@@ -1,7 +1,6 @@
 // fonts
 $fontSize        : 1rem;
 
-
 /* layout element heights */
 $navHeight       : 80px;
 $mbnavHeight     : 50px;
@@ -27,7 +26,7 @@ $viewport-sm	 : 600px;
 // media queries
 $media-xl		 : "screen and (min-width : #{$viewport-xl})";
 $media-lg		 : "screen and (min-width : #{$viewport-lg})";
-$media-med		 : "screen and (min-width : #{$viewport-med})";
+$media-med	 : "screen and (min-width : #{$viewport-med})";
 $media-sm		 : "screen and (min-width : #{$viewport-sm})";
 
 // to use a media query

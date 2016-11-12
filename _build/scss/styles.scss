@@ -12,18 +12,18 @@
 @import "base/reset";
 @import "base/fonts";
 @import "base/gridlex";
-@import "base/styleguide";
+@import "base/styleguide"; //style guide page specific styles
 
 // animations
 @import "animations/animations";
 
 // layout styles
-@import "layouts/structure";
+@import "layouts/structure"; // skeleton html markup
 @import "layouts/header";
 @import "layouts/nav";
 @import "layouts/hero";
 @import "layouts/footer";
-@import "layouts/parallax";
+@import "layouts/parallax"; // all parallax section styles
 
 // module styles
 @import "modules/icons";
@@ -34,14 +34,3 @@
 @import "modules/links";
 @import "modules/accent";
 @import "modules/box";
-
-
-
-/* custom media queries */
-@custom-media --viewport-xl (width >= 1500px);
-
-@custom-media --viewport-lg (width >= 1000px);
-
-@custom-media --viewport-med (width >= 768px);
-
-@custom-media --viewport-sm (width >= 600px);
