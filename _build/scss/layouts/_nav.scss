@@ -31,18 +31,18 @@
 			.menu-bg {
 				transition-delay: 0s;
 				// transition: all .4s 0s cubic-bezier(0.42, 0.03, 0.54, 0.96);
-
-				background-color: $secDark;
-				border: solid 2px $secDark;
+				//
+				// background-color: $secDark;
+				// border: solid 2px $secDark;
 			}
 
 			.logo {
-				transition-delay: 0s;
-				transition: all .4s 0s cubic-bezier(0.42, 0.03, 0.54, 0.96);
-
-				.st1, .st2, .st0 {
-					fill: #fff;
-				}
+				// transition-delay: 0s;
+				// transition: all .4s 0s cubic-bezier(0.42, 0.03, 0.54, 0.96);
+				//
+				// .st1, .st2, .st0 {
+				// 	fill: #fff;
+				// }
 			}
 
 
@@ -52,31 +52,38 @@
 
 // btn wrapper for js-menu toggle
 #menu .menu-btn-wrapper {
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     cursor: pointer;
     top: 0;
     left: 0;
-    width: 180px;
-    height: 130px;
+		align-items: center;
+		display: flex;
 
 		.menu-open {
 			transform: translateX(0%);
 			transition-delay: .8s;
-			width:80px;
-			height: 70px;
-			padding: $space/3;
+			width:auto;
+			height: $navHeight;
+			display: flex;
 		}
 		.menu-close {
 		 transform: translateX(-300%);
 		 transition-delay: .2s;
+		 	display: flex;
 	 }
+
+	 	.hamburger {
+			display:flex;
+			position: relative;
+
+		}
 
 		.logo {
 			position: relative;
 			width: 100%;
 			margin: 0 auto;
-			display: block;
+			display: flex;
 			z-index: 9997;
 		}
 
@@ -123,24 +130,24 @@
 #menu .menu-bg {
     position: fixed;
     top: 0;
+		width: 100%;
     left: 0;
     z-index: 9995;
-    width: 300px;
-    height: 130px;
-    background-color: $tertLight;
+    height: $navHeight;
+    background-color: #fff;
     box-sizing: border-box;
     animation-transform-origin: top left;
     transform-origin: top left;
     transition: all .7s 0s cubic-bezier(0.46, 0.03, 0.52, 0.96);
     backface-visibility: hidden;
-    transform: skewY(-30deg);
-    border: solid 2px $tertLight;
+    // transform: skewY(-30deg);
+    border-bottom: solid 1px $grayLight;
 
-
-			&:hover {
-				background-color: $secDark;
-				border: solid 2px $secDark;
-			}
+			//
+			// &:hover {
+			// 	background-color: $secDark;
+			// 	border: solid 2px $secDark;
+			// }
 
 }
 
@@ -149,13 +156,13 @@
 }
 .nav-cta {
     position: fixed;
+		z-index: 9999;
     top: 0px;
     right: 0px;
-    height: 25px;
+    // height: 25px;
     animation-transform-origin: bottom right;
     transform-origin: bottom right;
-    transform: rotate(-90deg);
-    margin-top: -10px;
+    // transform: rotate(-90deg);
 
 		span {
 			color: $tertLight;
