@@ -45,7 +45,6 @@
 				// }
 			}
 
-
 		}
 
 	}
@@ -57,8 +56,8 @@
     cursor: pointer;
     top: 0;
     left: 0;
-		align-items: center;
-		display: flex;
+		width: 70vw;
+		margin-left: $space;
 
 		.menu-open {
 			transform: translateX(0%);
@@ -66,22 +65,23 @@
 			width:auto;
 			height: $navHeight;
 			display: flex;
+			align-items: center;
 		}
 		.menu-close {
 		 transform: translateX(-300%);
 		 transition-delay: .2s;
-		 	display: flex;
+		 display: flex;
 	 }
 
 	 	.hamburger {
 			display:flex;
 			position: relative;
-
+			margin-right: $space/2;
 		}
 
 		.logo {
 			position: relative;
-			width: 100%;
+			width: 220px;
 			margin: 0 auto;
 			display: flex;
 			z-index: 9997;
@@ -105,14 +105,14 @@
 .menu-is-open#menu {
 
 		.menu-btn-wrapper {
-				.menu-open {
-					transform: translateX(-200px);
-								transition-delay: .2s;
-				}
-			  .menu-close {
-				 transform: translateX(0%);
-				 			transition-delay: .8s;
-			 }
+				// .menu-open {
+				// 	transform: translateX(-200px);
+				// 				transition-delay: .2s;
+				// }
+			//   .menu-close {
+			// 	 transform: translateX(0%);
+			// 	 			transition-delay: .8s;
+			//  }
 		}
 
 	& +	nav {
@@ -126,22 +126,17 @@
 		}
 }
 
-// triangle menu background
-#menu .menu-bg {
+#menu .nav-bg {
     position: fixed;
     top: 0;
 		width: 100%;
+		height: $navHeight;
     left: 0;
     z-index: 9995;
-    height: $navHeight;
     background-color: #fff;
-    box-sizing: border-box;
-    animation-transform-origin: top left;
-    transform-origin: top left;
-    transition: all .7s 0s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+		@include transition();
     backface-visibility: hidden;
-    // transform: skewY(-30deg);
-    border-bottom: solid 1px $grayLight;
+		border-bottom: 1px solid $grayLight;
 
 			//
 			// &:hover {
@@ -151,23 +146,71 @@
 
 }
 
+// triangle menu background
+.menu-bg {
+    position: fixed;
+    top: -130px;
+    left: -300px;
+    z-index: 9995;
+    width: 300px;
+    height: 130px;
+    background-color: $tertLight;
+    box-sizing: border-box;
+    animation-transform-origin: top left;
+    transform-origin: top left;
+    transition: all .7s 0s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    backface-visibility: hidden;
+    transform: skewY(-30deg);
+    border: solid 2px $tertLight;
+
+
+			&:hover {
+				background-color: $secDark;
+				border: solid 2px $secDark;
+			}
+
+}
+
 // right hand side verticle buttons
 .nav-cta {
-    display: block;
+    display: flex;
+		align-items: center;
+		height: $navHeight;
+		margin-right: $space;
 }
 .nav-cta {
     position: fixed;
 		z-index: 9999;
     top: 0px;
     right: 0px;
-    // height: 25px;
-    animation-transform-origin: bottom right;
-    transform-origin: bottom right;
+
     // transform: rotate(-90deg);
 
-		span {
-			color: $tertLight;
+		.utility-item  {
+			font-weight: 500;
+			text-transform: uppercase;
+			color:$tertLight;
+			padding: $space/4 $space/1.5;
+			@include transition();
+			font-size: responsive 12px 14px;
+			letter-spacing: 2px;
+
+			&:nth-child(2) {
+				border: 2px solid $linkLight;
+				border-radius: $btnBorderRadius;
+
+				&:hover {
+					background-color: $linkLight;
+					color: #fff;
+				}
+			}
+
+			&:hover  {
+				color: $linkDark;
+			}
+
 		}
+
 	}
 
 
@@ -323,21 +366,3 @@ nav {
 // 	}
 //
 // }
-
-
-
-.utility-item  {
-	letter-spacing: .5px;
-	font-weight: 600;
-	text-transform: uppercase;
-	color:$tertLight;
-	padding-left: $space/2;
-	@include transition();
-	font-size: 12px;
-	letter-spacing: .9px;
-
-	&:hover {
-		color: $linkDark;
-	}
-
-}

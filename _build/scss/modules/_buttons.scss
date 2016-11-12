@@ -21,7 +21,7 @@ button {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    border-radius: $borderRadius;
+    border-radius: $btnBorderRadius;
 
 //btn //i
     i {
@@ -37,7 +37,8 @@ button {
 	    height: 100%;
 	    left: 0;
 	    top: 0;
-	    border-radius:  $borderRadius 0 0 $borderRadius;
+			border-radius: $btnBorderRadius 0 0 $btnBorderRadius;
+	    // border-radius:  $borderRadius 0 0 $borderRadius;
 	    width: 60px;
 	    content: '';
 	    background-color: $linkDark;
