@@ -1,0 +1,29 @@
+
+
+.accent {
+	position: relative;
+	z-index: 2;
+	padding: $space 0 0 0;
+
+	&:before, &:after {
+		content:'';
+		display: block;
+		position: absolute;
+		top: 0px;
+		// bottom: 0px;
+		height: 6px;
+		z-index: 1;
+
+	}
+
+	&:before {
+		background-color: $secDark;
+		width:100%;
+	}
+
+	&:after {
+		background-color: $secLight;
+		width: 20%;
+		transform:translateX(200%);
+	}
+}

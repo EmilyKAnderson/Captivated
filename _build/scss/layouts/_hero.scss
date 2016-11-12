@@ -1,0 +1,52 @@
+//hero
+
+.hero {
+
+	.hero-header {
+		margin-bottom: $space;
+	}
+
+	.btn {
+		margin-bottom: 0;
+	}
+
+//hero // hero-description
+	.hero-description {
+		margin-bottom: $space*1.5;
+	}
+
+	.grid-middle {
+		height: 100%;
+	}
+}
+
+
+// hero-interior
+.hero-interior {
+		margin-top: $navHeight;
+
+	.grid-middle {
+		height: 100%;
+	}
+
+	h1 {
+		margin-bottom: $space/1.5;
+	}
+}
+
+	.hero-header {
+		margin-bottom: 0;
+
+		span.highlight {
+   			font-size: inherit;
+   			color:$secLight;
+		}
+
+		h2 {
+			margin-bottom: $space/2;
+		}
+
+		h1 {
+			margin-bottom: $space;
+		}
+	}

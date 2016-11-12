@@ -1,0 +1,62 @@
+<footer class="section bg-dark">
+
+	<div class="row grid-spaceBetween animation" data-animation="fadeInUp">
+
+		<div class="col-12-top">
+			  <ul class="footer-menu">
+			  	<li><a href=''>Log in</a></li>
+
+	   			<li><a href='/get-started/' {% if current[1] == 'careers' %}class='current'{% endif %}>Get started</a></li>
+
+			    <li><a href='#' {% if current[1] == 'about' %}class='current'{% endif %}>Features</a></li>
+
+					<li><a href='/' {% if current[1] == 'home' %}class='current'{% endif %}>Home</a></li>
+
+			   	<li><a href='/about/' {% if current[1] == 'features' %}class='current'{% endif %}>About</a></li>
+
+			   	<li><a href='/careers/' {% if current[1] == 'careers' %}class='current'{% endif %}>Careers</a></li>
+
+	    		<li class="col-12"><a href='http://captivated.works/blog' {% if current[1] == 'blog' %}class='current'{% endif %} target="_blank">Blog</a></li>
+
+			    <li><a href='/contact/' {% if current[1] == 'contact' %}class='current'{% endif %}>Contact</a></li>
+			  </ul>
+
+		</div>
+
+		<div class="col-12 grid-middle">
+			<div class="col-12">
+				<img src="/images/logo-mark.png" alt="" class="footer-logo">
+				<h3>cap·ti·vate</h3>
+				<p><em>(verb)</em> - attract and hold the interest and attention of; charm.</p>
+			</div>
+
+			<div class="col-12 grid">
+				<a href="#" class="social-icon grid-middle-center"><i class="socicon-twitter"></i></a>
+				<a href="#" class="social-icon grid-middle-center"><i class="socicon-linkedin"></i></a>
+				<a href="#" class="social-icon grid-middle-center"><i class="socicon-facebook"></i></a>
+				<a href="#" class="social-icon grid-middle-center"><i class="socicon-vimeo"></i></a>
+				<a href="#" class="social-icon grid-middle-center"><i class="socicon-youtube"></i></a>
+			</div>
+		</div>
+
+<div class="col-12-bottom grid-equalHeight">
+
+		<div class="col-12_med-12_lg-6" push-left="off-6">
+
+			<ul class="footer-menu-lower">
+			   	<li><a href='/styleguide/' {% if current[1] == 'styleguide' %}class='current'{% endif %}>Brand Style Guide</a></li>
+			    <li><a href='/privacy-policy/' {% if current[1] == 'privacy-policy' %}class='current'{% endif %}>Privacy Policy</a></li>
+			    <li><a href='/terms-conditions/' {% if current[1] == 'terms-conditions' %}class='current'{% endif %}>Terms &amp; Conditions</a></li>
+			  </ul>
+
+		</div>
+
+		<div class="col-12_med-12_lg-6">
+			<p class="p-small">Copyright © 2016 Captivated LLC All rights reserved</p>
+		</div>
+
+	</div>
+
+	</div>
+
+</footer>

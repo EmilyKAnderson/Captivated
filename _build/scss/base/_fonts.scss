@@ -1,0 +1,128 @@
+// FONTS
+
+
+// silent heading class
+%heading {
+	line-height: 1.1;
+	font-family: 'Assistant', sans-serif;
+	font-size: responsive;
+	font-weight: 800;
+	margin: 0;
+	letter-spacing: .5px;
+	margin-bottom: $space;
+ }
+
+///////////////////////////////////////////////
+// h1 /////////////////////////////////////////
+h1 {
+   font-size: responsive 38px 90px;
+   line-height: 1.1;
+   lower-font-range: 460px;
+   upper-font-range: 1400px;
+   @extend %heading;
+   margin-bottom: 0;
+
+}
+
+///////////////////////////////////////////////
+// h2 /////////////////////////////////////////
+h2 {
+	font-weight: 800;
+	font-size: responsive 32px 90px;
+	@extend %heading;
+}
+
+///////////////////////////////////////////////
+// h3 /////////////////////////////////////////
+h3 {
+	font-weight: 300;
+	font-size: responsive 26px 50px;
+	@extend %heading;
+}
+
+///////////////////////////////////////////////
+// h4 /////////////////////////////////////////
+h4 {
+	font-weight: 800;
+	font-size: responsive 18px 26px;
+	// padding-bottom: $space / 2;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	@extend %heading;
+}
+
+///////////////////////////////////////////////
+// h5 /////////////////////////////////////////
+h5 {
+	font-weight: 700;
+	font-size: responsive 16px 18px;
+	text-transform: uppercase;
+	@extend %heading;
+}
+
+h6 {
+	font-weight: 600;
+	font-size: responsive 10px 14px;
+	@extend %heading;
+	margin-bottom: $space/4;
+	color: $grayDark;
+}
+
+///////////////////////////////////////////////
+// P //////////////////////////////////////////
+p {
+font-family: 'Assistant', sans-serif;
+	font-size: responsive 16px 20px;
+    font-weight: 100;
+    letter-spacing: .3px;
+    lower-font-range: 460px;
+    upper-font-range: 1800px;
+    z-index: 1;
+    margin-bottom: $space;
+    line-height: 1.5;
+
+    &:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: -0px;
+		height: 30px;
+		width: 100px;
+		z-index: -1;
+  	}
+
+  &.p-large {
+  	line-height: 1.4;
+	font-size: responsive 20px 26px;
+  }
+
+  &.p-small {
+  	line-height: 1.4;
+	font-size: responsive 12px 14px;
+	margin-bottom: 0;
+  }
+}
+
+a {
+
+	font-family: 'Assistant', sans-serif;
+	text-decoration: none;
+
+	&.btn {
+		font-size: responsive 12px 14px;
+	    lower-font-range: 320px;
+	    upper-font-range: 1600px;
+	}
+}
+
+
+.nav-item {
+	font-size: responsive 16px 43px;
+    lower-font-range: 600px;
+    upper-font-range: 1600px;
+	font-size: responsive;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: block;
+	color:$secLight;
+}

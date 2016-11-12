@@ -1,0 +1,47 @@
+// if you ever want Jekyll to compile sass use the commented lines below
+// ---
+// # Only the main Sass file needs front matter (the dashes are enough)
+// ---
+@charset "utf-8";
+
+// base styles
+@import "base/variables";
+@import "base/mixins";
+@import "base/colors";
+@import "base/spacing";
+@import "base/reset";
+@import "base/fonts";
+@import "base/gridlex";
+@import "base/styleguide";
+
+// animations
+@import "animations/animations";
+
+// layout styles
+@import "layouts/structure";
+@import "layouts/header";
+@import "layouts/nav";
+@import "layouts/hero";
+@import "layouts/footer";
+@import "layouts/parallax";
+
+// module styles
+@import "modules/icons";
+@import "modules/buttons";
+@import "modules/lists";
+@import "modules/blurb";
+@import "modules/cards";
+@import "modules/links";
+@import "modules/accent";
+@import "modules/box";
+
+
+
+/* custom media queries */
+@custom-media --viewport-xl (width >= 1500px);
+
+@custom-media --viewport-lg (width >= 1000px);
+
+@custom-media --viewport-med (width >= 768px);
+
+@custom-media --viewport-sm (width >= 600px);

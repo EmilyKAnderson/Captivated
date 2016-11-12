@@ -1,0 +1,53 @@
+// buttons
+
+button {
+	outline: none;
+	background-color: transparent;
+}
+
+//btn
+.btn {
+    background-color: $linkLight;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 18px 40px 18px 90px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: $borderRadius;
+
+//btn //i
+    i {
+    	position: absolute;
+    	left: 18px;
+    	font-size: responsive 18px 30px;
+    	margin-top: -2px;
+    }
+
+//btn:before
+    &:before {
+	    position: absolute;
+	    height: 100%;
+	    left: 0;
+	    top: 0;
+	    border-radius:  $borderRadius 0 0 $borderRadius;
+	    width: 60px;
+	    content: '';
+	    background-color: $linkDark;
+	    transition: all 0.3s;
+	}
+
+//btn:hover //:before
+	&:hover::before {
+		width: 75px;
+		transition: all 0.3s;
+	}
+
+}

@@ -1,0 +1,36 @@
+.tri:after {
+  content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 200px;
+    height: 100px;
+    -webkit-transform-origin: top left;
+    animation-transform-origin: top left;
+    transform-origin: top left;
+    background-color: #ffd86c;
+    -webkit-transition: transform 350ms 0ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    -moz-transition: transform 350ms 0ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    -ms-transition: transform 350ms 0ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    -o-transition: transform 350ms 0ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    transition: transform 350ms 0ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    -webkit-transform: translate3D(0, 250%, 0) skewY(-30deg);
+    -moz-transform: translate3D(0, 250%, 0) skewY(-30deg);
+    -ms-transform: translate3D(0, 250%, 0) skewY(-30deg);
+    -o-transform: translate3D(0, 250%, 0) skewY(-30deg);
+    transform: translate3D(0, 250%, 0) skewY(-30deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #ffd86c;
+
+  }
+
+
+ .tri:hover {
+    box-shadow: 0px 10px 20px 1px rgba(3, 35, 57, 0.17);
+
+    &:after {
+      transform: translate3D(0, 125%, 0) skewY(-30deg);
+
+    }
+}

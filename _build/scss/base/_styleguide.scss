@@ -1,0 +1,60 @@
+
+//////////////////////////////////////////
+// pertains to styleguide page only
+//////////////////////////////////////////
+.styles-section {
+	h2,h3,h4,h5,p {
+		margin-bottom: $space * 2;
+	}
+}
+.colors {
+	position: relative;
+	padding-bottom: $space * 2;
+
+	.color {
+		display: block;
+		width: 120px;
+		height: 120px;
+		border-radius: 100%;
+		margin-bottom:  $space / 2;
+
+		&.prime-light {
+			background-color: $primeLight;
+		}
+
+		&.prime-dark {
+			background-color: $primeDark;
+		}
+
+		&.sec-light {
+			background-color: $secLight;
+		}
+
+		&.sec-dark {
+			background-color: $secDark;
+		}
+
+		&.tert-light {
+			background-color: $tertLight;
+		}
+
+		&.tert-dark {
+			background-color: $tertDark;
+		}
+
+		&.link-light{
+			background-color: $linkLight;
+		}
+
+		&.link-dark {
+			background-color: $linkDark;
+		}
+	}
+
+
+	.color-wrap {
+		margin-bottom: $space ;
+	}
+}
+
+

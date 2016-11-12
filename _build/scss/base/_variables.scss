@@ -1,0 +1,36 @@
+// fonts
+$fontSize        : 1rem;
+
+
+/* layout element heights */
+$navHeight       : 80px;
+$mbnavHeight     : 50px;
+
+/* menu-icon-width */
+$hamburgerWidth  : 40px;
+$hamburgerHeight : 40px;
+
+/* theme-btn-width */
+$themeBtnWidth   : 20px;
+$themeBtnHeight  : 20px;
+
+/* utility variables */
+$borderRadius    : 1px;
+$btnBorderRadius : 30px;
+
+// media query variables
+$viewport-xl	 : 1500px;
+$viewport-lg	 : 1000px;
+$viewport-med	 : 768px;
+$viewport-sm	 : 600px;
+
+// media queries
+$media-xl		 : "screen and (min-width : #{$viewport-xl})";
+$media-lg		 : "screen and (min-width : #{$viewport-lg})";
+$media-med		 : "screen and (min-width : #{$viewport-med})";
+$media-sm		 : "screen and (min-width : #{$viewport-sm})";
+
+// to use a media query
+// @media #{$media-xl} {
+
+// }

@@ -1,0 +1,13 @@
+// heading with supporting p tag text style
+
+.blurb {
+	margin-bottom: $space*1.5;
+
+	h4 {
+		background-color: #fff;
+		display: inline-block;
+		line-height: 1;
+		padding-bottom: 0;
+		margin-bottom: $space/2;
+	}
+}
