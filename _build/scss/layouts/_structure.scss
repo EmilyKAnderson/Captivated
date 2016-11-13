@@ -50,7 +50,7 @@ section {
 			border-radius: 3px;
 	}
 
- .row:nth-last-child(n+2), .row:nth-last-child(n+2) ~ .row {
+ > div.row:nth-last-child(n+2), > div.row:nth-last-child(n+2) ~ .row {
 	 padding: $space $space/2;
 
 	 &:first-child {

@@ -145,6 +145,11 @@
 		align-items: center;
 		height: $navHeight;
 		margin-right: $space;
+		display: none;
+
+		@media #{$media-sm} {
+			display: flex;
+		}
 }
 .nav-cta {
     position: fixed;
@@ -160,10 +165,23 @@
 			@include transition();
 			font-size: responsive 12px 14px;
 			letter-spacing: 2px;
+			display: flex;
+			align-items: center;
 
-			&:nth-child(2) {
+			i {
+				font-size: responsive 16px 26px;
+				line-height: 1.4;
+				display: flex;
+				padding-right: 10px;
+				// color: $grayDark;
+				color: $primeLight;
+				@include transition();
+			}
+
+			&:last-child {
 				border: 2px solid $secLight;
 				border-radius: $btnBorderRadius/2;
+				margin-left: $space/2;
 
 				&:hover {
 					background-color: $secLight;
@@ -173,6 +191,10 @@
 
 			&:hover  {
 				color: $secDark;
+
+				i {
+					color: $linkLight;
+				}
 			}
 
 		}
