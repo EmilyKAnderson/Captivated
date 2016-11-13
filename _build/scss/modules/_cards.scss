@@ -85,6 +85,16 @@
     }
 }
 
+.card-bg-accent {
+  background-color: $secLight;
+  left: 0;
+  height: 400px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width:100%;
+}
+
 
 .card-pricing {
   background-color: #fff;
