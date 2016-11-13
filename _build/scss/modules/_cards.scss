@@ -85,6 +85,16 @@
     }
 }
 
+.card-bg-accent {
+  background-color: $secLight;
+  left: 0;
+  height: 400px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width:100%;
+}
+
 
 .card-pricing {
   background-color: #fff;
@@ -119,7 +129,7 @@
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
     color: #fff;
     z-index: 9999;
-    transform: scale(1.03);
+    // transform: scale(1.03);
     > [class*="col"]:nth-child(1) {
         transform: translateY(-15px);
         }
