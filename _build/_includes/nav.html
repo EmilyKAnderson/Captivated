@@ -27,14 +27,6 @@
 
 <nav>
 
-	{% assign base = '' %}
-	{% assign depth = page.url | split: '/' | size | minus: 1 %}
-	{% if    depth <= 1 %}{% assign base = '.' %}
-	{% elsif depth == 2 %}{% assign base = '..' %}
-	{% elsif depth == 3 %}{% assign base = '../..' %}
-	{% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}
-
-
 <ul>
 	{% for item in site.navigation %}
 		 {% assign class = nil %}
@@ -42,14 +34,15 @@
 				 {% assign class = 'active' %}
 		 {% endif %}
 			<li class="col-12">
-					 <a href="{{ base }}{{ item.url }}" class="{{ class }}">
+					 <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
+
 							 {{ item.title }}
 					 </a>
 			 </li>
  {% endfor %}
  <li class="col-12">
 		{% for item in site.maincta %}
-					<a href="{{ base }}{{ item.url }}" class="{{ class }}">
+					<a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
 							{{ item.title }}
 					</a>
 		{% endfor %}

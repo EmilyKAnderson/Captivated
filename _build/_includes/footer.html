@@ -1,3 +1,5 @@
+
+
 <footer class="section bg-dark">
 
 	<div class="row grid-spaceBetween animation" data-animation="fadeInUp">
@@ -11,7 +13,7 @@
 								 {% assign class = 'active' %}
 						 {% endif %}
 							<li>
-									 <a href="{{ base }}{{ item.url }}" class="{{ class }}">
+									 <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
 											 {{ item.title }}
 									 </a>
 							 </li>
@@ -47,7 +49,7 @@
 							 {% assign class = 'active' %}
 					 {% endif %}
 						<li>
-								 <a href="{{ item.url }}" class="{{ class }}">
+								 <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
 										 {{ item.title }}
 								 </a>
 						 </li>
