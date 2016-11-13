@@ -23,10 +23,10 @@
 @import "layouts/nav";
 @import "layouts/hero";
 @import "layouts/footer";
-@import "layouts/post";
 @import "layouts/parallax"; // all parallax section styles
 
 // module styles
+@import "modules/post";
 @import "modules/icons";
 @import "modules/buttons";
 @import "modules/lists";

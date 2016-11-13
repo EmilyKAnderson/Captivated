@@ -15,7 +15,7 @@
 
       p {
         a {
-          @extend %link;
+          @extend %inline-link;
           display: inline;
           transform: translateY(0px) !important;
           width: auto !important;
