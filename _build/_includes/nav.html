@@ -18,54 +18,42 @@
 	<div class="menu-bg"></div>
 
 	<div class="nav-cta">
-		<a href="/log-in" class="utility-item">Log in</a>
-		<a href='/get-started' {% if current[1] == 'about' %}class='current'{% endif %} class="utility-item">Sign up</a>
+		<a href="/faq" class="main-action"><i class="material-icons">help_outline</i> faq</a>
+		<a href="/log-in" class="main-action">Log in</a>
+		<a href='/get-started' {% if current[1] == 'about' %}class='current'{% endif %} class="main-action">Sign up</a>
 	</div>
 
 </div>
 
 <nav>
-	<!-- <div class="row-no-max main-menu grid-middle">
-	<ul class="row grid-center">
-	<li class="col-12"><a href=''>Log in</a></li>
 
-	<li class="col-12"><a href='/get-stared/' {% if current[1] == 'careers' %}class='current'{% endif %}>Get Started</a></li>
+	{% assign base = '' %}
+	{% assign depth = page.url | split: '/' | size | minus: 1 %}
+	{% if    depth <= 1 %}{% assign base = '.' %}
+	{% elsif depth == 2 %}{% assign base = '..' %}
+	{% elsif depth == 3 %}{% assign base = '../..' %}
+	{% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}
 
-	<li class="col-12"><a href='/' {% if current[1] == 'home' %}class='current'{% endif %}>Home</a></li>
-
-	<li class="col-12"><a href='#' {% if current[1] == 'about' %}class='current'{% endif %}>Features</a></li>
-
-	<li class="col-12"><a href='/about/' {% if current[1] == 'features' %}class='current'{% endif %}>About</a></li>
-
-	<li class="col-12"><a href='/careers/' {% if current[1] == 'careers' %}class='current'{% endif %}>Careers</a></li>
-
-	<li class="col-12"><a href='http://captivated.works/blog' {% if current[1] == 'blog' %}class='current'{% endif %} target="_blank">Blog</a></li>
-
-	<li class="col-12"><a href='/contact/' {% if current[1] == 'contact' %}class='current'{% endif %}>Contact</a></li>
-</ul>
-
-<div class="col grid social-icons">
-<a href="#" class="social-icon grid-middle-center"><i class="socicon-twitter"></i></a>
-<a href="#" class="social-icon grid-middle-center"><i class="socicon-linkedin"></i></a>
-<a href="#" class="social-icon grid-middle-center"><i class="socicon-facebook"></i></a>
-<a href="#" class="social-icon grid-middle-center"><i class="socicon-vimeo"></i></a>
-<a href="#" class="social-icon grid-middle-center"><i class="socicon-youtube"></i></a>
-</div>
-
-</div> -->
 
 <ul>
-	<li class="col-12"><a href='/' {% if current[1] == 'home' %}class='current'{% endif %}>Home</a></li>
-	<li class="col-12"><a href='/about/' {% if current[1] == 'about' %}class='current'{% endif %}>Features</a></li>
-	<li class="col-12"><a href='/about/' {% if current[1] == 'features' %}class='current'{% endif %}>About</a></li>
-	<!-- <li class="col-12"><a href='/careers/' {% if current[1] == 'careers' %}class='current'{% endif %}>Careers</a></li> -->
-	<li class="col-12"><a href='http://captivated.works/blog' {% if current[1] == 'blog' %}class='current'{% endif %} target="_blank">Blog</a></li>
-	<li class="col-12"><a href='/contact/' {% if current[1] == 'contact' %}class='current'{% endif %}>Contact</a></li>
+	{% for item in site.navigation %}
+		 {% assign class = nil %}
+		 {% if page.title contains item.title %}
+				 {% assign class = 'active' %}
+		 {% endif %}
+			<li class="col-12">
+					 <a href="{{ base }}{{ item.url }}" class="{{ class }}">
+							 {{ item.title }}
+					 </a>
+			 </li>
+ {% endfor %}
+ <li class="col-12">
+		{% for item in site.maincta %}
+					<a href="{{ base }}{{ item.url }}" class="{{ class }}">
+							{{ item.title }}
+					</a>
+		{% endfor %}
+	</li>
 </ul>
-
-<!-- <ul>
-<li class="col-12"><a href=''>Log in</a></li>
-<li class="col-12"><a href='/get-stared/' {% if current[1] == 'careers' %}class='current'{% endif %}>Get Started</a></li>
-</ul> -->
 
 </nav>

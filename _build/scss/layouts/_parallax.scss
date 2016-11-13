@@ -23,8 +23,7 @@
 
 
 	.par-section {
-
-				margin: $space;
+				margin: $space/3;
 				border-radius: 3px;
 	      position: relative;
 		    min-height: 500px; /* fallback for older browsers */
@@ -32,8 +31,14 @@
 		    -webkit-transform-style: preserve-3d;
 		    transform-style: preserve-3d;
 
+			@media #{$media_sm} {
+				 min-height: 60%;
+				 margin: $space/2;
+			}
+
 			@media #{$media_med} {
 				 min-height: 60%;
+				 margin: $space;
 			}
 
 	    	.par-element {

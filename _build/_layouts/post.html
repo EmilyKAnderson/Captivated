@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    <div class="wrapper">
+       {% include nav.html %}
+
+    	<div class="par-frame">
+
+        <!-- par-section -->
+        <div class="hero-interior bg-light par-section">
+
+        	<!-- par-element -->
+        	<div class="par-element fast">
+
+        		<!-- row  -->
+        		<div class="row grid-middle">
+
+        			<div class="grid">
+
+        				<header class="col-12 hero-header animation" data-animation="fadeInDown">
+        				  <h6>Frequently Asked Questions</h6>
+        					<h2>Seek and you will find</h2>
+        				</header>
+
+        				<!-- <div class="col-12_lg-7 animation" data-animation="fadeIn">
+        					<p class="p-large">Captivated enables business to engage in real-time &amp; authentic conversations with their customers to increase sales and improve customer service. </p>
+        				</div> -->
+
+        			</div>
+
+        		</div>
+
+        	</div>
+
+        </div>
+
+
+        <section>
+          <div class="row grid-center bg-shaded">
+            <article class="col-12_md-8_lg-7_xl-6 post">
+                  {{ content }}
+
+            </article>
+          </div>
+        </section>
+        {% include footer.html %}
+        </div>
+    </div>
+
+    {% include jsfooter.html %}
+  </body>
+
+</html>

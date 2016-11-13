@@ -1,25 +1,19 @@
 
 //open/close mb navigation
   $('.js-menu .menu-open').on('click', function(){
-    $('.js-menu').addClass('menu-is-open');
+    $('.js-menu').toggleClass('menu-is-open');
+    $('.hamburger').toggleClass('is-active');
     });
 
-  $('.js-menu .menu-close').on('click', function(){
-      $('.js-menu').removeClass('menu-is-open');
-      });
+  // $('.js-menu .menu-close').on('click', function(){
+  //
+  //     $('.js-menu').removeClass('menu-is-open');
+  //     });
 
+    // $( ".js-menu .menu-btn-wrapper").hover(function() {
+    //   $( ".js-menu" ).toggleClass('show-toggle');
+    // });
 
-    $( ".js-menu .menu-btn-wrapper").hover(function() {
-      $( ".js-menu" ).toggleClass('show-toggle');
-    });
-
-//     $( ".js-menu" ).hover('menu-btn-wrapper',
-//       function() {
-//         $( this ).addClass( "hover" );
-//       }, function() {
-//         $( this ).removeClass( "hover" );
-//   }
-// );
 
 $(document).ready(function($){
     $('section').waypoint(function(direction) {

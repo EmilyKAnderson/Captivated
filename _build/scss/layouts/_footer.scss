@@ -1,9 +1,14 @@
 footer {
 	position: relative;
 	padding: $space 0;
-	min-height: 300px;
+	min-height: 500px;
+	// height: 100%;
 	background: $tertDark url(../images/texture.png) center center ;
 
+	@media #{$media-med} {
+		min-height: 300px	;
+	}
+	
 	.row {
 		min-height: 300px;
 
