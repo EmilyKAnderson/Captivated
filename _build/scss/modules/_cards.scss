@@ -1,54 +1,40 @@
 
 
 %plan-name {
-    background-color: $secDark;
-    color: #fff;
+    color: $tertDark;
     text-align: center;
     padding: $space/2 0 $space/8 0;
 
 }
 
 %price {
-    background-color: $secLight;
-    color: #fff;
-    h2{font-weight: 400;position: relative;
-        &:before {
-            color: $secDark;
-            content: "$";
-            font-size: responsive 32px 72px;
-            position: relative;
-            top: -10px;
-            width: 50px;
-            height: 50px;
-        }
+    color: $secLight;
+    p{font-weight: 400;position: relative;
     }
     text-align: center;
     padding: $space 0;
-    span{font-size: responsive 12px 18px;color: $secDark;}
 }
 
 %details {
-    background-color: #fff;
-    padding-bottom:$space/2;
+    border-top: 1px solid $grayLight;
+    margin-top: $space/2;
 
     li {
-        margin: 0 6px;
-    }
-
-    li:nth-child(1),
-     li:nth-child(2),
-      li:nth-child(3) {
-        padding: $space/2 $space/2;
-        color: var(--tertColor);
-        font-weight: 400;
+      text-align: center;
+      i {
+        display: block;
+        margin-bottom: $space/2;
+      }
     }
 
     li:nth-child(1),
      li:nth-child(2) {
-        border-bottom: 1px solid $grayLight;
-     }
+        padding: $space/3 0;
+        color: $grayDark;
+        font-weight: 400;
+    }
 
-    li:nth-child(4) {
+    li:nth-child(3) {
         @extend %link;
 
         a {
@@ -56,76 +42,59 @@
             cursor:pointer;
         }
     }
-
-    li:nth-child(5),
-     li:nth-child(6) {
-        color: $grayDark;
-        font-size: responsive 10px 12px;
-        padding: $space/4 $space/2;
-        text-align: center;
-     }
 }
 
 %link {
-    background-color: $linkLight;
-    color:#fff;
+    // background-color: $linkLight;
+    border: 2px solid $secLight;
+    border-radius:15px;
+    // color:#fff;
+    color: $secLight;
     text-align: center;
     font-weight: 800;
     padding:$space/2 0;
     margin: $space/2 auto;
     text-transform: uppercase;
     width: 75%;
-    color:#fff;
     cursor: pointer;
+    a {
+      color: $secLight;
+    }
 
     &:hover {
-        background-color: $linkDark;
+        // background-color: $linkDark;
+        border: 2px solid $secLight;
     }
 }
 
 
 .card-pricing {
-    border-bottom: 1px solid $grayLight;
-    border-left: 1px solid $grayLight;
-    border-right: 1px solid $grayLight;
-    padding: 0;
-// box-shadow: 0 1px 1px 0 rgba(0,0,0, .1);
+  background-color: #fff;
+  border-bottom: 1px solid $grayLight;
+  border-left: 1px solid $grayLight;
+  border-right: 1px solid $grayLight;
+  cursor: pointer;
+  padding: $space;
 
-> [class*="col"]:nth-child(1) {
-    @extend %plan-name;
-    }
+  > [class*="col"]:nth-child(1) {
+      @extend %plan-name;
+      }
 
-> [class*="col"]:nth-child(2) {
-    @extend %price;
-    }
+  > [class*="col"]:nth-child(2) {
+      @extend %price;
+      }
 
-> [class*="col"]:nth-child(3) {
-    @extend %details;
-    }
+  > [class*="col"]:nth-child(3) {
+      @extend %details;
+      }
 
-> [class*="col"]:nth-child(4) {
-    @extend %link;
-    margin-bottom: $space;
-}
-
-.material-icons {
-    display: inline-block;
-    position: relative;
-    margin-right: 10px;
-    top: 5px;
-}
-
-
-    &.highlight {
-
-        > [class*="col"]:nth-child(1) {
-           padding: $space 0  $space/2;
-        }
-
-        > [class*="col"]:nth-child(3) {
-             padding-bottom: $space;
-        }
-
-    }
-
+  > [class*="col"]:nth-child(4) {
+      @extend %link;
+  }
+  &:hover {
+    // background-color: $secLight;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
+    color: #fff;
+    z-index: 9999;
+  }
 }
