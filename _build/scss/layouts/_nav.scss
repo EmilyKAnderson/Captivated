@@ -18,8 +18,8 @@
 			.menu-bg {
 				top: 0;
 		    width: 200vw;
-		    background-color: $secDark;
-		    border: solid 2px $secDark;
+		    background-color: $tertLight;
+		    border: solid 2px $tertLight;
 				transition: all .7s 0s cubic-bezier(0.42, 0.03, 0.54, 0.96);
 				height: 300vh;
 			}
@@ -30,19 +30,6 @@
 
 			.menu-bg {
 				transition-delay: 0s;
-				// transition: all .4s 0s cubic-bezier(0.42, 0.03, 0.54, 0.96);
-				//
-				// background-color: $secDark;
-				// border: solid 2px $secDark;
-			}
-
-			.logo {
-				// transition-delay: 0s;
-				// transition: all .4s 0s cubic-bezier(0.42, 0.03, 0.54, 0.96);
-				//
-				// .st1, .st2, .st0 {
-				// 	fill: #fff;
-				// }
 			}
 
 		}
@@ -67,11 +54,6 @@
 			display: flex;
 			align-items: center;
 		}
-		.menu-close {
-		 transform: translateX(-300%);
-		 transition-delay: .2s;
-		 display: flex;
-	 }
 
 	 	.hamburger {
 			display:flex;
@@ -87,11 +69,6 @@
 			z-index: 9997;
 		}
 
-		i {
-			font-size: 50px;
-			color: $tertLight;
-		}
-
 		div {
 			position: absolute;
 			top: 0;
@@ -105,14 +82,16 @@
 .menu-is-open#menu {
 
 		.menu-btn-wrapper {
-				// .menu-open {
-				// 	transform: translateX(-200px);
-				// 				transition-delay: .2s;
-				// }
-			//   .menu-close {
-			// 	 transform: translateX(0%);
-			// 	 			transition-delay: .8s;
-			//  }
+				.menu-open {
+						transition-delay: 1s;
+				}
+				.logo {
+					transition-delay: 0s;
+					@include transition();
+					.st1, .st2, .st0 {
+						fill: #fff;
+					}
+				}
 		}
 
 	& +	nav {
@@ -138,12 +117,6 @@
     backface-visibility: hidden;
 		border-bottom: 1px solid $grayLight;
 
-			//
-			// &:hover {
-			// 	background-color: $secDark;
-			// 	border: solid 2px $secDark;
-			// }
-
 }
 
 // triangle menu background
@@ -164,11 +137,6 @@
     border: solid 2px $tertLight;
 
 
-			&:hover {
-				background-color: $secDark;
-				border: solid 2px $secDark;
-			}
-
 }
 
 // right hand side verticle buttons
@@ -184,8 +152,6 @@
     top: 0px;
     right: 0px;
 
-    // transform: rotate(-90deg);
-
 		.utility-item  {
 			font-weight: 500;
 			text-transform: uppercase;
@@ -196,17 +162,17 @@
 			letter-spacing: 2px;
 
 			&:nth-child(2) {
-				border: 2px solid $linkLight;
-				border-radius: $btnBorderRadius;
+				border: 2px solid $secLight;
+				border-radius: $btnBorderRadius/2;
 
 				&:hover {
-					background-color: $linkLight;
+					background-color: $secLight;
 					color: #fff;
 				}
 			}
 
 			&:hover  {
-				color: $linkDark;
+				color: $secDark;
 			}
 
 		}
@@ -298,7 +264,7 @@ nav {
 				a {
 					padding: $space*1.5;
 					text-align: left;
-					color:$tertLight;
+					color:$secLight;
 					font-size: responsive 16px 80px;
 				}
 

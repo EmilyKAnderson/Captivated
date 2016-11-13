@@ -69,13 +69,13 @@
 	        transition-timing-function: cubic-bezier(.215,.61,.355,1);
 	    	-webkit-transform: translate3d(0,-10px,0) rotate(-45deg);
 	    	transform: translate3d(0,-10px,0) rotate(-45deg);
-			background-color: #fff;
+			// background-color: #fff;
 
 		    &:before {
 		    	transition: top .12s .18s cubic-bezier(.33333,0,.66667,.33333),transform .15s .42s cubic-bezier(.215,.61,.355,1),-webkit-transform .15s .42s cubic-bezier(.215,.61,.355,1);
 		    	top: 0;
 		    	transform: rotate(-90deg);
-		    	background-color: #fff;
+		    	// background-color: #fff;
 
 		    }
 
