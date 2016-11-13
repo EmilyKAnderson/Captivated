@@ -2,18 +2,24 @@
 
 	<div class="menu-btn-wrapper">
 		<div class="js-menuBtn menu-open">
+			<button class="hamburger hamburger--collapse" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+			</button>
 			<div class="logo">
 				<!-- <img src="/images/svg/logo.svg" alt="" class="menu-logo"> -->
 				{% include logo.html %}
 			</div>
 		</div>
-		<div class="js-menuBtn menu-close"><i class="material-icons">clear</i></div>
+		<!-- <div class="js-menuBtn menu-close"><i class="material-icons">clear</i></div> -->
 	</div>
+	<div class="nav-bg"></div>
 	<div class="menu-bg"></div>
 
 	<div class="nav-cta">
-		<a href='/get-started' {% if current[1] == 'about' %}class='current'{% endif %} class="utility-item">Sign up</a>
 		<a href="/log-in" class="utility-item">Log in</a>
+		<a href='/get-started' {% if current[1] == 'about' %}class='current'{% endif %} class="utility-item">Sign up</a>
 	</div>
 
 </div>

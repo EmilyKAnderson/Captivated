@@ -1,12 +1,9 @@
 @mixin transition() {
-	transition:all 0.4s ease-in-out;
-	-webkit-transition:all 0.4s ease-in-out;
-	-moz-transition:all 0.4s ease-in-out;
+	transition: all .5s 0s cubic-bezier(0.48, 0, 0.52, 0.98);
 }
 
 
 @mixin transition-slow() {
-	transition:all 0.7s ease-in-out;
-	-webkit-transition:all 0.7s ease-in-out;
-	-moz-transition:all 0.7s ease-in-out;
+	transition: all 1s 0s cubic-bezier(0.48, 0, 0.52, 0.98);
+
 }
