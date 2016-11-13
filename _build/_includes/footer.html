@@ -3,23 +3,20 @@
 	<div class="row grid-spaceBetween animation" data-animation="fadeInUp">
 
 		<div class="col-12-top">
-			  <ul class="footer-menu">
-			  	<li><a href=''>Log in</a></li>
 
-	   			<li><a href='/get-started/' {% if current[1] == 'careers' %}class='current'{% endif %}>Get started</a></li>
-
-			    <li><a href='#' {% if current[1] == 'about' %}class='current'{% endif %}>Features</a></li>
-
-					<li><a href='/' {% if current[1] == 'home' %}class='current'{% endif %}>Home</a></li>
-
-			   	<li><a href='/about/' {% if current[1] == 'features' %}class='current'{% endif %}>About</a></li>
-
-			   	<li><a href='/careers/' {% if current[1] == 'careers' %}class='current'{% endif %}>Careers</a></li>
-
-	    		<li class="col-12"><a href='http://captivated.works/blog' {% if current[1] == 'blog' %}class='current'{% endif %} target="_blank">Blog</a></li>
-
-			    <li><a href='/contact/' {% if current[1] == 'contact' %}class='current'{% endif %}>Contact</a></li>
-			  </ul>
+				<ul class="footer-menu">
+					{% for item in site.navigation %}
+						 {% assign class = nil %}
+						 {% if page.title contains item.title %}
+								 {% assign class = 'active' %}
+						 {% endif %}
+							<li>
+									 <a href="{{ item.url }}" class="{{ class }}">
+											 {{ item.title }}
+									 </a>
+							 </li>
+				 {% endfor %}
+				</ul>
 
 		</div>
 
@@ -44,10 +41,18 @@
 		<div class="col-12_med-12_lg-6" push-left="off-6">
 
 			<ul class="footer-menu-lower">
-			   	<li><a href='/styleguide/' {% if current[1] == 'styleguide' %}class='current'{% endif %}>Brand Style Guide</a></li>
-			    <li><a href='/privacy-policy/' {% if current[1] == 'privacy-policy' %}class='current'{% endif %}>Privacy Policy</a></li>
-			    <li><a href='/terms-conditions/' {% if current[1] == 'terms-conditions' %}class='current'{% endif %}>Terms &amp; Conditions</a></li>
-			  </ul>
+				{% for item in site.lowerfootnav %}
+					 {% assign class = nil %}
+					 {% if page.title contains item.title %}
+							 {% assign class = 'active' %}
+					 {% endif %}
+						<li>
+								 <a href="{{ item.url }}" class="{{ class }}">
+										 {{ item.title }}
+								 </a>
+						 </li>
+			 {% endfor %}
+			</ul>
 
 		</div>
 

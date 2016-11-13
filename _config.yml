@@ -1,8 +1,42 @@
 title: 'Captivated'
 author: 'Emily K Anderson'
 description: 'Captivated Customer website'
-baseurl: "/"
+baseurl: &baseurl "/"
 exclude: ['_site','scss','*scss','Gem*','Guard*','*rb','.sass-cache','.git*','config.rb','*.md','*.json','docroot','node_modules','gulpfile.js','install.sh','vendor']
 include: ['_pages']
 source:      _build
 destination: _site
+
+
+# main navitation items
+navigation:
+  - title: Home
+    url: *baseurl
+    id: home
+  - title: About
+    url: about/
+    about: about
+  - title: Features
+    url: features/
+    id: features
+  - title: Blog
+    url: http://captivated.works/blog/
+  - title: Contact
+    url: contact/
+    id: contact
+
+# main call to action items
+maincta:
+  - title: Log In
+    url: http://app.captivated.works/
+  - title: Sign Up
+    url: /get-started/
+
+# lower footer nav
+lowerfootnav:
+  - title: Brand Styleguide
+    url: /styleguide/
+  - title: Privacy Policy
+    url: /privacy-policy/
+  - title: Terms & Conditions
+    url: /terms-conditions/
