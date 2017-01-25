@@ -1,13 +1,13 @@
 //////////////////////////////////////////
 // all svg icon styles
 //////////////////////////////////////////
-.icon {
+.icon, svg {
 	width: auto;
 	display: flex;
 	stroke: $secLight;
 	fill: $secLight;
 	stroke-width: 0px;
-position: relative;
+	position: relative;
 	backface-visibility: visible;
 	height: 40px;
 	padding-right: $space/2;
