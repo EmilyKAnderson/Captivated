@@ -106,3 +106,14 @@ $('.market-slider').slick({
   arrows: 'false',
   autoplay: 'true'
 });
+
+// get started page toggle
+$('.js-monthly').on('click', function() {
+  console.log('you stupid poop');
+  $('.js-monthly-content').fadeIn();
+  $('.js-yearly-content').fadeOut();
+});
+$('.js-yearly').on('click', function() {
+  $('.js-yearly-content').fadeIn();
+  $('.js-monthly-content').fadeOut();
+});
