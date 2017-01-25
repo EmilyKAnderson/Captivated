@@ -89,3 +89,41 @@ button {
 	}
 
 }
+
+.pricing-tab {
+	padding: 0;
+}
+
+.pricing-tab-btn {
+	background: transparent;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 700;
+	letter-spacing: 1px;
+	padding: $space/3 0;
+	text-align: center;
+	text-transform: uppercase;
+	@include transition;
+	width: 100%;
+	span {
+		color: #fff;
+	}
+	&.is-active {
+		background-color: #fff;
+		span {
+			color: $secLight;
+		}
+	}
+	&.pricing-tab-btn-1 {
+		border-left: 2px solid #fff;
+		border-right: 2px solid #fff;
+		border-radius: $btnBorderRadius/2 0 0 $btnBorderRadius/2;
+	}
+	&.pricing-tab-btn-2 {
+		border-right: 2px solid #fff;
+		border-radius: 0 $btnBorderRadius/2 $btnBorderRadius/2 0;
+	}
+}

@@ -97,12 +97,26 @@ $('.modal').modal();
 
 // slick slider initiate
 
-$('.market-slider').slick({
-  dots: true,
-  infinite: true,
-  speed: 400,
-  fade: true,
-  cssEase: 'linear',
-  arrows: 'false',
-  autoplay: 'true'
+// $('.market-slider').slick({
+//   dots: true,
+//   infinite: true,
+//   speed: 400,
+//   fade: true,
+//   cssEase: 'linear',
+//   arrows: 'false',
+//   autoplay: 'true'
+// });
+
+// get started page toggle
+$('.js-monthly').on('click', function() {
+  $('.js-monthly').addClass('is-active');
+  $('.js-yearly').removeClass('is-active');
+  $('.js-monthly-content').css('display', 'flex');
+  $('.js-yearly-content').css('display', 'none');
+});
+$('.js-yearly').on('click', function() {
+  $('.js-yearly').addClass('is-active');
+  $('.js-monthly').removeClass('is-active');
+  $('.js-yearly-content').css('display', 'flex');
+  $('.js-monthly-content').css('display', 'none');
 });
