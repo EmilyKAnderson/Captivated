@@ -36,9 +36,9 @@ module.exports = {
 
     js: {
         src: src + 'js/**/*.js',
-        concatFilename: 'scripts.min.js', // result filename
+        // concatFilename: 'scripts.min.js', // result filename
         jekyllJsDest: dest + '_site/js/',
-        jsDest: src + 'js/'
+        // jsDest: src + 'js/'
     },
 
     jekyll: {
