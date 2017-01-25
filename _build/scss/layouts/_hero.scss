@@ -1,9 +1,19 @@
-//hero
-
+//-------------------------------------------------//
+// hero
+//-------------------------------------------------//
 .hero {
+		padding: $space*2 0;
 
 	.hero-header {
 		margin-bottom: $space;
+	}
+
+	span:first-child {
+		display: block;
+
+		@media #{$media-sm} {
+			display: inline-block;
+		}
 	}
 
 	.btn {
@@ -15,22 +25,49 @@
 		margin-bottom: $space*1.5;
 	}
 
-	.grid-middle {
-		height: 100%;
+	> div {
+		height: inherit;
 	}
 }
 
 
+//-------------------------------------------------//
 // hero-interior
+//-------------------------------------------------//
 .hero-interior {
-		margin-top: $navHeight;
+		// margin-top: $mbnavHeight;
+		height: auto;
+		padding: $space 0;
 
-	.grid-middle {
-		height: 100%;
+		@media #{$media-med} {
+			padding: $space*1.5 0;
+		}
+
+		@media #{$media-lg} {
+			padding: $space*2 0;
+		}
+
+		@media #{$media-xl} {
+			padding: $space*3 0;
+		}
+
+
+	> div {
+		height: inherit;
+	}
+
+	label {
+		margin-bottom: $space/2;
+		display: inline-block;
 	}
 
 	h1 {
 		margin-bottom: $space/1.5;
+	}
+
+	p {
+		margin-bottom: 0;
+		max-width: 700px;
 	}
 }
 
@@ -48,5 +85,18 @@
 
 		h1 {
 			margin-bottom: $space;
+		}
+	}
+
+
+	//-------------------------------------------------//
+	// hero-market
+	//-------------------------------------------------//
+
+	.hero-market {
+		padding-top: $space*2;
+
+		p {
+			max-width: 750px;
 		}
 	}

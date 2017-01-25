@@ -10,6 +10,8 @@
 	margin: 0;
 	letter-spacing: .5px;
 	margin-bottom: $space;
+	lower-font-range: 460px;
+	upper-font-range: 1400px;
  }
 
 ///////////////////////////////////////////////
@@ -17,8 +19,6 @@
 h1 {
    font-size: responsive 38px 90px;
    line-height: 1.1;
-   lower-font-range: 460px;
-   upper-font-range: 1400px;
    @extend %heading;
    margin-bottom: 0;
 
@@ -28,16 +28,31 @@ h1 {
 // h2 /////////////////////////////////////////
 h2 {
 	font-weight: 800;
-	font-size: responsive 32px 90px;
+	font-size: responsive 30px 55px;
 	@extend %heading;
+	text-transform: uppercase;
+
+	span {
+		color: $secLight;
+
+		&.alt {
+			color: $linkLight;
+		}
+	}
+
+
 }
 
 ///////////////////////////////////////////////
 // h3 /////////////////////////////////////////
 h3 {
-	font-weight: 300;
-	font-size: responsive 26px 50px;
+	font-weight: 400;
+	font-size: responsive 24px 40px;
 	@extend %heading;
+
+	span {
+		color: $linkLight;
+	}
 }
 
 ///////////////////////////////////////////////
@@ -45,37 +60,48 @@ h3 {
 h4 {
 	font-weight: 800;
 	font-size: responsive 18px 26px;
-	line-height: 1.3;
 	letter-spacing: .5px;
 	@extend %heading;
+	line-height: 1.4;
 }
 
 ///////////////////////////////////////////////
 // h5 /////////////////////////////////////////
 h5 {
-	font-weight: 700;
+	font-weight: 800;
 	font-size: responsive 16px 18px;
 	text-transform: uppercase;
 	@extend %heading;
+	line-height: 1.6;
 }
 
-h6 {
+label {
 	font-weight: 600;
-	font-size: responsive 10px 16px;
+	font-size: responsive 13px 16px;
 	@extend %heading;
 	margin-bottom: $space/4;
 	color: $grayDark;
+}
+
+blockquote {
+	@extend %heading;
+	font-weight: 400;
+	// font-size: responsive 22px 40px;
+	line-height: 1.2;
+	lower-font-range: 460px;
+	upper-font-range: 1400px;
+
 }
 
 ///////////////////////////////////////////////
 // P //////////////////////////////////////////
 p {
 		font-family: 'Assistant', sans-serif;
-		font-size: responsive 16px 20px;
+		font-size: responsive 16px 18px;
     font-weight: 300;
     letter-spacing: .3px;
     lower-font-range: 460px;
-    upper-font-range: 1800px;
+    upper-font-range: 1400px;
     z-index: 1;
     margin-bottom: $space;
     line-height: 1.5;
@@ -92,7 +118,7 @@ p {
 
   &.p-large {
   	line-height: 1.4;
-	font-size: responsive 20px 26px;
+	font-size: responsive 20px 24px;
   }
 
   &.p-small {
@@ -109,16 +135,16 @@ a {
 
 	&.btn {
 		font-size: responsive 12px 16px;
-	    lower-font-range: 320px;
-	    upper-font-range: 1600px;
+    lower-font-range: 320px;
+    upper-font-range: 1600px;
 	}
 }
 
 
 .nav-item {
 	font-size: responsive 16px 43px;
-    lower-font-range: 600px;
-    upper-font-range: 1600px;
+  lower-font-range: 600px;
+  upper-font-range: 1600px;
 	font-size: responsive;
 	font-weight: 700;
 	text-transform: uppercase;

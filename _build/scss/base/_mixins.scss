@@ -11,3 +11,11 @@
 @mixin transition-nav() {
 transition: all .5s 0s cubic-bezier(0.42, 0.2, 0.6, 0.98);
 }
+
+@mixin center() {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-height: 100%;
+	min-width: 100%;
+}

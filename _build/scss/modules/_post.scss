@@ -26,8 +26,22 @@
     }
   }
 
-
-  h2,h3,h4 {
-    color: $secDark;
+  a {
+    @extend %inline-link;
+    display: inline;
+    transform: translateY(0px) !important;
+    width: auto !important;
+    margin: 0  !important;
+    padding: 0  !important;
   }
+  
+  h2, h3 {
+    color: $tertLight;
+  }
+
+  h4 {
+    color: $secDark;
+    text-transform:none;
+  }
+
 }

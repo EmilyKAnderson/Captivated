@@ -25,9 +25,9 @@
 }
 
 [class*="col-"], .col {
-  > .col, > [class*="col-"] {
-    padding: 0;
-  }
+  // > .col, > [class*="col-"] {
+  //   padding: 0;
+  // }
 }
 // .grid.col,
 // .grid[class*="col-"]{
@@ -165,4 +165,3 @@
   @include makeCol(_xl);
   @include makeOff(_xl);
 }
-

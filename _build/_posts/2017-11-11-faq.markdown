@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Frequently Asked Questions"
+description: "label for this page"
 date: 2017-11-11
 categories: faq
 id: faq
@@ -17,3 +18,11 @@ permalink: /faq/
   No. Your customers can text your business using the standard texting app on their phone. They send a text to your business the same way they would to family and friends.
 * ####What are your prices?
   You can check out our pricing plans [here](/get-started/).
+* ####Will customers be able to see my cell phone number if I’m  texting from the mobile app?
+  No. All of your personal information including your cell phone number is completely protected when using our mobile app.
+* ####Do I need an Internet connection to send and receive texts?
+  Yes. When using our web app, you must have a Wi-Fi connection to send and receive texts. With our mobile app, you can text using either your phone’s data plan or a Wi-Fi connection.
+* ####Does Captivated use short code?
+  No. Short code is meant for mass marketing efforts. Captivated is meant for two-way, peer-to-peer communication, a trusted channel between you and your customers. Each text sent through Captivated should feel personal rather than automated.
+* ####What web browsers work with Captivated?
+  Our web app supports Google Chrome, Firefox and Safari. It is not compatible with Internet Explorer.

@@ -2,12 +2,16 @@
 $fontSize        : 1rem;
 
 /* layout element heights */
-$navHeight       : 75px;
+$navHeight       : 70px;
 $mbnavHeight     : 50px;
 
 /* menu-icon-width */
-$hamburgerWidth  : 40px;
-$hamburgerHeight : 40px;
+$hamburgerWidth  : 38px;
+$hamburgerHeight : 38px;
+
+/* menu-icon-width */
+$MBhamburgerWidth  : 28px;
+$MBhamburgerHeight : 28px;
 
 /* theme-btn-width */
 $themeBtnWidth   : 20px;
@@ -16,6 +20,8 @@ $themeBtnHeight  : 20px;
 /* utility variables */
 $borderRadius    : 1px;
 $btnBorderRadius : 13px;
+
+$radius         : 3px;
 
 // media query variables
 $viewport-xl	 : 1500px;

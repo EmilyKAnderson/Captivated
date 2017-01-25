@@ -1,36 +1,27 @@
-<!-- par-section -->
-<div class="hero bg-light par-section">
-
-	<!-- par-element -->
-	<div class="par-element fast">
+<div class="hero bg-light">
 
 		<!-- row  -->
 		<div class="row grid-middle">
 
-			<div class="col-12">
-
-				<div class="col-12">
-					<h1 class="animation hero-header" data-animation="fadeInUp">
+				<div class="col-12 move" data-move="fadeInDown">
+					<h1 class="hero-header">
 					<span>What if your </span>
 					<span class="highlight typed"></span><br />
-					<span>could</span>
+					<span>could just</span>
 					<span class="highlight">text </span>
 					<span>you?</span>
 					</h1>
 				</div>
 
-				<div class="col-12 animation" data-animation="fadeIn">
-					<p class="p-large hero-description">Buisness texing made easy. <a href="" class="link">Watch the video <i class="material-icons">play_circle_outline</i></a></p>
+				<div class="col-12 move" data-move="fadeInUp">
+					<p class="p-large hero-description">Buisness texing made easy.
+					<!-- Modal Trigger -->
+					<a href="#modal1" class="link">Watch the video <i class="material-icons">play_circle_outline</i></a></p>
 				</div>
 
-				<div class="col-12 animation" data-animation="fadeInLeft">
-					<a href="/get-started" class="btn ghost overlay-trigger"><i class="material-icons">arrow_forward</i>Get Started</a>
+				<div class="col-12 move" data-move="fadeInLeft" data-move-delay=".5s">
+					<a href="/get-started" class="btn">{% include icon/right.html %} Get Started</a>
 				</div>
-
-			</div>
-
 		</div>
-
-	</div>
 
 </div>

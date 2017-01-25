@@ -17,12 +17,17 @@ $linkDark    : #e26223;	//dark orange
 $grayLight   : #F5F5F5;
 $grayDark    : #BDBDBD;
 
-$lightest    : #fff;
+$lightest    : #fefefe;
 $darkest     : #222;
 
 $font        : #999999;
 
-// colors in sections are based off background color or section 
+// colors in sections are based off background color or section
+
+h1, h2, h3, h4, h5, label, p, a, span, li {
+	color: $tertDark;
+}
+
 
 
 // bg-light
@@ -45,24 +50,42 @@ $font        : #999999;
 }
 
 .bg-dark {
-	background-color: $tertLight;
-		
+	background-color: $tertDark;
+
+	* {
+		color: #fff;
+	}
+}
+
+.bg-prime {
+	background-color: $primeLight;
+
+	* {
+		color: #fff;
+	}
+}
+
+.bg-sec {
+	background-color: $secLight;
+
 	* {
 		color: #fff;
 	}
 }
 
 
-.bg-blue {
+.bg-secDark {
 	background-color: $secDark;
-	color: $secLight;
 
-	p {
+	* {
 		color: #fff;
-	}
-
-	h6 {
-	color: #fff;
 	}
 }
 
+.bg-link {
+	background-color: $linkLight;
+
+	* {
+		color: #fff;
+	}
+}

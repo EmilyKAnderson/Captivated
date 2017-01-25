@@ -1,0 +1,16 @@
+<!-- Hero interior partial getting data from hero.yml -->
+
+<div class="hero-interior bg-light">
+
+		<div class="row grid-middle">
+
+			 {% assign id = site.data.hero[page.id] %}
+				<div class="col-12 hero-header move" data-move="fadeInDown">
+				  <label>{{ id.label }}</label>
+					<h2>{{ id.head }}</h2>
+					<p class="p-large">{{ id.subhead }}</p>
+				</div>
+
+			</div>
+
+</div>

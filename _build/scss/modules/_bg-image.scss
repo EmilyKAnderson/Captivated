@@ -1,0 +1,33 @@
+.bg-image:first-child {
+  // max-height: 50vh;
+  position: relative;
+  height: 70vh;
+  max-height: 250px;
+
+  @media #{$media-lg} {
+    max-height: 500px;
+  }
+}
+
+.bg-image {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  max-height: 90vh;
+
+  >div {
+    padding: 0;
+    position: relative;
+    top:0;
+    left: 0;
+    right:0 ;
+    bottom: 0;
+
+    img {
+      position: relative;
+      @include center();
+      width: auto;
+      max-width: 120%;
+    }
+  }
+}

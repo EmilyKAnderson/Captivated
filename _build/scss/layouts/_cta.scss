@@ -1,0 +1,36 @@
+.cta {
+	padding-bottom: $space*2;
+
+	>* {
+		margin-bottom: $space*1.5;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media #{$media-med} {
+			margin-bottom: 0;
+		}
+
+		>* {
+			&:last-child {
+					margin-top: $space;
+			}
+		}
+	}
+
+	figure {
+		height: 200px;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+    display: block;
+
+		img {
+      position: absolute;
+			@include center();
+		}
+	}
+
+
+}

@@ -1,8 +1,42 @@
-// icons
+//////////////////////////////////////////
+// all svg icon styles
+//////////////////////////////////////////
+.icon {
+	width: auto;
+	display: flex;
+	stroke: $secLight;
+	fill: $secLight;
+	stroke-width: 0px;
+position: relative;
+	backface-visibility: visible;
+	height: 40px;
+	padding-right: $space/2;
+	opacity: .9;
+	@include transition();
+}
 
+
+//////////////////////////////////////////
+// Pricing icons
+//////////////////////////////////////////
+.pricing-icon {
+		stroke: $secLight;
+		stroke-width: 0px;
+		width: 100%;
+		height: 100%;
+		max-width:60%;
+		border-color: #secDark;
+		fill: $secLight;
+		z-index: 0;
+		opacity: .7;
+}
+
+
+//////////////////////////////////////////
 //hamburger
+//////////////////////////////////////////
 .hamburger {
-	height:$hamburgerHeight;
+		height:$hamburgerHeight;
     display: flex;
     cursor: pointer;
     transition-property: opacity,-webkit-filter;
@@ -18,6 +52,11 @@
     margin: 0;
     overflow: visible;
     z-index: 999;
+		transform: scale(.85);
+
+		@media #{$media-lg} {
+			transform: scale(1);
+		}
 
 //hamburger //hamburger-box
 	.hamburger-box {
@@ -25,8 +64,12 @@
 	    width: $hamburgerWidth;
 	    height:$hamburgerHeight;
 	    position: relative;
-	    margin-top: 7px;
-		 padding-left: 0;
+	    margin-top: 10px;
+		  padding-left: 0;
+
+			@media #{$media-lg} {
+				margin-top: 11px;
+			}
 
 	    .hamburger-inner,
 	    .hamburger-inner:after,
@@ -43,7 +86,7 @@
 
 //hamburger //hamburger-box //hamburger-innner
 		.hamburger-inner {
-			display: block;
+				display: block;
 	    	top: 55%;
 
 	    	&:before {
@@ -105,21 +148,12 @@
 
 
 	.social-icon {
-		height: 50px;
-		width: 50px;
-		border-radius: 100%;
-		background-color: #fff;
+		// background-color: #fff;
 		margin-bottom: 0;
 		margin-right: $space;
+		margin-top: $space;
 
-		 i {
-		 	position: relative;
-		 	top: 3px;
-		 	color: $primeLight;
-		 	font-size: responsive 16px 25px;
-		 }
-
-		 &:hover i {
-		 	color: $linkLight;
+		 &:hover svg {
+		 	fill: $linkLight;
 		 }
 	}

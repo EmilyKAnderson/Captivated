@@ -1,0 +1,104 @@
+.modal {
+
+  z-index: -1;
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 80%;
+  width: calc(100% - 1em);
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity;
+
+  @media #{$media-med} {
+     width: 80%;
+  }
+
+  h1,h2,h3,h4 {
+    margin-top: 0;
+  }
+
+
+  .modal-header {
+    border-radius: 0 0 2px 2px;
+    background-color: $secLight;
+    height: 54px;
+    width: 100%;
+
+  }
+}
+.modal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background:$tertDark;
+  display: none;
+  will-change: opacity;
+}
+
+// Modal with fixed action footer
+.modal.modal-fixed-footer {
+  padding: 0;
+  height: 70%;
+
+  .modal-content {
+    position: absolute;
+    height: calc(100% - 54px);
+    max-height: 100%;
+    overflow-y: auto;
+    width: 100%;
+    top: 54px;
+
+    iframe {
+      width: 100%;
+      position: relative;
+      height: 100%;
+    }
+  }
+
+  .modal-header {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .social-icon{
+      margin: 0 0 0 $space/2;
+    }
+    svg {
+      fill: #fff;
+    }
+
+    .modal-close {
+      cursor: pointer;
+      position: absolute;
+      right: $space;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      h4 {
+        color: #fff;
+        display: flex;
+        margin-bottom: 0;
+        @include transition();
+      }
+
+      &:hover  h4 {
+        @include transition();
+        color: $linkDark;
+      }
+    }
+  }
+  //end modal footer
+}

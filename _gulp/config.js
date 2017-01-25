@@ -23,12 +23,20 @@ module.exports = {
         ]
     },
 
-    js: {
+    vendor: {
         src : [  // source js file
           src + 'vendor/waypoints/lib/jquery.waypoints.min.js',
-          src + 'vendor/typed.js/dist/typed.min.js'
+          src + 'vendor/typed.js/dist/typed.min.js',
+          src + 'vendor/slick-carousel/slick/slick.min.js'
         ],
         concatFilename: 'vendor.js', // result filename
+        jekyllJsDest: dest + '_site/js/',
+        jsDest: src + 'js/'
+    },
+
+    js: {
+        src: src + 'js/**/*.js',
+        concatFilename: 'scripts.min.js', // result filename
         jekyllJsDest: dest + '_site/js/',
         jsDest: src + 'js/'
     },
@@ -58,15 +66,11 @@ module.exports = {
             src + 'images/**/*.jpg',
             src + 'images/**/*.svg',
             src + '_posts/*.md',
+            src + '_posts/*.markdown',
             src + '_data/*.yml',
             src + '**/*.html',
             '!' + dest + '_site/**/*.*'
         ]
-    },
-
-    compressjs: {
-        src: src + 'js/*.js',
-        dest: dest + '_site/js/'
-    },
+    }
 
 };

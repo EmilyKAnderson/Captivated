@@ -3,8 +3,14 @@
 // pertains to styleguide page only
 //////////////////////////////////////////
 .styles-section {
-	h2,h3,h4,h5,p {
+	h1, h2,h3,h4,h5,p {
 		margin-bottom: $space * 2;
+	}
+
+	label {
+		display: block;
+		text-align: left;
+		margin-left: 0;
 	}
 }
 .colors {
@@ -13,9 +19,9 @@
 
 	.color {
 		display: block;
-		width: 120px;
-		height: 120px;
-		border-radius: 100%;
+		width: 100px;
+		height: 100px;
+		border-radius: 1000px;
 		margin-bottom:  $space / 2;
 
 		&.prime-light {
@@ -56,5 +62,3 @@
 		margin-bottom: $space ;
 	}
 }
-
-

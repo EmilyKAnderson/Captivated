@@ -6,6 +6,7 @@
     "respond": "~1.4.1",
     "jquery": "^3.1.0",
     "waypoints": "^4.0.0",
-    "typed.js": "^1.1.4"
+    "typed.js": "^1.1.4",
+    "slick-carousel": "^1.6.0"
   }
 }

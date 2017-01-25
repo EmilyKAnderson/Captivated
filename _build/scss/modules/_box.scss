@@ -1,189 +1,259 @@
 // boxes with triangle
 .markets {
-		margin: 0;
-		padding: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	li {
+		position: relative;
+		height: auto;
+		margin-bottom: $space/3;
 		width: 100%;
 
-		li {
-			position: relative;
-			height: 270px;
-			margin-bottom: $space/3;
-			width: calc(100% - 30px);
 
-			@media #{$media-sm} {
-					height: 300px;
-					margin-bottom: $space/2;
+		@media #{$media-med} {
+			height: 400px;
+			margin-bottom: $space;
+		}
+
+		@media #{$media-lg} {
+			height: 380px;
+		}
+
+		&:nth-child(1) {
+
+			@media #{$media-lg} {
+				width: calc(40% - 15px);
 			}
 
-			@media #{$media-med} {
-					width: calc(50% - 15px);
-					height: 340px;
-					margin-bottom: $space;
+		}
+
+		&:nth-child(2) {
+
+			@media #{$media-lg} {
+				width: calc(60% - 15px);
+			}
+
+		}
+
+		&:nth-child(3) {
+			@media #{$media-lg} {
+				width: calc(33% - 15px);
+			}
+		}
+
+		&:nth-child(4) {
+			@media #{$media-lg} {
+				width: calc(33% - 15px);
+			}
+		}
+
+		&:nth-child(5) {
+			@media #{$media-lg} {
+				width: calc(33% - 15px);
+			}
+		}
+
+		&:nth-child(6) {
+			@media #{$media-lg} {
+				width: calc(60% - 15px);
+			}
+		}
+
+		&:nth-child(7) {
+			@media #{$media-lg} {
+				width: calc(40% - 15px);
+			}
+		}
+
+		&:nth-child(8) {
+			@media #{$media-lg} {
+				width: calc(33% - 15px);
+			}
+		}
+
+		&:nth-child(9) {
+			@media #{$media-lg} {
+				width: calc(33% - 15px);
+			}
+		}
+
+		&:nth-child(10) {
+			@media #{$media-lg} {
+				width: calc(33% - 15px);
+			}
+		}
+
+		&.box-2 {
+			@media #{$media-lg} {
+				width: calc(40% - 15px);
+			}
+		}
+
+		&.box-3 {
+			@media #{$media-lg} {
+				width: calc(60% - 15px);
+			}
+		}
+
+
+		div {
+			display: flex;
+			align-items: center;
+			padding: $space 0;
+
+			@media #{$media-lg} {
+						padding:0;
+			}
+
+			article {
+				display: flex;
+				flex-flow: row wrap;
+
+				>* {
+					display: flex;
+					flex-flow: row wrap;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		header {
+			z-index: 2;
+			position: absolute;
+			padding: $space $space/2;
+
+			h4 {
+				color: #fff;
+				text-shadow: 0px 1px 1px $darkest;
+				font-size: responsive 25px 32px;
 			}
 
 			@media #{$media-lg} {
-					height: 380px;;
+				padding: $space;
 			}
-
-
-			&:nth-child(1) {
-
-				@media #{$media-lg} {
-						width: calc(40% - 15px);
-				}
-
-			}
-
-			&:nth-child(2) {
-
-				@media #{$media-lg} {
-						width: calc(60% - 15px);
-				}
-
-			}
-
-			&:nth-child(3) {
-				@media #{$media-lg} {
-					width: calc(33% - 15px);
-				}
-			}
-
-			&:nth-child(4) {
-				@media #{$media-lg} {
-					width: calc(33% - 15px);
-				}
-			}
-
-			&:nth-child(5) {
-				@media #{$media-lg} {
-					width: calc(33% - 15px);
-				}
-			}
-
-			&:nth-child(6) {
-				@media #{$media-lg} {
-						width: calc(60% - 15px);
-				}
-			}
-
-			&:nth-child(7) {
-				@media #{$media-lg} {
-						width: calc(40% - 15px);
-				}
-			}
-
-			&:nth-child(8) {
-				@media #{$media-lg} {
-					width: calc(33% - 15px);
-				}
-			}
-
-			&:nth-child(9) {
-				@media #{$media-lg} {
-					width: calc(33% - 15px);
-				}
-			}
-
-			&:nth-child(10) {
-				@media #{$media-lg} {
-					width: calc(33% - 15px);
-				}
-			}
-
-
-			figure {
-				margin: 0;
-				width: 100%;
-				height: inherit;
-				border-radius: $borderRadius;
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				overflow: hidden;
-
-				img {
-					position: absolute;
-					min-width: 120%;
-					display: block;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%,-50%);
-
-					@media #{$media-med} {
-							min-width: 150%;
-					}
-
-				}
-
-				figcaption {
-					position: absolute;
-			    top: 0;
-			    right: 0;
-			    bottom: 0;
-			    left: 0;
-			    background-color: rgba(49, 57, 71, 0.7);
-			    padding: $space;
-			    color: white;
-			    display: flex;
-			    flex-direction: column;
-			    align-items: flex-start;
-			    justify-content: center;
-			    transition: opacity .4s 0s ease-in-out;
-			    opacity: 0;
-
-					> p {
-						font-weight: 500;
-					}
-
-					> a {
-						@extend %box-link;
-						font-weight: 700;
-						text-transform: uppercase;
-						font-size: responsive 12px 15px;
-						letter-spacing: 1px;
-					}
-				}
-
-				&:after {
-					 content: '';
-						position: absolute;
-						bottom: 0px;
-						right: 0px;
-						width: 200px;
-						height: 100px;
-						animation-transform-origin: top left;
-						transform-origin: top left;
-						background-color: $secLight;
-
-						// NOTE: cubic-bezier(P1x,P1y,P2x,P2y) first and last values stay between 0 and 1
-						// NOTE: Learning things about cubic-bezier - the last input give it a really nice bounce!
-						transition: transform .5s 0s cubic-bezier(.42, 0, .58, .98);
-						// transition: transform .5s 0s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-						transform: translate3D(0, 240%, 0) skewY(-30deg);
-						border: 1px solid $secDark;
-
-					}
-
-			}
-
-				&:hover figure {
-					 border-radius: $borderRadius;
-					 cursor: pointer;
-			     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
-
-			     &:after {
-			       transform: translate3D(0, 135%, 0) skewY(-30deg);
-
-			     }
-
-					 figcaption {
-						 opacity: 1;
-					 }
-			 }
 
 		}
+		figure, div {
+			margin: 0;
+			width: 100%;
+			height: inherit;
+			border-radius: $borderRadius;
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				display: block;
+				@include center();
+
+				@media #{$media-med} {
+					height: 110%;
+					width: auto;
+				}
+			}
+
+			article {
+				padding: 0 $space;
+			}
+
+			figcaption {
+				position: relative;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: 100%;
+				background-color: rgba(49, 57, 71, 0.55);
+				padding: 0 $space/2;
+				color: #fff;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: center;
+				transition: opacity .4s 0s ease-in-out;
+				opacity: 0;
+				text-shadow:  0 1px 1px $darkest;
+
+				@media #{$media-lg} {
+					padding: 0 $space;
+				}
+
+				> p {
+					font-weight: 500;
+					padding-top: $space;
+
+					@media #{$media-lg} {
+						padding-top: $space/2;
+					}
+				}
+
+				> * {
+					color: #fff;
+				}
+
+				> a {
+					@extend %box-link;
+					font-weight: 700;
+					text-transform: uppercase;
+					font-size: responsive 12px 15px;
+					letter-spacing: 1px;
+				}
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+				width: 200px;
+				height: 100px;
+				animation-transform-origin: top left;
+				transform-origin: top left;
+				background-color: $secLight;
+				// NOTE: cubic-bezier(P1x,P1y,P2x,P2y) first and last values stay between 0 and 1
+				// NOTE: Learning things about cubic-bezier - the last input give it a really nice bounce!
+				transition: transform .5s 0s cubic-bezier(.42, 0, .58, .98);
+				transform: translate3D(0, 240%, 0) skewY(-30deg);
+				border: 1px solid $secDark;
+
+			}
+
+		}
+
+		&:hover figure, &.active figure {
+			border-radius: $borderRadius;
+			cursor: pointer;
+			box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
+
+			&:after {
+				transform: translate3D(0, 135%, 0) skewY(-30deg);
+
+			}
+
+			figcaption {
+				opacity: 1;
+			}
+
+		} //end hover figure
+
+		&.active figure {
+
+			figcaption {
+				opacity: 1;
+			}
+
+		}
+
+	} // end li
+
 }
 
 
@@ -197,7 +267,7 @@
 	overflow: hidden;
 
 	&:nth-child(1), &:nth-child(3) {
-			border-width: 1px;
+		border-width: 1px;
 	}
 
 
@@ -230,7 +300,6 @@
 	display: block;
 	display: flex;
 	align-items: flex-end;
-	// text-align:center;
 	transform: translateY(100%);
 	@include transition();
 	opacity: 0;
@@ -255,14 +324,105 @@
 }
 
 .box:hover {
-		@include transition();
+	@include transition();
 
-		h4 {
-			color: $grayLight;
-		}
-
-		.box-overlay {
-			transform: translateY(0%);
-			opacity: 1;
+	h4 {
+		color: $grayLight;
 	}
+
+	.box-overlay {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+.box-wrap {
+	position: relative;
+
+&.images {
+	color: #fff;
+
+	li {
+			position: relative;
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+
+			figure {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				background-color: $tertDark;
+
+				img {
+					@include center();
+					width:auto ;
+					position: absolute;
+					opacity: .7;
+				}
+
+				figcaption {
+					position: absolute;
+					top: $space;
+					left: $space;
+					@include transition();
+					text-shadow:  0 1px 1px $darkest;
+
+					h3 {
+						margin-bottom: 0;
+					}
+
+				} //end figcaption
+
+			} //end figure
+
+			article {
+				position: relative;
+				padding: $space;
+				@include transition();
+
+				h5 {
+					margin-bottom: $space/3;
+				}
+
+				@media #{$media-lg}{
+					padding: $space;
+				}
+
+			} //end article
+
+
+			&:hover {
+
+				@media #{$media-lg}{
+					@include transition();
+
+					figcaption {
+						opacity: 0;
+						@include transition();
+					}
+
+					article {
+						opacity: 1;
+						@include transition();
+					}
+
+				}
+
+			} //end hover
+
+			figure + article {
+					text-shadow:  0 1px 1px $darkest;
+					padding: $space*3 $space $space;
+
+				@media #{$media-lg}{
+					opacity: 0;
+				}
+
+			}  //end of article that follows figure
+
+		} //end li
+
+	} //emd images
+
 }

@@ -1,0 +1,33 @@
+# hero content hero-interior partial
+# //////////////////////////////////
+
+# //////////////////////////////////
+# main-pages
+contact:
+    label: Contact
+    head: Let's <span class="highlight">start</span> a conversation
+    subhead: We run our business using Captivated because it works. Have a question or want a quick 15 minute demo? - Text us or <a class="link">Get started</a> today.
+
+why:
+    label: Why Captivated
+    head: Text messaging <span class="highlight">platform</span>
+    subhead: Captivated enables business to engage in real-time &amp; authentic conversations with their customers to increase sales and improve customer service.
+
+get-started:
+    label: Get started
+    head: Choose a <span class="highlight">plan</span>
+    subhead: With our month-to-month plan, you'll pay as you go with no commitment to future months. With our annual plan, you'll pay once per year and save 20%.
+
+features:
+    label: Get started
+    head: Choose a <span class="highlight">plan</span>
+    subhead: With our month-to-month plan, you'll pay as you go with no commitment to future months. With our annual plan, you'll pay once per year and save 20%.
+
+# //////////////////////////////////
+
+# //////////////////////////////////
+# markets
+automotive:
+    label: Automotive
+    head: Business texting made easy <br> for <span class="typed-markets"></span>
+    subhead: Text or call?  Let's face it, everyone would rather text you than call you. Texting is pervasive and convenient. It’s less intrusive than a phone call. You get faster responses than sending an email.

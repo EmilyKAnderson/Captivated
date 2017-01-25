@@ -15,21 +15,31 @@
     perspective-origin-x: 100%;
     -webkit-perspective-origin-x: 100%;
 	overflow-y: scroll; /* has to be scroll, not auto */
-	z-index: 1 ;
+	z-index: 1;
 
 	@media #{$media_med} {
 	    overflow-y: auto;
 	}
 
-
 	.par-section {
-				margin: $space/3;
+				// margin: 0 $space/3;
 				border-radius: 3px;
 	      position: relative;
 		    min-height: 500px; /* fallback for older browsers */
 		    min-height: 50%;
 		    -webkit-transform-style: preserve-3d;
 		    transform-style: preserve-3d;
+				max-width: 1400px;
+
+
+				@media #{$media-sm} {
+					// width: calc(100% - 20px);
+				}
+
+				@media #{$media-med} {
+					// width: calc(100% - 60px);
+				}
+
 
 			@media #{$media_sm} {
 				 min-height: 60%;
@@ -53,8 +63,8 @@
 					border-radius: $borderRadius;
 					height: 100%;
 					overflow: hidden;
-				    transform-origin-x: calc(100% + 30px);
-					-webkit-transform-origin-x:calc(100% + 30px);
+				    transform-origin-x:100%;
+					-webkit-transform-origin-x:100%;
 
 			   &.fastest {
 			      -webkit-transform: translateZ(150px) scale(.5);

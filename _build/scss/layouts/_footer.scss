@@ -1,70 +1,100 @@
-footer {
+// ----------------------------------------- //
+// footer - THE END
+// ----------------------------------------- //
+footer.global-footer {
 	position: relative;
 	padding: $space 0;
-	min-height: 500px;
-	// height: 100%;
 	background: $tertDark url(../images/texture.png) center center ;
-
+	margin-top: $space;
+	
 	@media #{$media-med} {
 		min-height: 300px	;
 	}
-	
+
 	.row {
 		min-height: 300px;
-
-		> [class*="col-"] {
-			// border-top: 1px solid $grayDark;
-			padding: $space 0;
-
-			&:nth-child(1) {
-				// border-top: 0px solid $grayDark;
-			}
-		}
 	}
+
+	// ----------------------------------------- //
+	// footer menu
+	// ----------------------------------------- //
 
 	.footer-menu {
 		margin-left: 0;
-		padding-left: 0;
-		li {
-			display: inline-block;
-			margin-right: $space;
+		padding: 0 $space/2 $space 0;
 
-			a {
-				font-weight:600;
-				font-size: responsive 16px 22px;
-				letter-spacing: .5px;
+		 li a {padding-bottom: $space/3;}
 
-				&:hover {
-					color: $linkLight;
-				}
-			}
-		}
-	}
+		@media #{$media-med} {
+			padding: 0 $space/2;
 
+			li {
+				display: inline-block;
+				margin-right: $space;
+
+				a {
+					font-weight:600;
+					font-size: responsive 16px 22px;
+					letter-spacing: .5px;
+					padding-bottom: $space/4;
+
+					&:hover {
+						color: $linkLight;
+					} // end hover
+
+				} //end a
+
+			} //end li
+
+		} //end media med
+
+	} //end footer menu
+
+	// ----------------------------------------- //
+	// Lower footer menu
+	// ----------------------------------------- //
 	.footer-menu-lower {
 			margin-left: 0;
 			padding-left: 0;
-			float: right;
-			position: absolute;
-			display: flex;
-			width: 50%;
-			justify-content: flex-end;
+			display: block;
+			width: 100%;
+			position: relative;
+			padding: $space 0;
 
-			li {
-
+			@media #{$media-med} {
 				display: flex;
+				width: 50%;
+				float: right;
+				position: absolute;
+				justify-content: flex-end;
+				padding: 0;
+
+				li {
+
+					display: flex;
+
+					a {
+						 margin-right: $space;
+
+						&:hover {
+							color: $linkLight;
+						} //end hover
+
+					} //end a
+
+				} //end li
 
 			}
 
 			a {
-			   font-size: responsive 12px 14px;
-			   margin-left: $space;
-
-				&:hover {
-					color: $linkLight;
-				}
+		    font-size: responsive 12px 14px;
 			}
+
 		}
+
+// ----------------------------------------- //
+// footer logo
+// ----------------------------------------- //
 
 	.footer-logo {
 		max-width: 100px;

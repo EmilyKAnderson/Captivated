@@ -25,39 +25,47 @@ button {
 		}
 }
 
-//btn
 .btn {
-		// border: 2px solid $linkLight;
-		// height: 50px;
 		background-color: $linkLight;
 		overflow: hidden;
-		padding: 18px 40px 18px 90px;
 		z-index: 1;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    // background-color: #fff;
     border-radius: $btnBorderRadius;
     color: #fff;
     cursor: pointer;
-    display: inline-block;
     font-weight: 700;
     letter-spacing: 1px;
     outline: none;
     position: relative;
     text-transform: uppercase;
     transition: all 0.3s;
+		padding: 18px 40px 18px 90px;
+		display: flex;
+		max-width: 120px;
+		align-items: center;
+		flex-flow: row wrap;
+
+		&.no-icon {
+				display: inline-block;
+				padding: 18px;
+				max-width: none;
+		}
 
 //btn //i
-    i {
+    i, svg.icon {
     	position: absolute;
-    	left: 18px;
+    	left: $space/1.5;
     	font-size: responsive 18px 30px;
-    	margin-top: -3px;
+			fill: #fff;
+			display: flex;
+			max-width: 30px;
+
+			@media #{$media-sm} {
+				max-width:none;
+			}
     }
 
 //btn:before
     &:before {
-			// padding:$space/4;
 	    position: absolute;
 	    height: 200px;
 			right: calc(100% - 160px);

@@ -1,26 +1,24 @@
-// custom fade in on scroll animation classes
-.animation {
+.move{
   opacity: 0;
 }
 
-.animation.animated {
-opacity: 1;
-backface-visibility: hidden;
+.move.animated{
+    opacity: 1;
 }
 
 
 // main animation
 .fadeIn {
-  @include fadeIn();
+  @include fadeIn($duration: 1.2s, $function: ease-in-out);
 }
 
 .fadeInUp {
-
   @include fadeInUp($duration: .7s, $function: ease-out);
 }
 
 .fadeInDown {
   @include fadeInDown($duration: .7s, $function: ease-out);
+
 }
 
 .fadeInLeft {
@@ -29,8 +27,8 @@ backface-visibility: hidden;
 
 .fadeInRight {
   @include fadeInRight($duration: .7s, $function: ease-out);
-}
 
+}
 
 .slideInLeft{
   @include slideInLeft($duration: 1.5s, $function: ease);
@@ -86,15 +84,19 @@ backface-visibility: hidden;
 }
 
 
+// ----------------------------------------- //
+// TYPED ANIMATION
+// ----------------------------------------- //
 
-
-.typed-cursor{
+.typed-cursor {
     opacity: 1;
     -webkit-animation: blink 1.4s infinite;
     -moz-animation: blink 1.4s infinite;
     animation: blink 1.4s infinite;
     font-weight: 600;
+    color: $primeLight;
 }
+
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }

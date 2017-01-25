@@ -1,8 +1,8 @@
 
 
-<footer class="section bg-dark">
+<footer class="section bg-dark global-footer">
 
-	<div class="row grid-spaceBetween animation" data-animation="fadeInUp">
+	<div class="row grid-spaceBetween move" data-move="fadeIn">
 
 		<div class="col-12-top">
 
@@ -30,17 +30,27 @@
 			</div>
 
 			<div class="col-12 grid">
-				<a href="#" class="social-icon grid-middle-center"><i class="socicon-twitter"></i></a>
-				<a href="#" class="social-icon grid-middle-center"><i class="socicon-linkedin"></i></a>
-				<a href="#" class="social-icon grid-middle-center"><i class="socicon-facebook"></i></a>
-				<a href="#" class="social-icon grid-middle-center"><i class="socicon-vimeo"></i></a>
-				<a href="#" class="social-icon grid-middle-center"><i class="socicon-youtube"></i></a>
+				<a href="#" class="social-icon grid-middle-center">
+					{% include icon/social/facebook.html %}
+				</a>
+				<a href="#" class="social-icon grid-middle-center">
+					{% include icon/social/linkedin.html %}
+				</a>
+				<a href="#" class="social-icon grid-middle-center">
+					{% include icon/social/twitter.html %}
+				</a>
+				<a href="#" class="social-icon grid-middle-center">
+					{% include icon/social/youtube.html %}
+				</a>
+				<a href="#" class="social-icon grid-middle-center">
+					{% include icon/social/vimeo.html %}
+				</a>
 			</div>
 		</div>
 
 <div class="col-12-bottom grid-equalHeight">
 
-		<div class="col-12_med-12_lg-6" push-left="off-6">
+		<div class="col-12_md-12_lg-6" push-left="off-0_md-6">
 
 			<ul class="footer-menu-lower">
 				{% for item in site.lowerfootnav %}
@@ -58,7 +68,7 @@
 
 		</div>
 
-		<div class="col-12_med-12_lg-6">
+		<div class="col-12_md-12_lg-6">
 			<p class="p-small">Copyright © 2016 Captivated LLC All rights reserved</p>
 		</div>
 

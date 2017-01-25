@@ -1,0 +1,40 @@
+
+///////////////////////////////
+// block styles throughout site
+///////////////////////////////
+.blocks {
+}
+///////////////////////////////
+//fullwidth blocks
+///////////////////////////////
+.blocks-full {
+  display: flex;
+  overflow: hidden;
+
+    >* {
+      text-align: left;
+      max-width: 100%;
+
+      @media #{$media-lg} {
+        flex: 1;
+      }
+    }
+
+    >*:first-child {
+        background-color: $tertDark;
+
+        * {
+          color: #fff;
+        }
+    }
+
+    >*:nth-child(2) {
+        background-color: $linkLight;
+
+        * {
+          color: $tertLight;
+        }
+
+    }
+
+} //end blocks-full

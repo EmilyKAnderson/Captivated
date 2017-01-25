@@ -2,123 +2,99 @@
 layout: default
 permalink: /get-started/
 title: Get Started
+id: get-started
 ---
 
-<!-- par-section -->
-<div class="hero-interior bg-light par-section">
-
-	<!-- par-element -->
-	<div class="par-element fast">
-
-		<!-- row  -->
-		<div class="row grid-middle">
-
-			<div class="col-12 grid">
-				<div class="col-12 hero-header animation" data-animation="fadeInDown">
-					<h6>Get started</h6>
-					<h2>Choose a <span class="highlight">plan</span></h2>
-				</div>
-
-				<div class="col-12_lg-7 animation" data-animation="fadeIn">
-					<p class="p-large">With our month-to-month plan, you'll pay as you go with no commitment to future months. With our annual plan, you'll pay once per year and save 20%.</p>
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
-</div>
-
+{% include hero-interior.html %}
 
 <section class="bg-shaded appear grid">
+
 	<div class="card-bg-accent"></div>
 
-   <div class="row col-12_md-6_lg-5 grid-center-spaceBetween">
+   <div class="row col-12_md-6_lg-5 grid-center-spaceBetween half-pad move" data-move="fadeIn">
     	<div class="col-5">
-        	<a href="#" class="plans-by-month tabs-btn tab-btn-1 is-active">Monthly</a>
+        	<a href="#" class="plans-by-month tabs-btn tab-btn-1 is-active"><span>Monthly</span></a>
      	</div>
      	<div class="col-5">
-        	<a href="#" class="plans-by-year tabs-btn tab-btn-2">Yearly</a>
+        	<a href="#" class="plans-by-year tabs-btn tab-btn-2"><span>Yearly</span></a>
        </div>
   	</div>
 
-	<div class="row grid-middle animation" data-animation="fadeInUp">
+	<ul class="row-no-pad grid-middle-center move" data-move="fadeInUp">
 
 		<!-- PREUMIUM Monthly -->
-		<div class="col-12_md-6_lg-3 grid card-pricing">
-			<div class="col-12">
+		<li class="col-11_md-6_lg-3 grid-center card-pricing">
+			<header class="col-12">
 				<h4>Premium</h4>
-			</div>
-			<div class="col-12 grid-center-middle price">
-				<p class="col-12">graphic here</p>
-			</div>
+			</header>
+			<figure class="col-8 grid-center-middle price">
+				{% include icon/pricing/pricing-premium.html %}
+			</figure>
 			<ul class="col-12">
-				<li>$299</li>
+				<li><h3>$299</h3></li>
 				<li>Up to 50 users</li>
 				<li>5000 messages included</li>
 			</ul>
-			<div class="col-12">
+			<footer class="col-12">
 				<a href="" class="">Get Started <i class="material-icons">arrow_forward</i></a>
-			</div>
-		</div>
+			</footer>
+		</li>
 
 		<!-- CHOICE Monthly -->
-		<div class="col-12_md-6_lg-3 grid card-pricing">
-			<div class="col-12">
+		<li class="col-11_md-6_lg-3 grid-center card-pricing active">
+			<header class="col-12">
 				<h4>Choice</h4>
-			</div>
-			<div class="col-12 grid-center-middle price">
-				<p class="col-12">graphic here</p>
-			</div>
+			</header>
+			<figure class="col-8 grid-center-middle price">
+				  {% include icon/pricing/pricing-choice.html %}
+			</figure>
 			<ul class="col-12">
-				<li>$199</li>
+				<li><h3>$199</h3></li>
 				<li>Up to 25 users</li>
 				<li>2500 messages included</li>
 			</ul>
-			<div class="col-12">
+			<footer class="col-12">
 				<a href="" class="">Get Started <i class="material-icons">arrow_forward</i></a>
-			</div>
-		</div>
+			</footer>
+		</li>
 
 		<!-- BASIC Monthly -->
-		<div class="col-12_md-6_lg-3 grid card-pricing">
-			<div class="col-12">
+		<li class="col-11_md-6_lg-3 grid-center card-pricing">
+			<header class="col-12">
 				<h4>Basic</h4>
-			</div>
-			<div class="col-12 grid-center-middle price">
-				<p>graphic here</p>
-			</div>
+			</header>
+			<figure class="col-8 grid-center-middle price">
+				{% include icon/pricing/pricing-basic.html %}
+			</figure>
 			<ul class="col-12">
-				<li>$99</li>
+				<li><h3>$99</h3></li>
 				<li>Up to 10 users</li>
 				<li>1000 messages included</li>
 			</ul>
-			<div class="col-12">
+			<footer class="col-12">
 				<a href="" class="">Get Started <i class="material-icons">arrow_forward</i></a>
-			</div>
-		</div>
+			</footer>
+		</li>
 
 		<!-- STARTER Monthly -->
-		<div class="col-12_md-6_lg-3 grid card-pricing">
-			<div class="col-12">
+		<li class="col-11_md-6_lg-3 grid-center card-pricing">
+			<header class="col-12">
 				<h4>Starter</h4>
-			</div>
-			<div class="col-12 grid-center-middle price">
-				<p class="col-12">graphic here</p>
-			</div>
+			</header>
+			<figure class="col-8 grid-center-middle price">
+				    {% include icon/pricing/pricing-starter.html %}
+			</figure>
 			<ul class="col-12">
-				<li>$49</li>
+				<li><h3>$49</h3></li>
 				<li>Up to 5 users</li>
 				<li>500 messages included</li>
 			</ul>
-			<div class="col-12">
+			<footer class="col-12">
 				<a href="" class="">Get Started <i class="material-icons">arrow_forward</i></a>
-			</div>
-		</div>
+			</footer>
+		</li>
 
-	</div>
+	</ul>
 
 
 </section>
