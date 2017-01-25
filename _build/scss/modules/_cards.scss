@@ -105,6 +105,9 @@
   @include transition();
   margin-bottom: $space;
   width: 90%;
+  h4 {
+    margin-bottom: $space/3;
+  }
 
   @media #{$media-med} {
     width: 50%;
@@ -211,4 +214,13 @@
 
 .js-yearly-content {
   display: none;
+  .annual-savings {
+    color: $primeLight;
+    margin: 0;
+    text-align: center;
+    span {
+      font-size: 0.5rem;
+      opacity: .3;
+    }
+  }
 }
