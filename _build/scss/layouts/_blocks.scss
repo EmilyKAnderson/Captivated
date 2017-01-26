@@ -35,43 +35,22 @@
         }
       }
     }
-
-    >*:first-child {
-        background-color: $tertDark;
-
-        * {
-          color: #fff;
-        }
-    }
-
-    >*:nth-child(2) {
-        background-color: $linkLight;
-
-        * {
-          color: $tertLight;
-        }
-
-    }
-
-// alt colors and background for this side by side section
-    &.alt {
-      >*:first-child {
-          background-color: $secLight;
-
-          * {
-            color: #fff;
-          }
-      }
-
-      >*:nth-child(2) {
-          background-color: #fff;
-
-          * {
-            color: $tertLight;
-          }
-
-      }
-
-    }
+    
+    // >*:first-child {
+    //     background-color: $tertDark;
+    //
+    //     * {
+    //       color: #fff;
+    //     }
+    // }
+    //
+    // >*:nth-child(2) {
+    //     background-color: $linkLight;
+    //
+    //     * {
+    //       color: $tertLight;
+    //     }
+    //
+    // }
 
 } //end blocks-full
