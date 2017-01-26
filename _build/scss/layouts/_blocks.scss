@@ -15,8 +15,24 @@
       text-align: left;
       max-width: 100%;
 
+
       @media #{$media-lg} {
         flex: 1;
+      }
+
+      article, blockquote {
+        z-index: 1;
+        position: relative;
+        padding: $space $space;
+        border: 0px;
+        margin-bottom: 0;
+        display: flex;
+        color: #fff;
+        flex-flow: row wrap;
+
+        @media #{$media-lg}{
+          padding: $space*4 $space*2;
+        }
       }
     }
 
@@ -34,6 +50,27 @@
         * {
           color: $tertLight;
         }
+
+    }
+
+// alt colors and background for this side by side section
+    &.alt {
+      >*:first-child {
+          background-color: $secLight;
+
+          * {
+            color: #fff;
+          }
+      }
+
+      >*:nth-child(2) {
+          background-color: #fff;
+
+          * {
+            color: $tertLight;
+          }
+
+      }
 
     }
 

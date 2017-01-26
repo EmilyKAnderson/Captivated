@@ -15,18 +15,6 @@
 }
 
 blockquote {
-  z-index: 1;
-  position: relative;
-  padding: $space $space;
-  border: 0px;
-  margin-bottom: 0;
-  display: flex;
-  color: #fff;
-  flex-flow: row wrap;
-
-  @media #{$media-lg}{
-    padding: $space*4 $space*2;
-  }
 
   h4 {
     font-size: 30px;
