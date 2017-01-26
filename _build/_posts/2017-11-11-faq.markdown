@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Frequently Asked Questions"
-description: "label for this page"
+description: "FAQ"
 date: 2017-11-11
 categories: faq
 id: faq
