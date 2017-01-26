@@ -201,7 +201,6 @@
 				line-height: 1.4;
 				display: flex;
 				padding-right: 10px;
-				// color: $grayDark;
 				color: $primeLight;
 				@include transition();
 			}
@@ -242,17 +241,19 @@ nav {
 		position: fixed;
 		left: 0;right:0; top: 0; bottom:0;
 		width: 100vw;
-	  height: calc(100% - 60px);
+	  // height: 100%;
+		overflow-y: scroll;
 		margin-top: $space*2;
 		z-index:-200;
 		transition: z-index 0s .8s ease;
 
-	ul:nth-child(1) {
+	ul:first-child {
     width: 100vw;
     display: flex;
-		margin-top: $space*2;
+		padding:  $space*2 0 0  $space;
     flex-direction: column;
     float: left;
+		height: 100%;
 		padding-left: 0;
 		justify-content: flex-start;
 
@@ -264,20 +265,28 @@ nav {
 				@include transition-nav();
 
 				a {
-					padding: $space/6 $space;
+					padding: $space/8 $space/2;
 					display:inline-block;
 					text-align: left;
 					color:#fff;
-					font-size: responsive 16px 60px;
+					font-size: responsive 20px 50px;
+					margin-left: $space/2;
+					margin-bottom: $space/3;
 
 						&.active {
-								background-color: $tertDark;
-								color: $primeLight;
+								// background-color: $tertDark;
+								// color: $primeLight;
+								border-bottom: 2px dashed $primeDark;
 							}
 
 					@media #{$media-lg} {
-						margin-left: $space*1.5;
-						margin-left: $space/2;
+						margin-left: $space*2;
+						margin-bottom: $space/2;
+					}
+
+					&:hover {
+						color: $secLight;
+						@include transition();
 					}
 				}
 
@@ -286,10 +295,10 @@ nav {
 				&:nth-last-of-type(-n+1) {
 						display: flex;
 						margin-top: $space;
-						padding-left: $space*1.4;
+						padding-left: $space;
 
 							@media #{$media-lg} {
-								margin-left: $space/2;
+								margin-left: 0;
 							}
 
 						a {
@@ -299,10 +308,6 @@ nav {
 
 					}
 
-					&:hover a {
-						color: $secLight;
-						@include transition();
-					}
 
 			} //end li
 

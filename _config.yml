@@ -15,9 +15,12 @@ navigation:
   - title: Home
     url: *baseurl
     id: home
-  - title: Why
-    url: why/
-    id: why
+  # - title: Why
+  #   url: why/
+  #   id: why
+  - title: How it works
+    url: how-it-works/
+    id: how-it-works
   - title: Features
     url: features/
     id: features

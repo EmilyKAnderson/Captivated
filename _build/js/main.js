@@ -75,7 +75,7 @@ $(function(){
         typeSpeed: 100,
         loop:false,
          // false = infinite
-        backDelay: 2200
+        backDelay: 2000
     });
 });
 
@@ -87,7 +87,7 @@ $(function(){
         typeSpeed: 100,
         loop:false,
          // false = infinite
-        backDelay: 2200
+        backDelay: 2000
     });
 });
 

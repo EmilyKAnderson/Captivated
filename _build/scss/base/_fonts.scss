@@ -59,7 +59,7 @@ h3 {
 // h4 /////////////////////////////////////////
 h4 {
 	font-weight: 800;
-	font-size: responsive 18px 26px;
+	font-size: responsive 19px 26px;
 	letter-spacing: .5px;
 	@extend %heading;
 	line-height: 1.4;
@@ -72,12 +72,11 @@ h5 {
 	font-size: responsive 16px 18px;
 	text-transform: uppercase;
 	@extend %heading;
-	line-height: 1.6;
 }
 
 label {
 	font-weight: 600;
-	font-size: responsive 13px 16px;
+	font-size: responsive 14px 16px;
 	@extend %heading;
 	margin-bottom: $space/4;
 	color: $grayDark;

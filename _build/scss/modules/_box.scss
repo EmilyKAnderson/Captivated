@@ -1,4 +1,4 @@
-// boxes with triangle
+// markets grid
 .markets {
 	margin: 0;
 	padding: 0;
@@ -9,6 +9,13 @@
 		height: auto;
 		margin-bottom: $space/3;
 		width: 100%;
+
+		a {
+			height: inherit;
+			position: relative;
+			display: flex;
+			cursor: auto;
+		}
 
 
 		@media #{$media-med} {
@@ -124,16 +131,13 @@
 		header {
 			z-index: 2;
 			position: absolute;
-			padding: $space $space/2;
+			padding: $space;
 
 			h4 {
 				color: #fff;
 				text-shadow: 0px 1px 1px $darkest;
 				font-size: responsive 25px 32px;
-			}
-
-			@media #{$media-lg} {
-				padding: $space;
+				display: block;
 			}
 
 		}
@@ -155,13 +159,27 @@
 				@include center();
 
 				@media #{$media-med} {
-					height: 110%;
+					// height: 130%;
 					width: auto;
+					max-width: 768px;
+				}
+
+				@media #{$media-med} {
+					// height: 110%;
+					max-width: 800px;
 				}
 			}
 
 			article {
 				padding: 0 $space;
+			}
+
+			header + figure {
+				figcaption {
+					p {
+						padding-top: $space*2;
+					}
+				}
 			}
 
 			figcaption {
@@ -172,7 +190,6 @@
 				left: 0;
 				height: 100%;
 				background-color: rgba(49, 57, 71, 0.55);
-				padding: 0 $space/2;
 				color: #fff;
 				display: flex;
 				flex-direction: column;
@@ -181,14 +198,14 @@
 				transition: opacity .4s 0s ease-in-out;
 				opacity: 0;
 				text-shadow:  0 1px 1px $darkest;
+				padding: $space $space/2;
 
-				@media #{$media-lg} {
+				@media #{$media-med} {
 					padding: 0 $space;
 				}
 
 				> p {
 					font-weight: 500;
-					padding-top: $space;
 
 					@media #{$media-lg} {
 						padding-top: $space/2;
@@ -199,13 +216,13 @@
 					color: #fff;
 				}
 
-				> a {
-					@extend %box-link;
-					font-weight: 700;
-					text-transform: uppercase;
-					font-size: responsive 12px 15px;
-					letter-spacing: 1px;
-				}
+				// > a {
+				// 	@extend %box-link;
+				// 	font-weight: 700;
+				// 	text-transform: uppercase;
+				// 	font-size: responsive 12px 15px;
+				// 	letter-spacing: 1px;
+				// }
 			}
 
 			&:after {
@@ -228,35 +245,40 @@
 
 		}
 
-		&:hover figure, &.active figure {
-			border-radius: $borderRadius;
-			cursor: pointer;
-			box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
+		@media #{$media-med} {
 
-			&:after {
-				transform: translate3D(0, 135%, 0) skewY(-30deg);
+					&:hover figure, &.active figure {
+						border-radius: $borderRadius;
+						cursor: pointer;
+						box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
 
-			}
+						&:after {
+							transform: translate3D(0, 135%, 0) skewY(-30deg);
 
-			figcaption {
-				opacity: 1;
-			}
+						}
 
-		} //end hover figure
+						figcaption {
+							opacity: 1;
+						}
 
-		&.active figure {
-
-			figcaption {
-				opacity: 1;
-			}
-
+					} //end hover figure
 		}
+
+		//
+		// &.active figure {
+		//
+		// 	figcaption {
+		// 		opacity: 1;
+		// 	}
+
+		// }
 
 	} // end li
 
 }
 
 
+// updated box styles for auto landing page
 .box {
 	position: relative;
 	border-right: 0px solid #fff;
@@ -347,6 +369,7 @@
 			padding: 0;
 			margin: 0;
 
+
 			figure {
 				position: absolute;
 				height: 100%;
@@ -358,6 +381,10 @@
 					width:auto ;
 					position: absolute;
 					opacity: .75;
+
+					&.sm {
+						max-width: 500px;
+					}
 				}
 
 				figcaption {

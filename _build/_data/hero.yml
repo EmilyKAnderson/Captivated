@@ -5,22 +5,27 @@
 # main-pages
 contact:
     label: Contact
-    head: Let's <span class="highlight">start</span> a conversation
+    head: Let's <span>start</span> a conversation
     subhead: We run our business using Captivated because it works. Have a question or want a quick 15 minute demo? - Text us or <a class="link">Get started</a> today.
 
 why:
     label: Why Captivated
-    head: Text messaging <span class="highlight">platform</span>
-    subhead: Captivated enables business to engage in real-time &amp; authentic conversations with their customers to increase sales and improve customer service.
+    head: Text messaging <span>platform</span>
+    subhead: Captivated enables business to engage in real-time &amp; authentic conversations with their customers to increase sales and improve customer service
+
+how-it-works:
+    label: Why Captivated
+    head: <span>How</span> it works
+    subhead: Captivated enables customers to communicate with your business through text messaging. By using software that runs in the background, Captivated is your silent assistant, empowering you to easily manage multiple conversations with your customers.
 
 get-started:
     label: Get started
-    head: Choose a <span class="highlight">plan</span>
+    head: Choose a <span>plan</span>
     subhead: With our month-to-month plan, you'll pay as you go with no commitment to future months. With our annual plan, you'll pay once per year and save 20%.
 
 features:
     label: Get started
-    head: Choose a <span class="highlight">plan</span>
+    head: Choose a <span>plan</span>
     subhead: With our month-to-month plan, you'll pay as you go with no commitment to future months. With our annual plan, you'll pay once per year and save 20%.
 
 # //////////////////////////////////

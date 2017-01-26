@@ -2,17 +2,23 @@
 // all svg icon styles
 //////////////////////////////////////////
 .icon, svg {
-	width: auto;
 	display: flex;
 	stroke: $secLight;
 	fill: $secLight;
 	stroke-width: 0px;
 	position: relative;
 	backface-visibility: visible;
-	height: 40px;
-	padding-right: $space/2;
+	height: 25px;
 	opacity: .9;
 	@include transition();
+
+	@media #{$media-med} {
+		width: 35px;
+		min-width: 35px;
+		height: auto;
+		padding-right: $space/2;
+
+	}
 }
 
 
