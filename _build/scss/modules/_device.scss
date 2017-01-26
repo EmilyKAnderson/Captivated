@@ -10,64 +10,69 @@ $tabletWidth: 800px;
 
 .device {
 
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      background-color: #fff;
-      border-radius: 40px;
-      margin-left: 0;
-      margin-top: 0;
-      transform: scale(.8);
-      box-shadow: 0px 15px 40px 0px lighten(#000, 88%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #fff;
+  border-radius: 40px;
+  margin-left: 0;
+  margin-top: 0;
+  transform: scale(.8);
+  box-shadow: 0px 15px 40px 0px lighten(#000, 88%);
 
-      &:after:not(.tablet) {
-        position: absolute;
-        content: '';
-        display: flex;
-        width: 35px;
-        height: 35px;
-        border-radius: 1000px;
-        border: 3px solid $grayLight;
-        bottom: 15px;
-      }
+  &:after:not(.tablet) {
+    position: absolute;
+    content: '';
+    display: flex;
+    width: 35px;
+    height: 35px;
+    border-radius: 1000px;
+    border: 3px solid $grayLight;
+    bottom: 15px;
+  }
 
-      picture {
-        width:100%;
-      }
+  picture {
+    width:100%;
+  }
 
-      img {
-        position: relative;
-        display: block;
-        border-radius: 4px;
-        width:100%;
-        border: 2px solid $grayLight;
-      }
+  img {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    width:100%;
+    border: 2px solid $grayLight;
+  }
 
-      @media #{$media-lg} {
-          position: relative;
-          left: 0;
-          transform: scale(1);
-      }
+  @media #{$media-lg} {
+    position: relative;
+    left: 0;
+    transform: scale(1);
+  }
 
 
-    &.mobile {
-      width: $mobileWidth;
-      height: $mobileHeight;
-      padding: $space*1.5 $space/1.7 $space*2;
+  &.mobile {
+    width: $mobileWidth;
+    height: $mobileHeight;
+    padding: $space*1.5 $space/1.7 $space*2;
+  }
+
+  &.tablet {
+    width: $tabletWidth;
+    height: $tabletHeight;
+    padding: $space*1.5;
+
+    @media #{$media-lg} {
+      position:absolute;
+      left: 0;
     }
 
-    &.tablet {
-      width: $tabletWidth;
-      height: $tabletHeight;
-      padding: $space*1.5 $space;
-
-      @media #{$media-lg} {
-        position:absolute;
-        left: 0;
-      }
-
+    &.left {
+      left: auto;
+      right: 0;
     }
 
   }
+
+}
