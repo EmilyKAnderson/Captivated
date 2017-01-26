@@ -49,7 +49,20 @@ h1, h2, h3, h4, h5, label, p, a, span, li {
 	}
 }
 
-.bg-dark {
+
+
+// here is where you set high level styles
+// for items on certain background colors
+
+.bg-tert {
+	background-color: $tertLight;
+
+	* {
+		color: #fff;
+	}
+}
+
+.bg-tertDark {
 	background-color: $tertDark;
 
 	* {
@@ -72,7 +85,6 @@ h1, h2, h3, h4, h5, label, p, a, span, li {
 		color: #fff;
 	}
 }
-
 
 .bg-secDark {
 	background-color: $secDark;
