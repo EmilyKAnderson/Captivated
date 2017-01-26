@@ -4,8 +4,8 @@
 // $mobileWidth: 375px;
 $mobileHeight: 568px;
 $mobileWidth: 310px;
-$tabletHeight: 630px;
-$tabletWidth: 1024px;
+$tabletHeight: 500px;
+$tabletWidth: 800px;
 
 
 .device {
@@ -33,17 +33,22 @@ $tabletWidth: 1024px;
         bottom: 15px;
       }
 
+      picture {
+        width:100%;
+      }
+
       img {
         position: relative;
         display: block;
-        border-radius: 3px;
+        border-radius: 4px;
+        width:100%;
+        border: 2px solid $grayLight;
       }
 
       @media #{$media-lg} {
           position: relative;
           left: 0;
           transform: scale(1);
-          max-width: 100%;
       }
 
 
@@ -54,12 +59,15 @@ $tabletWidth: 1024px;
     }
 
     &.tablet {
-      // position: absolute;
-      right: 0;
       width: $tabletWidth;
       height: $tabletHeight;
-      padding: $space*2 $space;
+      padding: $space*1.5 $space;
+
+      @media #{$media-lg} {
+        position:absolute;
+        left: 0;
+      }
+
     }
 
-
-}
+  }
