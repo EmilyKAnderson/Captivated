@@ -38,16 +38,23 @@ button {
     position: relative;
     text-transform: uppercase;
     transition: all 0.3s;
-		padding: 18px 40px 18px 90px;
+		padding: $space/2 $space/1.2;
 		display: flex;
-		max-width: 120px;
 		align-items: center;
 		flex-flow: row wrap;
+		text-align: center;
+		display: inline-block;
+		min-width: 100px;
 
 		&.no-icon {
 				display: inline-block;
 				padding: 18px;
 				max-width: none;
+		}
+
+		@media #{$media-med} {
+			min-width: 180px;
+			padding: $space/1.5 $space;
 		}
 
 //btn //i
@@ -96,9 +103,9 @@ button {
 
 .pricing-tab-btn {
 	background: transparent;
-	border-top: 2px solid #fff;
-	border-bottom: 2px solid #fff;
-	color: #fff;
+	border-top: 2px solid $grayLight;
+	border-bottom: 2px solid $grayLight;
+	color: $grayLight;
 	cursor: pointer;
 	display: inline-block;
 	font-weight: 700;
@@ -109,21 +116,21 @@ button {
 	@include transition;
 	width: 100%;
 	span {
-		color: #fff;
+		color: $grayLight;
 	}
 	&.is-active {
-		background-color: #fff;
+		background-color: $grayLight;
 		span {
 			color: $secLight;
 		}
 	}
 	&.pricing-tab-btn-1 {
-		border-left: 2px solid #fff;
-		border-right: 2px solid #fff;
+		border-left: 2px solid $grayLight;
+		border-right: 2px solid $grayLight;
 		border-radius: $btnBorderRadius/2 0 0 $btnBorderRadius/2;
 	}
 	&.pricing-tab-btn-2 {
-		border-right: 2px solid #fff;
+		border-right: 2px solid $grayLight;
 		border-radius: 0 $btnBorderRadius/2 $btnBorderRadius/2 0;
 	}
 }

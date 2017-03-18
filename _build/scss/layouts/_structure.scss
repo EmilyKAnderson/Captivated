@@ -5,7 +5,7 @@
 html, body {
 	position: relative;
 	height: 100%;
-	background-color: #fefefe;
+	background-color: $grayLight;
 	text-rendering: optimizeLegibility;
 }
 
@@ -73,6 +73,15 @@ section {
 
 		@media #{$media-xl} {
 			padding: $space*4 0;
+		}
+
+		&[class*="bg-"] {
+				padding: $space 0;
+
+				@media #{$media-med} {
+					padding: $space*2 $space/2;
+				}
+
 		}
 
 		&:first-child {

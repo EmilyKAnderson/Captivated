@@ -8,7 +8,7 @@
 	stroke-width: 0px;
 	position: relative;
 	backface-visibility: visible;
-	height: 25px;
+	height: 30px;
 	opacity: .9;
 	@include transition();
 
@@ -16,7 +16,6 @@
 		width: 35px;
 		min-width: 35px;
 		height: auto;
-		padding-right: $space/2;
 
 	}
 }

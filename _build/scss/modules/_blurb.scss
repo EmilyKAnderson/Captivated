@@ -1,14 +1,15 @@
 // heading with supporting p tag text style
 
+
 .blurb {
-	padding: $space/2;
+	padding: $space/2 0;
 
 	h3 {
 		color: $linkLight;
 	}
 
   @media #{$media-lg} {
-		padding: $space;
+		padding: $space 0;
 	}
 
 	h4, h5 {
@@ -17,6 +18,9 @@
 		display: flex;
 		align-items: center;
 
+		svg {
+			margin-right: $space/2;
+		}
 
 		span {
 			display: flex;
@@ -34,11 +38,8 @@
 //////////////////////////////////////
 
 	&_cta {
-		// background-color:lighten($secLight, 39.5%);
-		// background-color: $grayLight;
 		border-radius:3px;
 		align-items: center;
-
 	}
 
 	&:hover:not(.blurb_cta) {
@@ -49,6 +50,45 @@
 			@include transition();
 			transition-delay: 0s;
 		}
+
+	}
+
+}
+
+
+
+.blurbs-left {
+
+	.blurb {
+		padding: $space/2 0;
+
+		@media #{$media-med} {
+			padding: $space/2;
+		}
+
+		@media #{$media-lg} {
+			padding: $space $space $space 0;
+			max-width: 90%
+		}
+
+	}
+
+}
+
+.blurbs-right {
+
+	.blurb {
+		padding: $space/2 0;
+
+		@media #{$media-med} {
+			padding: $space/2;
+		}
+
+		@media #{$media-lg} {
+			padding: $space 0  $space $space;
+			max-width: 90%
+		}
+
 	}
 
 }

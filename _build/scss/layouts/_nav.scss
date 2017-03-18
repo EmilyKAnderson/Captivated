@@ -84,7 +84,7 @@
 			height: 100%;
 
 			@media #{$media-lg} {
-				width: 220px;
+				width: 240px;
 			}
 		}
 
@@ -116,6 +116,7 @@
 	& +	nav {
 				transition: z-index 0s 0s ease;
 				z-index: 9997;
+				overflow-y: scroll;
 
 				li {
 					transform: translate3D(0, 0, 0);
@@ -132,7 +133,7 @@
 		height: $mbnavHeight;
     left: 0;
     z-index: 9995;
-    background-color: #fff;
+    background-color:#F9F8F8;
 		@include transition();
     backface-visibility: hidden;
 		border-bottom: 1px solid $grayLight;
@@ -241,8 +242,6 @@ nav {
 		position: fixed;
 		left: 0;right:0; top: 0; bottom:0;
 		width: 100vw;
-	  // height: 100%;
-		overflow-y: scroll;
 		margin-top: $space*2;
 		z-index:-200;
 		transition: z-index 0s .8s ease;
@@ -265,7 +264,7 @@ nav {
 				@include transition-nav();
 
 				a {
-					padding: $space/8 $space/2;
+					padding: $space/8 0;
 					display:inline-block;
 					text-align: left;
 					color:#fff;
@@ -295,7 +294,7 @@ nav {
 				&:nth-last-of-type(-n+1) {
 						display: flex;
 						margin-top: $space;
-						padding-left: $space;
+						padding-left: $space/1.5;
 
 							@media #{$media-lg} {
 								margin-left: 0;

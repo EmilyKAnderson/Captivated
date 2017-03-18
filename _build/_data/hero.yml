@@ -6,7 +6,7 @@
 contact:
     label: Contact
     head: Let's <span>start</span> a conversation
-    subhead: We run our business using Captivated because it works. Have a question or want a quick 15 minute demo? - Text us or <a class="link">Get started</a> today.
+    subhead: We run our business using Captivated because it works. Have a question or want a quick 15 minute demo?
 
 why:
     label: Why Captivated
@@ -26,7 +26,7 @@ get-started:
 features:
     label: Features
     head: An enterprise solution for <span>better</span> customer <span>communication</span>
-    subhead: 
+    subhead:
 
 # //////////////////////////////////
 
