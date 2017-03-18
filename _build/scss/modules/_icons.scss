@@ -13,8 +13,8 @@
 	@include transition();
 
 	@media #{$media-med} {
-		width: 35px;
-		min-width: 35px;
+		width: 45px;
+		min-width: 45px;
 		height: auto;
 
 	}
@@ -151,9 +151,7 @@
 
 // SOCIAL ICONS
 
-
 	.social-icon {
-		// background-color: #fff;
 		margin-bottom: 0;
 		margin-right: $space;
 		margin-top: $space;
