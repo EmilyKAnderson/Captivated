@@ -7,92 +7,97 @@ button {
 }
 
 %btn-sm {
-		@include transition();
-		border-radius: $btnBorderRadius/2;
-		border: 2px solid $secLight;
-		cursor: pointer;
-		display: flex;
-		font-size: responsive 12px 16px;
-		font-weight: 700;
-		letter-spacing: 1px;
-		padding: $space/3 $space;
-		text-transform: uppercase;
-    color: $secLight;
+	@include transition();
+	border-radius: $btnBorderRadius/2;
+	border: 2px solid $secLight;
+	cursor: pointer;
+	display: flex;
+	font-size: responsive 12px 16px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	padding: $space/3 $space;
+	text-transform: uppercase;
+	color: $secLight;
 
-		&:hover {
-			background-color: $secLight;
-			color: $tertLight;
-		}
+	&:hover {
+		background-color: $secLight;
+		color: $tertLight;
+	}
 }
 
 .btn {
-		background-color: $linkLight;
-		overflow: hidden;
-		z-index: 1;
-    border-radius: $btnBorderRadius;
-    color: #fff;
-    cursor: pointer;
-    font-weight: 700;
-    letter-spacing: 1px;
-    outline: none;
-    position: relative;
-    text-transform: uppercase;
-    transition: all 0.3s;
-		padding: $space/2 $space/1.2;
-		display: flex;
-		align-items: center;
-		flex-flow: row wrap;
-		text-align: center;
+	background-color: $linkLight;
+	overflow: hidden;
+	z-index: 1;
+	border-radius: $btnBorderRadius;
+	color: #fff;
+	cursor: pointer;
+	font-weight: 700;
+	letter-spacing: 1px;
+	outline: none;
+	position: relative;
+	text-transform: uppercase;
+	transition: all 0.3s;
+	padding: $space/2 $space/1.2;
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	text-align: center;
+	display: inline-block;
+	min-width: 100px;
+
+	&.no-icon {
 		display: inline-block;
-		min-width: 100px;
-
-		&.no-icon {
-				display: inline-block;
-				padding: 18px;
-				max-width: none;
-		}
-
-		@media #{$media-med} {
-			min-width: 180px;
-			padding: $space/1.5 $space;
-		}
-
-//btn //i
-    i, svg.icon {
-    	position: absolute;
-    	left: $space/1.5;
-    	font-size: responsive 18px 30px;
-			fill: #fff;
-			display: flex;
-			max-width: 30px;
-
-			@media #{$media-sm} {
-				max-width:none;
-			}
-    }
-
-//btn:before
-    &:before {
-	    position: absolute;
-	    height: 200px;
-			right: calc(100% - 160px);
-	    top: -100%;
-			border-radius: $btnBorderRadius 0 0 $btnBorderRadius;
-	    width: 300px;
-			animation-transform-origin: top left;
-			transform-origin: top left;
-			transform: skewY(-30deg);
-	    content: '';
-	    background-color: $linkDark;
-	    transition: all 0.3s;
-			z-index: -1;
+		padding: 18px;
+		max-width: none;
 	}
 
-//btn:hover //:before
-	&:hover::before {
+	@media #{$media-med} {
+		min-width: 180px;
+		padding: $space/1.5 $space;
+	}
 
-		right: calc(100% - 200px);
+	//btn //i
+	i, svg.icon {
+		position: absolute;
+		left: $space/1.5;
+		font-size: responsive 18px 30px;
+		fill: #fff;
+		display: flex;
+		max-width: 30px;
+
+		@media #{$media-sm} {
+			max-width:none;
+		}
+	}
+
+	//btn:before
+	&:before {
+		position: absolute;
+		height: 200px;
+		right: calc(100% - 160px);
+		top: -100%;
+		border-radius: $btnBorderRadius 0 0 $btnBorderRadius;
+		width: 300px;
+		animation-transform-origin: top left;
+		transform-origin: top left;
+		transform: skewY(-30deg);
+		content: '';
+		background-color: $linkDark;
 		transition: all 0.3s;
+		z-index: -1;
+	}
+
+	//btn:hover //:before
+
+	&:hover {
+		box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
+
+		&:before {
+			right: calc(100% - 220px);
+			transition: all 0.2s;
+		}
+
 	}
 
 }
