@@ -2,14 +2,13 @@
 // iphone
 // $mobileHeight: 667px;
 // $mobileWidth: 375px;
-$mobileHeight: 568px;
+// $mobileHeight: 550px;
 $mobileWidth: 310px;
-$tabletHeight: 500px;
+// $tabletHeight: 450px;
 $tabletWidth: 800px;
 
 
 .device {
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -22,19 +21,21 @@ $tabletWidth: 800px;
   transform: scale(.8);
   box-shadow: 0px 15px 40px 0px lighten(#000, 88%);
 
-  &:after:not(.tablet) {
-    position: absolute;
-    content: '';
-    display: flex;
-    width: 35px;
-    height: 35px;
-    border-radius: 1000px;
-    border: 3px solid $grayLight;
-    bottom: 15px;
-  }
+  // &:after:not(.tablet) {
+  //   position: absolute;
+  //   content: '';
+  //   display: flex;
+  //   width: 35px;
+  //   height: 35px;
+  //   border-radius: 1000px;
+  //   border: 3px solid $grayLight;
+  //   bottom: 15px;
+  // }
 
   picture {
     width:100%;
+    padding: 0;
+    margin: 0;
   }
 
   img {
@@ -48,19 +49,19 @@ $tabletWidth: 800px;
   @media #{$media-lg} {
     position: relative;
     left: 0;
-    transform: scale(1);
+    transform: scale(.9);
   }
 
 
   &.mobile {
     width: $mobileWidth;
-    height: $mobileHeight;
+    // height: $mobileHeight;
     padding: $space*1.5 $space/1.7 $space*2;
   }
 
   &.tablet {
     width: $tabletWidth;
-    height: $tabletHeight;
+    // height: $tabletHeight;
     padding: $space*1.5;
 
     @media #{$media-lg} {

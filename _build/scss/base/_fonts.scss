@@ -36,7 +36,7 @@ h2 {
 		color: $secLight;
 
 		&.alt {
-			color: $linkLight;
+			color: $primeLight;
 		}
 	}
 
@@ -51,7 +51,7 @@ h3 {
 	@extend %heading;
 
 	span {
-		color: $linkLight;
+		color: $primeLight;
 	}
 }
 

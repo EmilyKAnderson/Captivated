@@ -1,14 +1,13 @@
-// heading with supporting p tag text style
-
+// heading with supporting p tag text style and icon
 
 .blurb {
 	padding: $space/2 0;
 
 	h3 {
-		color: $linkLight;
+	color: $primeLight;
 	}
 
-  @media #{$media-lg} {
+	@media #{$media-lg} {
 		padding: $space 0;
 	}
 
@@ -19,13 +18,13 @@
 		align-items: top;
 
 		svg {
-			margin-right: $space/2;
-			width: 45px;
+			margin-right: $space;
+			width: 40px;
 			position: absolute;
 		}
 
 		span {
-			margin-left: $space*2;
+			margin-left: $space*2.5;
 			display: flex;
 			padding-bottom: $space/4;
 		}
@@ -36,12 +35,12 @@
 		max-width: 500px;
 		margin-bottom: 0;
 		position: relative;
-		margin-left: $space*2;
+		margin-left: $space*2.5;
 	}
 
-//////////////////////////////////////
-// CTA blurb
-//////////////////////////////////////
+	//////////////////////////////////////
+	// CTA blurb
+	//////////////////////////////////////
 
 	&_cta {
 		border-radius:3px;
@@ -61,8 +60,7 @@
 
 }
 
-
-
+// spacing for blurbs located on the left on desktop
 .blurbs-left {
 
 	.blurb {
@@ -81,6 +79,7 @@
 
 }
 
+// spacing for blurbs located on the right on desktop
 .blurbs-right {
 
 	.blurb {
@@ -91,7 +90,7 @@
 		}
 
 		@media #{$media-lg} {
-			padding: $space 0  $space $space;
+			padding: $space 0 $space $space;
 			max-width: 90%
 		}
 

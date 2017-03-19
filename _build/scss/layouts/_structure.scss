@@ -25,7 +25,7 @@ main {
 	width: 100%;
 	margin: 0 auto;
 	position: relative;
-	max-width: 1400px;
+	max-width: 1300px;
 
 	@media #{$media-med} {
 		width: calc(100% - 60px);

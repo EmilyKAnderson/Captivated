@@ -1,24 +1,47 @@
 //////////////////////////////////////////
 // all svg icon styles
 //////////////////////////////////////////
-.icon, svg {
+// .icon, svg {
+// 	display: flex;
+// 	stroke: $secLight;
+// 	fill: $secLight;
+// 	stroke-width: 0px;
+// 	position: relative;
+// 	backface-visibility: visible;
+// 	height: 30px;
+// 	opacity: .9;
+// 	@include transition();
+//
+// 	@media #{$media-med} {
+// 		width: 45px;
+// 		min-width: 45px;
+// 		height: auto;
+//
+// 	}
+// }
+
+.icon {
 	display: flex;
-	stroke: $secLight;
-	fill: $secLight;
+	stroke: #fff;
+	fill: #fff;
 	stroke-width: 0px;
 	position: relative;
 	backface-visibility: visible;
-	height: 30px;
+	height: 25px;
 	opacity: .9;
 	@include transition();
+	border-radius: $btnBorderRadius;
+	padding: $space/3;
+	background-image: linear-gradient(-30deg, #00A1C6 0%,  #44c4e7 80%);
 
 	@media #{$media-med} {
-		width: 45px;
-		min-width: 45px;
+		width: 30px;
+		min-width: 30px;
 		height: auto;
 
 	}
 }
+
 
 
 //////////////////////////////////////////
@@ -154,7 +177,9 @@
 	.social-icon {
 		margin-bottom: 0;
 		margin-right: $space;
-		margin-top: $space;
+		margin-top: $space/2;
+		fill: $secLight;
+		width: 25px;
 
 		 &:hover svg {
 		 	fill: $linkLight;
