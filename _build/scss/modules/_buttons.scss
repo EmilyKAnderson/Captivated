@@ -86,7 +86,7 @@ button {
 
 		&:hover {
 			color: darken($linkLight, 2%);
-			background-color: darken($lightest, 5%);
+			background-color: darken($lightest, 3%);
 			svg {
 				fill: darken($linkLight, 2%);
 			}
