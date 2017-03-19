@@ -20,6 +20,18 @@
 // 	}
 // }
 
+.logo {
+	position: relative;
+	width: 190px;
+	display: flex;
+	z-index: 9997;
+	height: 100%;
+
+	@media #{$media-lg} {
+		width: 240px;
+	}
+}
+
 .icon {
 	display: flex;
 	stroke: #fff;

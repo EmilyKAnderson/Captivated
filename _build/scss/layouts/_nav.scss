@@ -138,17 +138,6 @@
 		margin-right: $space/2;
 	}
 
-	.logo {
-		position: relative;
-		width: 190px;
-		display: flex;
-		z-index: 9997;
-		height: 100%;
-
-		@media #{$media-lg} {
-			width: 240px;
-		}
-	}
 }
 
 #menu .nav-bg {
@@ -194,6 +183,18 @@
 			letter-spacing: 2px;
 			display: flex;
 			align-items: center;
+
+      > svg {
+        display: flex;
+        width: 13px;
+        height: 13px;
+        fill: $tertLight;
+        margin-left: 10px;
+        margin-top: 2px;
+        transform: rotate(90deg);
+        @include transition();
+      }
+
 			a {
 				box-sizing: border-box;
 				@include transition();
@@ -203,12 +204,8 @@
 				width: 100%;
 				&:hover  {
 					color: $secDark;
+
 				}
-			}
-			i {
-				font-size: responsive 16px 16px;
-				line-height: 1.4;
-				display: flex;
 			}
 
 			&.nav-cta {
@@ -223,6 +220,10 @@
 			}
 			&:hover  {
 				color: $secDark;
+
+        > svg {
+          fill: $secDark;
+        }
 			}
 		}
 		.product-list {

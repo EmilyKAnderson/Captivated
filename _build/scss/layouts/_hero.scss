@@ -3,6 +3,16 @@
 //-------------------------------------------------//
 .hero {
 		padding: $space*2 0;
+		position: relative;
+
+	img.clip {
+		position:absolute;
+		right: 0;
+		top: -30%;
+		height: 200%;
+		width: auto;
+		opacity: .5;
+	}
 
 	.hero-header {
 		margin-bottom: $space;

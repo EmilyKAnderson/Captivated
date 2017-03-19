@@ -72,10 +72,13 @@
     transition: transform 1s cubic-bezier(.19, 1, .22, 1);
     a {
       color: $secLight;
-      i {
+      i,svg {
         position: relative;
         margin-left: $space/6;
-        top: $space/5;
+        top: 2px;
+        fill: $secLight;
+        width: 15px;
+        height: 15px;
       }
     }
 }
