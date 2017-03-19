@@ -1,5 +1,72 @@
 
 // main menu
+
+@-webkit-keyframes scale-in-tl {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-tl {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-out-tl {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    opacity: 1;
+  }
+}
+@keyframes scale-out-tl {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    opacity: 1;
+  }
+}
+
 #menu {
 	position: fixed;
 	z-index: 9997;
@@ -10,119 +77,52 @@
 	height: auto;
 	transform: translateY(0px);
 	transition: transform 1s ease-in-out;
+	background-color:#F9F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+	backface-visibility: hidden;
+	border-bottom: 1px solid $grayLight;
 
 	&.hide:not(.menu-is-open) {
 		transform: translateY(-300px);
 		transition: transform 1s ease-in-out;
 	}
-
-
-	&.menu-is-open {
-
-		height: 100vh;
-		width: 100vw;
-		overflow: hidden;
-
-			.menu-bg {
-				top: 0;
-		    width: 200vw;
-		    background-color: $tertLight;
-		    border: solid 2px $tertLight;
-				transition: all .7s 0s cubic-bezier(0.42, 0.03, 0.54, 0.96);
-				height: 300vh;
-			}
-
-		}
-
-		&.show-toggle {
-
-			.menu-bg {
-				transition-delay: 0s;
-			}
-
-		}
-
-	}
-
-// btn wrapper for js-menu toggle
-#menu .menu-btn-wrapper {
-    position: absolute;
-    z-index: 9999;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-		width: 70vw;
-		margin-left: $space;
-
-		.menu-open {
-			transform: translateX(0%);
-			transition-delay: .8s;
-			width:auto;
-			height: $mbnavHeight;
-			display: flex;
-			align-items: center;
-			left: -15px;
-
-			@media #{$media-lg} {
-					height: $navHeight;
-					left: 0;
-			}
-		}
-
-	 	.hamburger {
-			display:flex;
-			position: relative;
-			margin-right: $space/2;
-		}
-
-		.logo {
-			position: relative;
-			width: 190px;
-			margin: 0 auto;
-			display: flex;
-			z-index: 9997;
-			height: 100%;
-
-			@media #{$media-lg} {
-				width: 240px;
-			}
-		}
-
-		div {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: auto;
-			height: auto;
-		}
-
 }
 
-.menu-is-open#menu {
-
-		.menu-btn-wrapper {
-				.menu-open {
-						transition-delay: 1s;
-				}
-				.logo {
-					transition-delay: 0s;
-					@include transition();
-					>* {
-						fill: #fff;
-					}
-				}
+// btn wrapper for js-menu toggle
+#menu {
+	.menu-nav {
+		justify-content: space-between;
+		transform: translateX(0%);
+		transition-delay: .8s;
+		width:auto;
+		height: $mbnavHeight;
+		display: flex;
+		align-items: center;
+		margin: 0 $space;
+		z-index: 9999;
+		@media #{$media-lg} {
+				height: $navHeight;
+				left: 0;
 		}
+	}
 
-	& +	nav {
-				transition: z-index 0s 0s ease;
-				z-index: 9997;
-				overflow-y: scroll;
+ 	.hamburger {
+		display:flex;
+		position: relative;
+		margin-right: $space/2;
+	}
 
-				li {
-					transform: translate3D(0, 0, 0);
-					opacity: 1;
-				}
+	.logo {
+		position: relative;
+		width: 190px;
+		display: flex;
+		z-index: 9997;
+		height: 100%;
+
+		@media #{$media-lg} {
+			width: 240px;
 		}
+	}
 }
 
 #menu .nav-bg {
@@ -144,48 +144,19 @@
 
 }
 
-// triangle menu background
-.menu-bg {
-    position: fixed;
-    top: -130px;
-    left: -300px;
-    z-index: 9996;
-    width: 300px;
-    height: 130px;
-    background-color: $tertLight;
-    box-sizing: border-box;
-    animation-transform-origin: top left;
-    transform-origin: top left;
-    transition: all .7s 0s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-    backface-visibility: hidden;
-    transform: skewY(-30deg);
-    border: solid 2px $tertLight;
-
-
-}
-
-// right hand side verticle buttons
-.nav-cta {
+.nav-items {
     display: flex;
 		align-items: center;
 		height: $mbnavHeight;
-		margin-right: $space;
 		display: none;
-
-		@media #{$media-sm} {
+		.nav-items-list {
 			display: flex;
+			height:100%;
+			list-style-type: none;
+			padding: 0;
+			position: relative;
+			margin: 0;
 		}
-
-		@media #{$media-lg} {
-				height: $navHeight;
-		}
-}
-.nav-cta {
-    position: fixed;
-		z-index: 9995;
-    top: 0px;
-    right: 0px;
-
 		.main-action {
 			font-weight: 500;
 			text-transform: uppercase;
@@ -196,38 +167,82 @@
 			letter-spacing: 2px;
 			display: flex;
 			align-items: center;
-
+			&:hover {
+				.product-list {
+					display: block;
+					-webkit-animation: scale-in-tl 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+					-moz-animation: scale-in-tl 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+					animation: scale-in-tl 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+				}
+			}
+			a {
+				@include transition();
+				display: flex;
+				align-items: center;
+				&:hover  {
+					color: $secDark;
+				}
+			}
 			i {
-				font-size: responsive 16px 26px;
+				font-size: responsive 16px 16px;
 				line-height: 1.4;
 				display: flex;
-				padding-right: 10px;
-				color: $primeLight;
-				@include transition();
 			}
 
-			&:last-child {
+			&.nav-cta {
 				border: 2px solid $secLight;
 				border-radius: $btnBorderRadius/2;
 				margin-left: $space/2;
 
 				&:hover {
 					background-color: $secLight;
-					color: #fff;
+					color: $lightest;
 				}
 			}
-
 			&:hover  {
 				color: $secDark;
-
-				i {
-					color: $linkLight;
+			}
+		}
+		.product-list {
+			box-sizing: border-box;
+			position: absolute;
+			width: 300px;
+			background-color: $grayLight;
+			display: hidden;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+			top: 100%;
+			border: 1px solid $grayLight;
+			border-radius: 3px;
+			left: $space/1.5;
+			margin-top: -$space/3;
+			-webkit-animation: scale-out-tl 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+			-moz-animation: scale-out-tl 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+			animation: scale-out-tl 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+			.product-list-item {
+				a {
+					padding: $space;
+					&:hover {
+						background-color: $lightest;
+					}
 				}
 			}
-
+			.product-list-item .product-menu {
+				align-items: center;
+				display: flex;
+				.product-menu-icon {
+					margin-right: $space;
+				}
+			}
 		}
 
-	}
+		@media #{$media-sm} {
+			display: flex;
+		}
+
+		@media #{$media-lg} {
+				height: $navHeight;
+		}
+}
 
 	.utility-nav .utility-item {
 		display: none;
@@ -236,80 +251,4 @@
 			@media #{$media-lg} {
 				display: block;
 		}
-	}
-
-nav {
-		position: fixed;
-		left: 0;right:0; top: 0; bottom:0;
-		width: 100vw;
-		margin-top: $space*2;
-		z-index:-200;
-		transition: z-index 0s .8s ease;
-
-	ul:first-child {
-    width: 100vw;
-    display: flex;
-		padding:  $space*2 0 0  $space;
-    flex-direction: column;
-    float: left;
-		height: 100%;
-		padding-left: 0;
-		justify-content: flex-start;
-
-			li {
-				// width: 100%;
-				text-align: left;
-		    transform: translate3D(0, 50px, 0);
-		    opacity: 0;
-				@include transition-nav();
-
-				a {
-					padding: $space/8 0;
-					display:inline-block;
-					text-align: left;
-					color:#fff;
-					font-size: responsive 20px 50px;
-					margin-left: $space/2;
-					margin-bottom: $space/3;
-
-						&.active {
-								// background-color: $tertDark;
-								// color: $primeLight;
-								border-bottom: 2px dashed $primeDark;
-							}
-
-					@media #{$media-lg} {
-						margin-left: $space*2;
-						margin-bottom: $space/2;
-					}
-
-					&:hover {
-						color: $secLight;
-						@include transition();
-					}
-				}
-
-
-				// fancy way of saying last child - could change the 1 to 2 and it would be last 2 children
-				&:nth-last-of-type(-n+1) {
-						display: flex;
-						margin-top: $space;
-						padding-left: $space/1.5;
-
-							@media #{$media-lg} {
-								margin-left: 0;
-							}
-
-						a {
-							@extend %btn-sm;
-								margin-right: $space/2;
-						}
-
-					}
-
-
-			} //end li
-
- 		}
-
 	}
