@@ -184,6 +184,7 @@
 			margin: 0;
 		}
 		.main-action {
+			cursor: pointer;
 			font-weight: 500;
 			text-transform: uppercase;
 			color:$tertLight;
@@ -194,6 +195,7 @@
 			display: flex;
 			align-items: center;
 			a {
+				box-sizing: border-box;
 				@include transition();
 				display: flex;
 				height:100%;
@@ -258,7 +260,8 @@
 					animation-delay: 0.4s;
 				}
 				a {
-					padding: $space;
+					border-bottom: 1px solid #f1f1f1;
+					padding: $space/2 $space;
 					&:hover {
 						background-color: $lightest;
 					}
