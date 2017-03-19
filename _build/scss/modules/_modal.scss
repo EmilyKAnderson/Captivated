@@ -77,6 +77,8 @@
     }
     svg {
       fill: #fff;
+      min-width: 30px;
+      margin-right: $space/2;
     }
 
     .modal-close {

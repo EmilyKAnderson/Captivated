@@ -1,12 +1,16 @@
-
+.blockquote {
+  position: relative;
+  overflow: hidden;
+}
 .blockquote .icon {
   position: absolute;
   width: 100px;
   height: 100px;
   left: -10px;
   top: 5px;
-  fill: $linkDark;
+  fill: $primeLight;
   opacity: .8;
+  background-image: none;
 
   @media #{$media-lg}{
     width: 200px;
@@ -20,8 +24,6 @@ blockquote {
     font-size: 30px;
     color: #fff;
   }
-  // box-shadow: 0px 15px 40px 0px lighten(#000, 88%);
-  // box-shadow: 0px 15px 40px 0px darken($tertDark, 4%);
 
   cite {
     line-height: 1.4;

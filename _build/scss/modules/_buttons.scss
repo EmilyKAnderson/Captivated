@@ -40,7 +40,8 @@ button {
 	transition: all 0.3s;
 	padding: $space/2 $space/1.2 ;
 	min-width: 100px;
-	max-width: 250px;
+	max-width: 280px;
+	display: inline-block;
 
 	&.no-icon {
 		display: inline-block;
