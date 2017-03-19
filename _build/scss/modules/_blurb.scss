@@ -97,3 +97,78 @@
 	}
 
 }
+
+// alternate blurb styles for a box blurb with images
+
+.blurb-alt {
+	min-height:500px;
+	position: relative;
+	overflow: hidden;
+	padding: $space;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+
+	header {
+		text-align: center;
+	}
+
+	figure {
+
+		position: absolute;
+		top: 24%;
+		// background-color: $primeDark;
+		@include center-horizontal();
+		display: flex;
+		margin-top: $space;
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: $space/1.5 0;
+	}
+
+// if box color ir prime
+	&.bg-prime {
+		figure {
+			background-color: lighten($tertLight, 5%);
+		}
+	}
+
+	// if box color ir primeDark
+		&.bg-primeDark {
+
+			figure {
+				background-color: $primeLight;
+			}
+
+			footer {
+				background-color: $primeLight;
+			}
+		}
+
+
+// if box color ir tertDark
+	&.bg-tert {
+		figure {
+			background-color: $tertDark;
+		}
+	}
+
+// if box color ir tert
+	&.bg-tertDark {
+		figure {
+			background-color: $tertLight;
+		}
+		footer {
+			background-color:$tertLight;
+		}
+	}
+}

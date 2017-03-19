@@ -27,11 +27,6 @@ button {
 
 .btn {
 	background-color: $linkLight;
-	// background: #28ba29; /* Old browsers */
-	// background: -moz-linear-gradient(-45deg, #28ba29 48%, #0ca10d 100%); /* FF3.6-15 */
-	// background: -webkit-linear-gradient(-45deg, #28ba29 48%,#0ca10d 100%); /* Chrome10-25,Safari5.1-6 */
-	// background: linear-gradient(135deg, #28ba29 48%,#0ca10d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28ba29', endColorstr='#0ca10d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	overflow: hidden;
 	z-index: 1;
 	border-radius: $btnBorderRadius;
@@ -43,13 +38,9 @@ button {
 	position: relative;
 	text-transform: uppercase;
 	transition: all 0.3s;
-	padding: $space/2 $space/1.2;
-	display: flex;
-	align-items: center;
-	flex-flow: row wrap;
-	text-align: center;
-	display: inline-block;
+	padding: $space/2 $space/1.2 ;
 	min-width: 100px;
+	max-width: 250px;
 
 	&.no-icon {
 		display: inline-block;
@@ -57,58 +48,54 @@ button {
 		max-width: none;
 	}
 
-	@media #{$media-med} {
-		min-width: 180px;
-		padding: $space/2 $space/2;
-	}
-
 	//btn //i
-	i, svg.icon {
-		position: absolute;
-		left: $space/1.5;
-		font-size: responsive 18px 30px;
-		fill: #fff;
-		display: flex;
-		max-width: 30px;
-
-		@media #{$media-sm} {
-			max-width:none;
-		}
-	}
-
-	//btn:before
-	&:before {
-		// position: absolute;
-		// height: 200px;
-		// // left: calc(100% - 160px);
-		// left: 100%;
-		// top: 100%;
-		// border-radius: $btnBorderRadius 0 0 $btnBorderRadius;
-		// width: 300px;
-		// animation-transform-origin: bottom right;
-		// transform-origin: bottom right;
-		// transform: skewY(-30deg);
-		// content: '';
-		// background-color: $linkDark;
-		// transition: all 0.3s;
-		// z-index: -1;
-
+	i, svg {
+		fill: $lightest;
+		position: relative;
+		top: 1px;
+		width: 13px;
+		height: 13px;
+		padding-left: $space/3;
+		@include transition();
 	}
 
 	//btn:hover //:before
+		&:hover {
+			box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
+			background-color: darken($linkLight, 2%);
 
-	&:hover {
-		box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
-		background-color: $linkDark;
-		&:before {
-			right: calc(100% -100px);
-			transition: all 0.2s;
+		svg {
+			transform: translateX(8px);
+			@include transition();
 		}
 
 	}
 
 }
 
+
+// btn light background color
+.btn-light {
+		background-color: $lightest;
+		color: $tertLight;
+
+		svg {
+			fill: $tertLight;
+		}
+
+		&:hover {
+			color: darken($linkLight, 2%);
+			background-color: darken($lightest, 5%);
+			svg {
+				fill: darken($linkLight, 2%);
+			}
+		}
+
+	}
+
+
+
+// pricing page pill buttons
 .pricing-tab {
 	padding: 0;
 }
@@ -122,7 +109,8 @@ button {
 	display: inline-block;
 	font-weight: 700;
 	letter-spacing: 1px;
-	padding: $space/3 0;
+	padding: $space/4 0;
+	margin: $space/4 0;
 	text-align: center;
 	text-transform: uppercase;
 	@include transition;
