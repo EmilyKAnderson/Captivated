@@ -1,6 +1,7 @@
 
 // main menu
 
+// dropdown animations
 @-webkit-keyframes scale-in-tl {
   0% {
     -webkit-transform: scale(0);
@@ -63,6 +64,31 @@
             transform: scale(0);
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 }
@@ -167,18 +193,12 @@
 			letter-spacing: 2px;
 			display: flex;
 			align-items: center;
-			&:hover {
-				.product-list {
-					display: block;
-					-webkit-animation: scale-in-tl 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-					-moz-animation: scale-in-tl 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-					animation: scale-in-tl 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-				}
-			}
 			a {
 				@include transition();
 				display: flex;
+				height:100%;
 				align-items: center;
+				width: 100%;
 				&:hover  {
 					color: $secDark;
 				}
@@ -208,17 +228,35 @@
 			position: absolute;
 			width: 300px;
 			background-color: $grayLight;
-			display: hidden;
+			display: none;
 			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
 			top: 100%;
 			border: 1px solid $grayLight;
 			border-radius: 3px;
 			left: $space/1.5;
 			margin-top: -$space/3;
-			-webkit-animation: scale-out-tl 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-			-moz-animation: scale-out-tl 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-			animation: scale-out-tl 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+			overflow: hidden;
+			// animation for closing the dropdown
+			// -webkit-animation: scale-out-tl 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+			// -moz-animation: scale-out-tl 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+			// animation: scale-out-tl 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+			//animation for opening the dropdown
+			&.product-list-open {
+				display: block;
+				-webkit-animation: scale-in-tl 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+				-moz-animation: scale-in-tl 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+				animation: scale-in-tl 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+			}
 			.product-list-item {
+				-webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+				-moz-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+				animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+				&:nth-child(2) {
+					animation-delay: 0.2s;
+				}
+				&:nth-child(3) {
+					animation-delay: 0.4s;
+				}
 				a {
 					padding: $space;
 					&:hover {

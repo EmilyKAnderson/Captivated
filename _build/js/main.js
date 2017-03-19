@@ -41,7 +41,7 @@ $window.on('scroll', function(){
 });
 
 
-//open/close mb navigation
+//open/close mb navigation -- might need to delete
   $('.js-menu .js-menuBtn').on('click', function(){
     $('.js-menu').toggleClass('menu-is-open');
     $('.hamburger').toggleClass('is-active');
@@ -119,4 +119,14 @@ $('.js-yearly').on('click', function() {
   $('.js-monthly').removeClass('is-active');
   $('.js-yearly-content').css('display', 'flex');
   $('.js-monthly-content').css('display', 'none');
+});
+
+
+$('.js-expand-menu').on('click', function(e) {
+  event.stopPropagation();
+  $('.product-list').toggleClass('product-list-open');
+  // $('.product-list').fadeIn('slow');
+});
+$(document).click( function(){
+  $('.product-list').removeClass('product-list-open');
 });
