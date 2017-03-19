@@ -53,8 +53,8 @@ mainctadesktop:
 
 # lower footer nav
 lowerfootnav:
-  - title: Brand Style Guide
-    url: style-guide/
+  # - title: Brand Style Guide
+  #   url: style-guide/
   - title: Privacy Policy
     url: privacy-policy/
   - title: Terms & Conditions
