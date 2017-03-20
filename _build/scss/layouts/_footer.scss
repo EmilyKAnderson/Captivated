@@ -4,7 +4,6 @@
 footer.global-footer {
 	position: relative;
 	padding: $space 0;
-	background: $tertDark url(../images/texture.png) center center ;
 	margin-top: $space;
 
 	@media #{$media-med} {
@@ -17,6 +16,9 @@ footer.global-footer {
 
 	.row {
 		min-height: 300px;
+		&.footer-row {
+			border-top: 1px solid #f1f1f1;
+		}
 	}
 
 	// ----------------------------------------- //
@@ -26,22 +28,23 @@ footer.global-footer {
 	.footer-menu {
 		margin-left: 0;
 		padding: 0 $space/2 $space 0;
-
 		 li a {padding-bottom: $space/3;}
 
 		@media #{$media-med} {
-			padding: 0 $space/2;
+			padding: $space 0;
 
 			li {
 				display: inline-block;
 				margin-right: $space;
 
 				a {
-					font-weight:600;
-					font-size: responsive 16px 22px;
-					letter-spacing: .5px;
+					color: $tertLight;
+					font-weight:500;
+					font-size: responsive 12px 14px;
+					letter-spacing: 2px;
 					padding-bottom: $space/4;
-
+					@include transition();
+					text-transform: uppercase;
 					&:hover {
 						color: $linkLight;
 					} // end hover
@@ -63,22 +66,20 @@ footer.global-footer {
 			display: block;
 			width: 100%;
 			position: relative;
-			padding: $space 0;
+			padding-top: $space;
 
 			@media #{$media-med} {
 				display: flex;
-				width: 50%;
-				float: right;
-				position: absolute;
-				justify-content: flex-end;
-				padding: 0;
-
 				li {
 
 					display: flex;
 
 					a {
-						 margin-right: $space;
+						color: $tertLight;
+						font-weight:500;
+						font-size: responsive 12px 14px;
+						@include transition();
+						margin-right: $space;
 
 						&:hover {
 							color: $linkLight;
@@ -101,13 +102,14 @@ footer.global-footer {
 // ----------------------------------------- //
 
 	.footer-logo {
-		max-width: 100px;
-		display: inline-block;
-		position: relative;
-		top: 15px;
+		margin-bottom: $space/2;
+	}
+	.footer-cap-def {
+		margin-bottom: 0;
 	}
 
 	h3,p, a {
+		color: $tertLight;
 		display: inline-block;
 	}
 }
