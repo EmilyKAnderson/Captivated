@@ -2,9 +2,9 @@
 
 <footer class="section bg-shaded global-footer">
 
-	<div class="row grid-spaceBetween move" data-move="fadeIn">
+	<div class="row footer-row grid-spaceBetween move" data-move="fadeIn">
 
-		<div class="col-12-top">
+		<div class="col-12_md-12_lg-8-middle">
 
 				<ul class="footer-menu">
 					{% for item in site.navigation %}
@@ -20,19 +20,6 @@
 				 {% endfor %}
 				</ul>
 
-		</div>
-
-		<div class="col-12 grid-middle">
-			<div class="col-12">
-				<a href="/" class="logo">
-					{% include logo.html %}
-				</a>
-				<!-- <img src="/images/logo-mark.png" alt="" class="footer-logo"> -->
-				<!-- <h3>cap·ti·vate</h3> -->
-				<p><b>cap·ti·vate</b><em>(verb)</em> - attract and hold the interest and attention of; charm.</p>
-			</div>
-
-			<div class="col-12 grid">
 				<a href="#" class="social-icon grid-middle-center">
 					{% include icon/social/facebook.html %}
 				</a>
@@ -48,34 +35,33 @@
 				<a href="#" class="social-icon grid-middle-center">
 					{% include icon/social/vimeo.html %}
 				</a>
-			</div>
-		</div>
 
-<div class="col-12-bottom grid-equalHeight">
+				<ul class="footer-menu-lower">
+					{% for item in site.lowerfootnav %}
+						 {% assign class = nil %}
+						 {% if page.title contains item.title %}
+								 {% assign class = 'active' %}
+						 {% endif %}
+							<li>
+									 <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }} p-small">
+											 {{ item.title }}
+									 </a>
+							 </li>
+				 {% endfor %}
+				</ul>
 
-		<div class="col-12_md-12_lg-6" push-left="off-0_md-6">
-
-			<ul class="footer-menu-lower">
-				{% for item in site.lowerfootnav %}
-					 {% assign class = nil %}
-					 {% if page.title contains item.title %}
-							 {% assign class = 'active' %}
-					 {% endif %}
-						<li>
-								 <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
-										 {{ item.title }}
-								 </a>
-						 </li>
-			 {% endfor %}
-			</ul>
 
 		</div>
 
-		<div class="col-12_md-12_lg-6">
-			<p class="p-small">Copyright © 2017 Captivated LLC All rights reserved</p>
+		<div class="col-12_md-12_lg-4-middle">
+			<a href="/" class="footer-logo">
+				{% include logo.html %}
+			</a>
+			<!-- <img src="/images/logo-mark.png" alt="" class="footer-logo"> -->
+			<!-- <h3>cap·ti·vate</h3> -->
+			<p><b>cap·ti·vate</b><em>(verb)</em> - attract and hold the interest and attention of; charm.</p>
+			<p class="p-small">&copy; 2017 Captivated LLC</p>
 		</div>
-
-	</div>
 
 	</div>
 
