@@ -199,9 +199,12 @@
 	.social-icon {
 		margin-bottom: 0;
 		margin-right: $space;
-		margin-top: $space/2;
 		fill: $secLight;
 		width: 25px;
+
+	  @media #{$media-med} {
+			margin-top: $space/2;
+		}
 
 		 &:hover svg {
 		 	fill: $linkLight;

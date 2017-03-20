@@ -18,6 +18,19 @@ footer.global-footer {
 		min-height: 300px;
 		&.footer-row {
 			border-top: 1px solid #f1f1f1;
+
+			>div:last-child {
+				padding-top: $space;
+
+				@media #{$media-lg} {
+					padding-bottom: 0;
+				}
+
+				>* {
+					width: 100%;
+
+				}
+			}
 		}
 	}
 
@@ -27,11 +40,10 @@ footer.global-footer {
 
 	.footer-menu {
 		margin-left: 0;
-		padding: 0 $space/2 $space 0;
+		padding: $space 0;
 		 li a {padding-bottom: $space/3;}
 
 		@media #{$media-med} {
-			padding: $space 0;
 
 			li {
 				display: inline-block;

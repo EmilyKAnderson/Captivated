@@ -160,6 +160,7 @@
   @include transition();
   transform: translateY(-120%);
   overflow-y: auto;
+  overflow-x: hidden;
 
   @media #{$media-lg} {
     // overflow: none;
