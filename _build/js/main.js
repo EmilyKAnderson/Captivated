@@ -71,7 +71,7 @@ $(document).ready(function($){
 // home page
 $(function(){
     $(".typed").typed({
-        strings: [ "customers", "employees", "patients", "guests", "students", "members"],
+        strings: [ "customers", "clients", "patients", "guests", "students", "fans", "employees","members"],
         typeSpeed: 100,
         loop:false,
          // false = infinite

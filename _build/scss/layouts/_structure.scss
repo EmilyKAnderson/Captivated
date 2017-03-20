@@ -40,7 +40,12 @@ main {
 		@media #{$media-med} {
 			padding: $space*2 0;
 		}
-
+		@media #{$media-lg} {
+			padding: $space*3 0;
+		}
+		@media #{$media-xl} {
+			padding: $space*4 0;
+		}
 }
 
 // row no max width
@@ -68,7 +73,7 @@ section {
 		}
 
 		@media #{$media-lg} {
-			padding: $space*3 0;
+			padding: $space*4 0;
 		}
 
 		@media #{$media-xl} {
