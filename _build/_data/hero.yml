@@ -5,7 +5,7 @@
 # main-pages
 contact:
     label: Contact
-    head: Let's <span>start</span> a conversation
+    head: Let's start a <span>conversation</span>
     subhead: We run our business using Captivated because it works. Have a question or want a quick 15 minute demo?
 
 get-started:
@@ -20,7 +20,7 @@ features:
 
 how-it-works:
     label: Why Captivated
-    head: <span>How</span> it works
+    head: How it <span>works</span>
     subhead: Captivated enables customers to communicate with your business through text messaging. By using software that runs in the background, Captivated is your silent assistant, empowering you to easily manage multiple conversations with your customers.
 
 markets:
