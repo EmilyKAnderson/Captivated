@@ -15,9 +15,14 @@
 		@include center();
 		position: absolute;
 		opacity: .2;
-		min-height: auto;
-		width: 130%;
+		min-height: 100%;
+    width: auto;
 		filter: grayscale(100%);
+
+    @media #{$media-lg} {
+      min-height: auto;
+      width: 130%;
+    }
 	}
 
 	header {
