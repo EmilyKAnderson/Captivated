@@ -1,71 +1,75 @@
 <div id="menu" class="js-menu">
 	<div class="menu-nav">
-		<!-- <button class="hamburger hamburger--collapse js-menuBtn " type="button">
-				<span class="hamburger-box">
-					<span class="hamburger-inner"></span>
-				</span>
-		</button> -->
 		<a href="/" class="logo">
 			{% include logo.html %}
 		</a>
-		<div class="nav-items">
-			<ul class="nav-items-list">
-				<li class="main-action js-expand-menu">
-					Product {% include icon/arrow-right.html %}
-					<ul class="product-list">
-						<li class="product-list-item">
-							<a href="/product/how-it-works/">
-								<div class="product-menu">
-									<div class="product-menu-icon">
-										{% include icon/nav-how-it-works.html %}
+		
+		<div class="nav-items-wrap">
+			<div class="nav-items">
+				<ul class="nav-items-list">
+					<li class="main-action js-expand-menu">
+						Product {% include icon/arrow-right.html %}
+						<ul class="product-list">
+							<li class="product-list-item">
+								<a href="/product/how-it-works/">
+									<div class="product-menu">
+										<div class="product-menu-icon">
+											{% include icon/nav-how-it-works.html %}
+										</div>
+										<div class="product-menu-description">
+											How it Works
+										</div>
 									</div>
-									<div class="product-menu-description">
-										How it Works
+								</a>
+							</li>
+							<li class="product-list-item">
+								<a href="/product/features/">
+									<div class="product-menu">
+										<div class="product-menu-icon">
+											{% include icon/nav-features.html %}
+										</div>
+										<div class="product-menu-description">
+											Features
+										</div>
 									</div>
-								</div>
-							</a>
-						</li>
-						<li class="product-list-item">
-							<a href="/product/features/">
-								<div class="product-menu">
-									<div class="product-menu-icon">
-										{% include icon/nav-features.html %}
+								</a>
+							</li>
+							<li class="product-list-item">
+								<a href="/product/markets/">
+									<div class="product-menu">
+										<div class="product-menu-icon">
+											{% include icon/nav-markets.html %}
+										</div>
+										<div class="product-menu-description">
+											Markets
+										</div>
 									</div>
-									<div class="product-menu-description">
-										Features
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="product-list-item">
-							<a href="/product/markets/">
-								<div class="product-menu">
-									<div class="product-menu-icon">
-										{% include icon/nav-markets.html %}
-									</div>
-									<div class="product-menu-description">
-										Markets
-									</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="main-action">
-					<a href="/get-started/">Pricing</a>
-				</li>
-				<li class="main-action">
-					<a href="/faq/">faq</a>
-				</li>
-				<li class="main-action">
-					<a href="/contact/">Contact</a>
-				</li>
-			</ul>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="main-action">
+						<a href="/get-started/">Pricing</a>
+					</li>
+					<li class="main-action">
+						<a href="/faq/">faq</a>
+					</li>
+					<li class="main-action">
+						<a href="/contact/">Contact</a>
+					</li>
+				</ul>
+			</div>
+			<div class="nav-items">
+				<a href="/log-in" class="main-action">Log in</a>
+				<a href='/get-started' {% if current[1] == 'about' %}class='current'{% endif %} class="main-action nav-cta">Sign up</a>
+			</div>
 		</div>
-		<div class="nav-items">
-			<a href="/log-in" class="main-action">Log in</a>
-			<a href='/get-started' {% if current[1] == 'about' %}class='current'{% endif %} class="main-action nav-cta">Sign up</a>
-		</div>
+
+		<button class="hamburger hamburger--collapse js-menuBtn " type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+		</button>
 	</div>
 </div>
 

@@ -41,7 +41,7 @@ button {
 	position: relative;
 	text-transform: uppercase;
 	transition: all 0.3s;
-	padding: $space/2 $space/1.2 ;
+	padding: $space/2 $space*2 $space/2 $space/1.2;
 	min-width: 100px;
 	max-width: 280px;
 	display: inline-block;
@@ -50,17 +50,20 @@ button {
 	//btn //i
 	i, svg {
 		fill: $lightest;
-		position: relative;
+		position:absolute;
 		top: 1px;
 		width: 13px;
 		height: 13px;
 		padding-left: $space/3;
 		@include transition();
+		right: $space/1.2;
+		top: 40%;
 
+// play button
 		&.play {
 			width: 18px;
 			height: 18px;
-			top: 4px;
+			top: calc(40% - 2px);
 		}
 	}
 
