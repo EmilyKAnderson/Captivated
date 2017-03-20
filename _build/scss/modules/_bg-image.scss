@@ -28,6 +28,8 @@
       @include center();
       width: auto;
       max-width: 120%;
+      opacity: .9;
+      filter: grayscale(5%);
     }
   }
 }
