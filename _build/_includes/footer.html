@@ -5,7 +5,6 @@
 	<div class="row footer-row grid-spaceBetween move" data-move="fadeIn">
 
 		<div class="col-12_md-12_lg-8-middle">
-
 				<ul class="footer-menu">
 					{% for item in site.navigation %}
 						 {% assign class = nil %}
@@ -19,50 +18,46 @@
 							 </li>
 				 {% endfor %}
 				</ul>
-
-				<a href="#" class="social-icon grid-middle-center">
-					{% include icon/social/facebook.html %}
-				</a>
-				<a href="#" class="social-icon grid-middle-center">
-					{% include icon/social/linkedin.html %}
-				</a>
-				<a href="#" class="social-icon grid-middle-center">
-					{% include icon/social/twitter.html %}
-				</a>
-				<a href="#" class="social-icon grid-middle-center">
-					{% include icon/social/youtube.html %}
-				</a>
-				<a href="#" class="social-icon grid-middle-center">
-					{% include icon/social/vimeo.html %}
-				</a>
-
-				<ul class="footer-menu-lower">
-					{% for item in site.lowerfootnav %}
-						 {% assign class = nil %}
-						 {% if page.title contains item.title %}
-								 {% assign class = 'active' %}
-						 {% endif %}
-							<li>
-									 <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }} p-small">
-											 {{ item.title }}
-									 </a>
+				<div>
+					<a href="#" class="social-icon grid-middle-center">
+						{% include icon/social/facebook.html %}
+					</a>
+					<a href="#" class="social-icon grid-middle-center">
+						{% include icon/social/linkedin.html %}
+					</a>
+					<a href="#" class="social-icon grid-middle-center">
+						{% include icon/social/twitter.html %}
+					</a>
+					<a href="#" class="social-icon grid-middle-center">
+						{% include icon/social/youtube.html %}
+					</a>
+					<a href="#" class="social-icon grid-middle-center">
+						{% include icon/social/vimeo.html %}
+					</a>
+					<ul class="footer-menu-lower">
+						{% for item in site.lowerfootnav %}
+							 {% assign class = nil %}
+							 {% if page.title contains item.title %}
+									 {% assign class = 'active' %}
+							 {% endif %}
+								<li>
+										 <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
+												 {{ item.title }}
+										 </a>
+								 </li>
+					 {% endfor %}
+							 <li>
+								 <p class="p-small">&copy; 2017 Captivated LLC</p>
 							 </li>
-				 {% endfor %}
-				</ul>
-
-
+					</ul>
+				</div>
 		</div>
 
 		<div class="col-12_md-12_lg-4-middle">
 			<a href="/" class="footer-logo">
 				{% include logo.html %}
 			</a>
-			<!-- <img src="/images/logo-mark.png" alt="" class="footer-logo"> -->
-			<!-- <h3>cap·ti·vate</h3> -->
-			<p><b>cap·ti·vate</b><em>(verb)</em> - attract and hold the interest and attention of; charm.</p>
-			<p class="p-small">&copy; 2017 Captivated LLC</p>
+			<p class="footer-cap-def"><b>cap·ti·vate</b><em>(verb)</em> - attract and hold the interest and attention of; charm.</p>
 		</div>
-
 	</div>
-
 </footer>
