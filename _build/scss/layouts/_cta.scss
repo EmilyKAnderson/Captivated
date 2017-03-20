@@ -36,4 +36,8 @@
 			@include center();
 		}
 	}
+	.cta-card {
+		box-sizing: border-box;
+		padding: $space;
+	}
 }
