@@ -3,11 +3,11 @@
 // ----------------------------------------- //
 footer.global-footer {
 	position: relative;
-	padding: $space 0;
-	margin-top: $space;
+	padding:0 0 $space 0;
 
 	@media #{$media-med} {
 		padding: $space*2 0 $space;
+		padding: $space 0;
 	}
 
 	[class*="col-"] [class*="col-"] {

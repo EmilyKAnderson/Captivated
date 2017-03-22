@@ -30,11 +30,15 @@ $font        : #999999;
 
 // colors in sections are based off background color or section
 
-h1, h2, h3, h4, h5, label, p, a, span, li {
-	color: $tertDark;
+// .main {
+	// h1, h2, h3, h4, h5, label, p, a, span, li {
+	// 	color: $tertDark;
+	// }
+// }
+
+.hero, .hero-header, .bg-light p, .bg-light h2 {
+	color: $tertLight;
 }
-
-
 
 // bg-light
 .bg-light {
@@ -45,6 +49,10 @@ h1, h2, h3, h4, h5, label, p, a, span, li {
 	.box {
 		background-color: $grayLight;
 	}
+
+  p, h2, h3, h4, h5 {
+    color: $tertLight;
+  }
 }
 
 
@@ -53,9 +61,11 @@ h1, h2, h3, h4, h5, label, p, a, span, li {
 	background-color: $grayLight;
 	color: $tertLight;
 
-	h5 {
-		color: $darkest;
-	}
+  p, h2, h3, h4, h5, h5 span, span {
+    color: $tertLight;
+
+  }
+
 }
 
 

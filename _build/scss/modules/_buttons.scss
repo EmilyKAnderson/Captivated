@@ -1,6 +1,10 @@
 // buttons
 .btn + .btn {
-	margin-left: $space;
+	margin-left: $space/3;
+
+	  @media #{$media-med} {
+			margin-left: $space;
+		}
 }
 
 button {
@@ -38,43 +42,61 @@ button {
 	font-weight: 700;
 	letter-spacing: 1px;
 	outline: none;
+	text-align: center;
 	position: relative;
 	text-transform: uppercase;
+	padding: $space/4 $space/4;
 	transition: all 0.3s;
-	padding: $space/2 $space*2 $space/2 $space/1.2;
 	min-width: 100px;
 	max-width: 280px;
 	display: inline-block;
 	border: 3px solid $secLight;
 
-	//btn //i
-	i, svg {
-		fill: $lightest;
-		position:absolute;
-		top: 1px;
-		width: 13px;
-		height: 13px;
-		padding-left: $space/3;
-		@include transition();
-		right: $space/1.2;
-		top: 40%;
+		i, svg {
+			display: none;
+		}
 
-// play button
-		&.play {
-			width: 18px;
-			height: 18px;
-			top: calc(40% - 2px);
+  @media #{$media-med} {
+		padding: $space/2 $space/2;
+		text-align: left;
+		//btn //i
+		i, svg {
+			fill: $lightest;
+			position:absolute;
+			top: 1px;
+			width: 13px;
+			height: 13px;
+			padding-left: $space/3;
+			@include transition();
+			right: $space/1.2;
+			top: 40%;
+			display: block;
+
+
+
+	// play button
+			&.play {
+				width: 18px;
+				height: 18px;
+				top: calc(40% - 2px);
+			}
 		}
 	}
 
-	//btn:hover //:before
-		&:hover {
-			box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
-			background-color: darken($linkLight, 2%);
 
-		svg {
-			transform: translateX(8px);
-			@include transition();
+	@media #{$media-med} {
+		padding: $space/2 $space*2 $space/2 $space/1.2;
+
+		//btn:hover //:before
+			&:hover {
+				box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.17);
+				background-color: darken($linkLight, 2%);
+
+			svg {
+				transform: translateX(8px);
+				@include transition();
+			}
+
 		}
 
 	}

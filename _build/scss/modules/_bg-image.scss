@@ -24,12 +24,19 @@
     bottom: 0;
 
     img {
-      position: relative;
-      @include center();
-      width: auto;
+      height: 105%;
       max-width: 120%;
       opacity: .95;
       filter: grayscale(5%);
+
+      @media #{$media-lg} {
+        height: auto;
+        position: relative;
+        @include center();
+        width: auto;
+        max-width: 120%;
+
+      }
     }
   }
 }

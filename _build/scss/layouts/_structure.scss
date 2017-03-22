@@ -89,10 +89,12 @@ section {
 
 		}
 
-		&:first-child {
-			border-radius: $radius $radius 0 0 ;
-			padding-bottom: $space;
-			// border-bottom: 2px dashed $primeLight;
+		&:first-child:not(:last-child) {
+			border-radius: $radius $radius 0 0;
+		}
+
+		&:only-child {
+			border-radius: $radius;
 		}
 
 		&:last-child {
@@ -107,6 +109,10 @@ section {
 
 		&.no-pad {
 				padding:0;
+		}
+
+		&.no-pad-top {
+				padding-top: 0;
 		}
 
 		&.bg-light + .bg-light {
@@ -126,6 +132,10 @@ section {
 
 	>.bg-image:first-child {
 		border-radius: $radius $radius 0 0 ;
+	}
+
+	.hero + section:not('.bg-image') .row {
+		padding-top: 0;
 	}
 
 }//end section

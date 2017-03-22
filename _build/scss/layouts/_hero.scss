@@ -2,8 +2,12 @@
 // hero
 //-------------------------------------------------//
 .hero {
-		padding: $space*2 0;
+		padding: $space 0;
 		position: relative;
+
+		@media #{$media-med} {
+			padding: $space*2 0;
+		}
 
 	img.clip {
 		position:absolute;
@@ -15,7 +19,11 @@
 	}
 
 	.hero-header {
-		margin-bottom: $space;
+		margin-bottom: $space/1.5;
+		@media #{$media-med} {
+			margin-bottom: $space;
+		}
+
 	}
 
 	span:first-child {
@@ -32,7 +40,11 @@
 
 //hero // hero-description
 	.hero-description {
-		margin-bottom: $space*1.5;
+		margin-bottom: $space;
+
+		@media #{$media-med} {
+			margin-bottom: $space*1.5;
+		}
 	}
 
 	> div {

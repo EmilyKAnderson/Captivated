@@ -1,8 +1,15 @@
+.section-header + .row {
+  padding-top: $space;
+}
 
+.row.section-header {
+    padding-bottom:  $space;
+}
 
 .section-header {
   position: relative;
   text-align: center;
+  padding-bottom:  0;
 
   p {
     margin-bottom: 0;

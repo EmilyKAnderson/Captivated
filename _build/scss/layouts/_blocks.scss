@@ -27,16 +27,26 @@
 
 	header {
 		text-align: center;
+
+    h3 {
+      margin-bottom: $space/2;
+
+      @media #{$media-lg} {
+          margin-bottom: $space;
+      }
+    }
 	}
 
 	figure {
-
 		position: absolute;
 		top: 24%;
-		// background-color: $primeDark;
 		@include center-horizontal();
 		display: flex;
-		margin-top: $space;
+
+    @media #{$media-lg} {
+		    margin-top: $space;
+    }
+
 	}
 
 	footer {

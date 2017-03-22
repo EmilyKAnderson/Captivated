@@ -159,20 +159,19 @@
   top: 50px;
   @include transition();
   transform: translateY(-120%);
-  overflow-y: auto;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   @media #{$media-lg} {
-    // overflow: none;
     position: relative;
     top: 0;
     display: flex;
     align-items: center;
-    // height: $mbnavHeight;
     justify-content: space-between;
     margin-left: $space*2;
     background-color: transparent;
     transform: translateY(0);
+    height: 70px;
+
   }
 
 
@@ -209,7 +208,7 @@
       text-transform: uppercase;
       color:$tertLight;
       @include transition();
-      font-size: responsive 12px 14px;
+      font-size: responsive 13px 16px;
       letter-spacing: 2px;
       display: inline-block;
       width: 100%;
@@ -219,6 +218,7 @@
         display: flex;
         align-items: center;
         width: auto;
+        font-size: responsive 12px 13px;
         padding: $space/4 $space/1.5;
       }
 

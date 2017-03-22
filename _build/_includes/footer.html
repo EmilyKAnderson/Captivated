@@ -5,52 +5,88 @@
 	<div class="row footer-row grid-spaceBetween move" data-move="fadeIn">
 
 		<div class="col-12_md-12_lg-8-middle">
-				<ul class="footer-menu">
-					{% for item in site.navigation %}
-						 {% assign class = nil %}
-						 {% if page.title contains item.title %}
-								 {% assign class = 'active' %}
-						 {% endif %}
-							<li>
-									 <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
-											 {{ item.title }}
-									 </a>
-							 </li>
-				 {% endfor %}
+			<ul class="footer-menu">
+
+				<li>
+					<a href="http://dev.captivated.works//" class="active">
+						Home
+					</a>
+				</li>
+
+
+
+				<li>
+					<a href="http://dev.captivated.works/how-it-works/" class="">
+						How it works
+					</a>
+				</li>
+
+
+
+				<li>
+					<a href="http://dev.captivated.works/features/" class="">
+						Features
+					</a>
+				</li>
+
+
+
+				<li>
+					<a href="http://dev.captivated.works/blog/" class="">
+						Blog
+					</a>
+				</li>
+
+
+
+				<li>
+					<a href="http://dev.captivated.works/faq/" class="">
+						FAQ
+					</a>
+				</li>
+
+
+
+				<li>
+					<a href="http://dev.captivated.works/contact/" class="">
+						Contact
+					</a>
+				</li>
+
+			</ul>
+			<div>
+				<a href="#" class="social-icon grid-middle-center">
+					{% include icon/social/facebook.html %}
+				</a>
+				<a href="#" class="social-icon grid-middle-center">
+					{% include icon/social/linkedin.html %}
+				</a>
+				<a href="#" class="social-icon grid-middle-center">
+					{% include icon/social/twitter.html %}
+				</a>
+				<a href="#" class="social-icon grid-middle-center">
+					{% include icon/social/youtube.html %}
+				</a>
+				<a href="#" class="social-icon grid-middle-center">
+					{% include icon/social/vimeo.html %}
+				</a>
+				<ul class="footer-menu-lower">
+					{% for item in site.lowerfootnav %}
+					{% assign class = nil %}
+					{% if page.title contains item.title %}
+					{% assign class = 'active' %}
+					{% endif %}
+					<li>
+						<a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
+							{{ item.title }}
+						</a>
+					</li>
+					{% endfor %}
+					<li>
+						<p class="p-small">&copy; 2017 Captivated LLC</p>
+					</li>
 				</ul>
-				<div>
-					<a href="#" class="social-icon grid-middle-center">
-						{% include icon/social/facebook.html %}
-					</a>
-					<a href="#" class="social-icon grid-middle-center">
-						{% include icon/social/linkedin.html %}
-					</a>
-					<a href="#" class="social-icon grid-middle-center">
-						{% include icon/social/twitter.html %}
-					</a>
-					<a href="#" class="social-icon grid-middle-center">
-						{% include icon/social/youtube.html %}
-					</a>
-					<a href="#" class="social-icon grid-middle-center">
-						{% include icon/social/vimeo.html %}
-					</a>
-					<ul class="footer-menu-lower">
-						{% for item in site.lowerfootnav %}
-							 {% assign class = nil %}
-							 {% if page.title contains item.title %}
-									 {% assign class = 'active' %}
-							 {% endif %}
-								<li>
-										 <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
-												 {{ item.title }}
-										 </a>
-								 </li>
-					 {% endfor %}
-							 <li>
-								 <p class="p-small">&copy; 2017 Captivated LLC</p>
-							 </li>
-					</ul>
-				</div>
+			</div>
 		</div>
 
 		<div class="col-12_md-12_lg-4-middle">

@@ -3,7 +3,7 @@
 
 // silent heading class
 %heading {
-	line-height: 1.1;
+	line-height: 1.3;
 	font-family: 'Assistant', sans-serif;
 	font-size: responsive;
 	font-weight: 800;
@@ -13,6 +13,9 @@
 	lower-font-range: 460px;
 	upper-font-range: 1400px;
  }
+
+// have to do this so i dont conflict with Beaus lanind page styles
+.main {
 
 ///////////////////////////////////////////////
 // h1 /////////////////////////////////////////
@@ -34,12 +37,7 @@ h2 {
 
 	span {
 		color: $secLight;
-
-		// &.alt {
-		// 	color: $tertLight;
-		// }
 	}
-
 
 }
 
@@ -102,8 +100,13 @@ p {
     lower-font-range: 460px;
     upper-font-range: 1400px;
     z-index: 1;
-    margin-bottom: $space;
+    margin-bottom: $space/1.5;
     line-height: 1.5;
+
+
+	  @media #{$media-med} {
+    	margin-bottom: $space;
+		}
 
   &.p-large {
   	line-height: 1.4;
@@ -139,4 +142,10 @@ a {
 	text-transform: uppercase;
 	display: block;
 	color:$secLight;
+}
+
+span {
+	font-family: 'Assistant', sans-serif !important;
+}
+
 }

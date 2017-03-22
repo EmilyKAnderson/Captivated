@@ -1,8 +1,12 @@
-.cta {
-	padding-bottom: $space*2;
+.row.cta {
+
+padding:  0 ;
+
+	@media #{$media-med} {
+		padding: $space*2 0;
+	}
 
 	>* {
-		margin-bottom: $space*1.5;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -13,8 +17,6 @@
 		}
 
 		>* {
-
-			padding: 0;
 
 			&:last-child {
 				@media #{$media-med} {
@@ -38,6 +40,25 @@
 	}
 	.cta-card {
 		box-sizing: border-box;
-		padding: $space;
-	}
+		padding: $space $space/4;
+
+				@media #{$media-med} {
+					padding: $space;
+				}
+
+			}
+
+		}
+
+
+.cta:last-child {
+		padding-bottom: 0;
+		
+		@media #{$media-med} {
+				padding-bottom: $space;
+		}
+
+		@media #{$media-lg} {
+				padding-bottom: $space*2;
+		}
 }

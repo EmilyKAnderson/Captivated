@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Frequently Asked Questions"
-description: "FAQ"
+description: "We're here to help"
 date: 2017-11-11
 categories: faq
 id: faq
