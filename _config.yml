@@ -15,15 +15,15 @@ navigation:
   - title: Home
     url: *baseurl
     id: home
-  # - title: Why
-  #   url: why/
-  #   id: why
   - title: How it works
-    url: how-it-works/
+    url: /product/how-it-works/
     id: how-it-works
   - title: Features
     url: /product/features/
     id: features
+  - title: Markets
+    url: /product/markets/
+    id: markets
   - title: Blog
     url: blog/
   - title: FAQ
