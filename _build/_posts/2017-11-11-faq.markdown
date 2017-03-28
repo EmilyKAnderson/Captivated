@@ -25,4 +25,4 @@ permalink: /faq/
 * ####Does Captivated use short code?
   No. Short code is meant for mass marketing efforts. Captivated is meant for two-way, peer-to-peer communication, a trusted channel between you and your customers. Each text sent through Captivated should feel personal rather than automated.  Note, in 2017, Captivated will be releasing short-code notification technology. Many of our clients also want to leverage our technology to send timely mass notifications to their audience. This is perfect for some of our vertical markets. Stay tuned.  
 * ####What web browsers work with Captivated?
-  Our web app supports Google Chrome, Firefox and Safari. It is not compatible with Internet Explorer.
+  We recommend Google Chrome and Firefox. Safari is okay too. Captivated is not compatible with Internet Explorer.

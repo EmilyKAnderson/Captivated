@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Terms & Conditions"
-description: "label for this page"
+description: "Captivated LLC"
 date: 2017-11-12
 categories: terms-conditions
 id: terms-conditions
@@ -105,14 +105,3 @@ The customer’s address for the delivery of all notices, including any legal no
 ####Acceptance
 
 By accepting the terms of this Agreement, the Customer expressly waives any right it may have to a jury trial or class action lawsuit in connection with this agreement. By accepting the terms of this Agreement, Customer expressly waives any right it may have to a jury trial or class action lawsuit in connection with this Agreement. Customer further understands its remedies are limited as set forth herein. Customer agrees that it will work with Captivated, LLC in good faith for a period of sixty (60) days to resolve any disputes that may arise under this Agreement (the Waiting Period”). To the extent the parties are unable to resolve their dispute within such sixty (60) day period, either party may initiate arbitration proceedings. In order for Customer to initiate arbitration proceedings, the Customer agrees it must send a letter requesting arbitration and describing your claim to Captivated LLC at the address listed above.
-
-* ####Can I use my existing landline for texting?
-  Yes. Enabling your existing landline for texting takes about a week.
-* ####Can Captivated provide me a texting number?
-  Yes. We can give you a texting number with the same area code as your current business line.
-* ####How many people can I have on my account?
-  As many as you want. Our pricing is based on text usage, so it doesn’t cost more to have more users.
-* ####Do my customers need to download an app to text my business.
-  No. Your customers can text your business using the standard texting app on their phone. They send a text to your business the same way they would to family and friends.
-* ####What are your prices?
-  You can check out our pricing plans [here](/get-started/).

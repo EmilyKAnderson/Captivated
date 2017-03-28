@@ -59,6 +59,7 @@ button {
   @media #{$media-med} {
 		padding: $space/2 $space/2;
 		text-align: left;
+
 		//btn //i
 		i, svg {
 			fill: $lightest;
@@ -71,8 +72,7 @@ button {
 			right: $space/1.2;
 			top: 40%;
 			display: block;
-
-
+			cursor: pointer;
 
 	// play button
 			&.play {

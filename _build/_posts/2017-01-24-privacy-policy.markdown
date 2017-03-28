@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Privacy Policy"
-description: "label for this page"
+description: "Captivated LLC"
 date: 2017-01-24
 categories: privacy-policy
 id: privacy-policy

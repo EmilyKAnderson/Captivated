@@ -29,17 +29,6 @@ $tabletWidth: 800px;
     top: -25%;
   }
 
-  // &:after:not(.tablet) {
-  //   position: absolute;
-  //   content: '';
-  //   display: flex;
-  //   width: 35px;
-  //   height: 35px;
-  //   border-radius: 1000px;
-  //   border: 3px solid $grayLight;
-  //   bottom: 15px;
-  // }
-
   picture {
     width:100%;
     padding: 0;
@@ -57,7 +46,7 @@ $tabletWidth: 800px;
   @media #{$media-lg} {
     position: relative;
     left: 0;
-    transform: scale(.9);
+    transform: scale(1);
   }
 
   &.mobile {

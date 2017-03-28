@@ -34,19 +34,19 @@ main {
 }
 
 //multiple rows
-.row + .row {
-	padding: $space 0;
-
-		@media #{$media-med} {
-			padding: $space*2 0;
-		}
-		@media #{$media-lg} {
-			padding: $space*3 0;
-		}
-		@media #{$media-xl} {
-			padding: $space*4 0;
-		}
-}
+// .row + .row {
+// 	padding: $space 0;
+//
+// 		@media #{$media-med} {
+// 			padding: $space*2 0;
+// 		}
+// 		@media #{$media-lg} {
+// 			padding: $space*3 0;
+// 		}
+// 		@media #{$media-xl} {
+// 			padding: $space*4 0;
+// 		}
+// }
 
 // row no max width
 .row-no-max {
@@ -72,7 +72,7 @@ section {
 		}
 
 		@media #{$media-lg} {
-			padding: $space*4 0;
+			padding: $space*3 0;
 		}
 
 		@media #{$media-xl} {

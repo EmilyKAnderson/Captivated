@@ -27,6 +27,10 @@
     }
     .btn {
       margin-top: $space;
+
+      	@media #{$media-med} {
+          margin-top: $space*1.5;
+        }
     }
 
   }
@@ -60,4 +64,11 @@
   header {
     padding: $space*4 $space*2;
   }
+}
+
+.logo-mark {
+  max-width: 120px;
+  height: auto;
+  position: relative;
+  margin: 0 auto $space;
 }

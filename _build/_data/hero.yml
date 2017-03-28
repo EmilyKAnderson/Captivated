@@ -9,7 +9,7 @@ contact:
     subhead: We run our business using Captivated because it works. Have a question or want a quick 15 minute demo?
 
 get-started:
-    label: Get started
+    label: Pricing
     head: Choose a <span>plan</span>
     subhead: With our month-to-month plan, you'll pay as you go with no commitment to future months. With our annual plan, you'll pay once per year and save 20%.
 
@@ -19,8 +19,8 @@ features:
     subhead:
 
 how-it-works:
-    label: Why Captivated
-    head: How it <span>works</span>
+    label: How it works
+    head: Need something <span>here</span>
     subhead: Captivated enables customers to communicate with your business through text messaging. By using software that runs in the background, Captivated is your silent assistant, empowering you to easily manage multiple conversations with your customers.
 
 markets:

@@ -1,6 +1,6 @@
 .row.cta {
 	color: $tertLight;
-	padding:  0 ;
+	// padding:  0 $space 0;
 
 	@media #{$media-med} {
 		padding: $space 0 $space*2;
@@ -11,7 +11,15 @@
 	}
 
 	&.pad-top {
-		padding-top: $space;
+
+		@media #{$media-med} {
+			padding-top: $space;
+		}
+
+		@media #{$media-lg} {
+			padding-top: $space*2;
+		}
+
 	}
 
 
@@ -57,17 +65,17 @@
 
 	}
 
-}
+	&.cta-cards {
+		padding:0;
 
+		@media #{$media-med} {
+			padding: $space 0 $space;
+		}
 
-.cta:last-child {
-	padding-bottom: 0;
+		@media #{$media-lg} {
+			padding: 0 0 $space*2;
+		}
 
-	@media #{$media-med} {
-		padding-bottom: $space;
 	}
 
-	@media #{$media-lg} {
-		padding-bottom: $space*2;
-	}
 }
