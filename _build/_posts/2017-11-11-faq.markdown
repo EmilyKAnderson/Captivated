@@ -9,20 +9,20 @@ permalink: /faq/
 ---
 
 * ####Can I use my existing landline for texting?
-  Yes. Enabling your existing landline for texting takes about a week.
+  Yes, in most cases enabling your existing landline for texting takes about a week.  It is important to note that some carriers and VOIP providers will not allow us to host your SMS traffic.  In this scenario, we provide you with a local text number.  If a customer calls your Captivated provided number, it forwards to your main number.
 * ####Can Captivated provide me a texting number?
   Yes. We can give you a texting number with the same area code as your current business line.
 * ####How many people can I have on my account?
-  As many as you want. Our pricing is based on text usage, so it doesn’t cost more to have more users.
+  Captivated is a robust enterprise platform.  You can have unlimited users and set them up based on department, team, activity, or even expertise.  If they use the phone and email to engage with your audience, they probably should have a Captivated login.
 * ####Do my customers need to download an app to text my business.
   No. Your customers can text your business using the standard texting app on their phone. They send a text to your business the same way they would to family and friends.
-* ####What are your prices?
-  You can check out our pricing plans [here](/get-started/).
+* ####How does your pricing work?
+  Captivated offers plans based on the number of users and number of texts.  Instead of an all-inclusive over-priced plan, we keep our pricing low and provide an average number of messages and then you only pay for actual messages used.  You are welcome to contact us for larger message count packages to fit your needs. You can check out our pricing plans [here](/get-started/).
 * ####Will customers be able to see my cell phone number if I’m  texting from the mobile app?
   No. All of your personal information including your cell phone number is completely protected when using our mobile app.
 * ####Do I need an Internet connection to send and receive texts?
   Yes. When using our web app, you must have a Wi-Fi connection to send and receive texts. With our mobile app, you can text using either your phone’s data plan or a Wi-Fi connection.
 * ####Does Captivated use short code?
-  No. Short code is meant for mass marketing efforts. Captivated is meant for two-way, peer-to-peer communication, a trusted channel between you and your customers. Each text sent through Captivated should feel personal rather than automated.
+  No. Short code is meant for mass marketing efforts. Captivated is meant for two-way, peer-to-peer communication, a trusted channel between you and your customers. Each text sent through Captivated should feel personal rather than automated.  Note, in 2017, Captivated will be releasing short-code notification technology. Many of our clients also want to leverage our technology to send timely mass notifications to their audience. This is perfect for some of our vertical markets. Stay tuned.  
 * ####What web browsers work with Captivated?
   Our web app supports Google Chrome, Firefox and Safari. It is not compatible with Internet Explorer.

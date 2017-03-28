@@ -3,7 +3,7 @@
 		<a href="/" class="logo">
 			{% include logo.html %}
 		</a>
-		
+
 		<div class="nav-items-wrap">
 			<div class="nav-items">
 				<ul class="nav-items-list">
@@ -72,29 +72,3 @@
 		</button>
 	</div>
 </div>
-
-<!-- <nav>
-
-<ul>
-	{% for item in site.navigation %}
-		 {% assign class = nil %}
-		 {% if page.title contains item.title %}
-				 {% assign class = 'active' %}
-		 {% endif %}
-			<li class="col-12">
-					 <a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
-
-							 {{ item.title }}
-					 </a>
-			 </li>
- {% endfor %}
- <li class="col-12">
-		{% for item in site.maincta %}
-					<a href="{{ item.url | prepend: site.baseurl | prepend: site.url }}" class="{{ class }}">
-							{{ item.title }}
-					</a>
-		{% endfor %}
-	</li>
-</ul>
-
-</nav> -->

@@ -24,17 +24,18 @@
     bottom: 0;
 
     img {
-      height: 105%;
-      max-width: 120%;
+      width: 100%;
       opacity: .95;
       filter: grayscale(5%);
+      @include center();
+      position: absolute;
 
       @media #{$media-lg} {
         height: auto;
         position: relative;
         @include center();
         width: auto;
-        max-width: 120%;
+        max-width: 100%;
 
       }
     }
