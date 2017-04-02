@@ -58,6 +58,7 @@ $tabletWidth: 800px;
   &.tablet {
     width: $tabletWidth;
     // height: $tabletHeight;
+    left: -5%;
     padding: $space*1.5;
 
     @media #{$media-lg} {
@@ -66,8 +67,11 @@ $tabletWidth: 800px;
     }
 
     &.left {
-      left: auto;
-      right: 0;
+  
+      @media #{$media-lg} {
+        left: auto;
+        right: 0;
+      }
     }
 
   }

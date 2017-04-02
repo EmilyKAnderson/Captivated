@@ -33,14 +33,6 @@
 			margin-bottom: 0;
 		}
 
-		>* {
-
-			&:last-child {
-				@media #{$media-med} {
-					margin-top: $space;
-				}
-			}
-		}
 	}
 
 	figure {

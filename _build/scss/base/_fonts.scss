@@ -39,6 +39,13 @@ h2 {
 		color: $secLight;
 	}
 
+	span.tm {
+		// font-size: 80%;
+		color: inherit;
+		opacity: .1;
+
+	}
+
 }
 
 ///////////////////////////////////////////////
@@ -110,7 +117,7 @@ p {
 
   &.p-large {
   	line-height: 1.4;
-		font-size: responsive 20px 24px;
+		font-size: responsive 18px 24px;
   }
 
   &.p-small {

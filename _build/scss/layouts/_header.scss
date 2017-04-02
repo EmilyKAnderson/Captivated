@@ -25,11 +25,12 @@
     h2:last-child {
       margin-bottom: 0;
     }
-    .btn {
-      margin-top: $space;
+
+    p:not(:last-child) {
+      margin-bottom: $space;
 
       	@media #{$media-med} {
-          margin-top: $space*1.5;
+          margin-bottom: $space*1.5;
         }
     }
 

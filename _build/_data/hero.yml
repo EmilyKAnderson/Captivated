@@ -6,7 +6,7 @@
 contact:
     label: Contact
     head: Let's start a <span>conversation</span>
-    subhead: We run our business using Captivated because it works. Have a question or want a quick 15 minute demo?
+    subhead: We run our business using Captivated because it works. Schedule a 20-minute on-Line demonstration or 10 minute discovery to learn more.
 
 get-started:
     label: Pricing
@@ -20,9 +20,8 @@ features:
 
 how-it-works:
     label: How it works
-    head: Real Conversations, Real <span>Easy</span>
-    subhead: Captivated enables customers to communicate with your business through text messaging. By using software that runs in the background, Captivated is your silent assistant, empowering you to easily manage multiple conversations with your customers.
-
+    head: Real Conversations, Real <span>Easy</span><span class="tm">&trade;</span>
+    subhead: On one side, your contacts get to text you on your landline or a published text number that you promote for their convenience.  On your side, a text comes into Captivated and you get to handle it or easily transfer it to the right department or individual.
 markets:
     label: Markets
     head: A new way to <span>engage</span>
@@ -32,14 +31,7 @@ markets:
 
 # //////////////////////////////////
 # markets
-automotive:
-    label: Automotive
-    head: Business texting made easy <br> for <span class="typed-markets"></span>
-    subhead: Text or call?  Let's face it, everyone would rather text you then call you. Texting is pervasive and convenient. It’s less intrusive than a phone call. You get faster responses than sending an email.
-
-
-# dep
-# why:
-#     label: Why Captivated
-#     head: Text messaging <span>platform</span>
-#     subhead: Captivated enables business to engage in real-time &amp; authentic conversations with their customers to increase sales and improve customer service
+# automotive:
+#     label: Automotive
+#     head: Business texting made easy <br> for <span class="typed-markets"></span>
+#     subhead: Text or call?  Let's face it, everyone would rather text you then call you. Texting is pervasive and convenient. It’s less intrusive than a phone call. You get faster responses than sending an email.

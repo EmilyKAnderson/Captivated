@@ -12,9 +12,14 @@
 
 	li {
 		position: relative;
-		height: auto;
+		height: 180px;
 		margin-bottom: $space/3;
 		width: 100%;
+
+		@media #{$media-med} {
+				height: auto;
+		}
+
 
 		a {
 			height: inherit;

@@ -14,12 +14,12 @@
     color: $tertDark;
     text-align: center;
     padding: $space*1.5 0 0 0;
-
 }
 
 %price {
     color: $secLight;
-    p{font-weight: 400;position: relative;
+    p {
+      font-weight: 400;position: relative;
     }
     text-align: center;
     padding: $space/2 0;
@@ -68,8 +68,12 @@
     text-transform: uppercase;
     width: 75%;
     cursor: pointer;
-    transform: translateY(100px);
     transition: transform 1s cubic-bezier(.19, 1, .22, 1);
+
+    @media #{$media-lg} {
+        transform: translateY(100px);
+    }
+
     a {
       color: $secLight;
       i,svg {
@@ -80,6 +84,7 @@
         width: 15px;
         height: 15px;
       }
+
     }
 }
 
@@ -103,7 +108,7 @@
   border-bottom: 1px solid $grayLight;
   border-left: 1px solid $grayLight;
   border-right: 1px solid $grayLight;
-  cursor: pointer;
+  // cursor: pointer;
   overflow: hidden;
   @include transition();
   margin-bottom: $space;
