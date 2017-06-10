@@ -8,6 +8,11 @@ contact:
     head: Let's start a <span>conversation</span>
     subhead: We run our business using Captivated because it works. Schedule a 20-minute on-Line demonstration or 10 minute discovery to learn more.
 
+videos:
+    label: Videos
+    head: Learn more by watching our <span>videos</span>
+    # subhead:
+
 get-started:
     label: Pricing
     head: Choose a <span>plan</span>

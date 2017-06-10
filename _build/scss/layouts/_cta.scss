@@ -57,6 +57,10 @@
 
 	}
 
+	.cta-card:nth-last-child(n+3), .cta-card:nth-last-child(n+3) ~ .cta-card {
+		margin-bottom: $space;
+	 }
+
 	&.cta-cards {
 		padding:0;
 
@@ -70,4 +74,33 @@
 
 	}
 
+}
+
+.video-wrap {
+	padding: 0px !important;
+	max-width: 600px;
+
+	> div {
+		padding: 0px !important;
+
+
+		iframe {
+			width: 100%;
+			min-height: 200px;
+
+			@media #{$media-med} {
+						min-height: 350px;
+			}
+
+			@media #{$media-lg} {
+						min-height: 400px;
+			}
+
+		}
+
+		p {
+			padding: $space/2;
+			margin-bottom: 0px;
+		}
+	}
 }
