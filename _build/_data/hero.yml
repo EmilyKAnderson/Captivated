@@ -36,7 +36,12 @@ markets:
 
 # //////////////////////////////////
 # markets
-# automotive:
-#     label: Automotive
-#     head: Business texting made easy <br> for <span class="typed-markets"></span>
-#     subhead: Text or call?  Let's face it, everyone would rather text you then call you. Texting is pervasive and convenient. It’s less intrusive than a phone call. You get faster responses than sending an email.
+automotive:
+    label: Automotive
+    head: Business texting made easy <br> for <span class="typed-markets">automotive</span>
+    subhead: Text or call?  Let's face it, everyone would rather text you then call you. Texting is pervasive and convenient. It’s less intrusive than a phone call. You get faster responses than sending an email.
+
+retail:
+    label: Retail
+    head: Communicating with a big box store does not have to be <span>a big pain</span>
+    subhead: 84% of customers DESPISE calling retail stores. Why not let them text you the same way they connect to their family and friends.

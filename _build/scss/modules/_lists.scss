@@ -6,3 +6,22 @@ ul {
 	margin: 0;
 
 }
+
+
+.column-list-3 {
+	 columns:150px 3;
+	 column-gap: $space/2;
+
+	 li {
+		 padding: $space/4 $space/2;
+	 }
+}
+
+.column-list-2 {
+	 columns:150px 2;
+	 column-gap: $space/2;
+
+	 li {
+		 padding: $space/4 $space/2;
+	 }
+}

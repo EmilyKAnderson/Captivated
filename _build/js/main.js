@@ -80,6 +80,7 @@ $(function(){
 
 
 
+
 // slick slider initiate
 
 // $('.market-slider').slick({

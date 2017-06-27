@@ -112,7 +112,7 @@
 ///////////////////////////////
 //fullwidth blocks
 ///////////////////////////////
-.blocks-full {
+.blocks-full, .blocks-packed {
   display: flex;
   overflow: hidden;
 
@@ -142,7 +142,23 @@
         @media #{$media-lg}{
           padding: $space*4 $space*2;
         }
+
+        ul {
+          list-style-type: disc;
+        }
       }
     }
+
+
+  // sytles for tighter blocks
+  &.blocks-packed {
+
+    article, blockquote {
+      @media #{$media-lg}{
+        padding:$space*1.5;
+      }
+    }
+
+  }
 
 } //end blocks-full
